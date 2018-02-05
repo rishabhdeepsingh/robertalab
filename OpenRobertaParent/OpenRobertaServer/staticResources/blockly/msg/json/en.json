@@ -1,7 +1,59 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
+<<<<<<< HEAD
 		"lastupdated": "2018-05-18 14:05:41.170660",
+=======
+<<<<<<< HEAD
+		"lastupdated": "2018-05-16 08:19:05.162911",
+=======
+<<<<<<< HEAD
+		"lastupdated": "2018-05-09 16:40:48.422142",
+=======
+<<<<<<< HEAD
+		"lastupdated": "2018-05-08 12:57:58.580718",
+=======
+<<<<<<< HEAD
+		"lastupdated": "2018-04-29 22:37:28.534024",
+=======
+<<<<<<< HEAD
+		"lastupdated": "2018-04-27 12:48:17.278433",
+=======
+<<<<<<< HEAD
+<<<<<<< 5a327f87939c03775f0e08c5971cf7bff8306a89
+		"lastupdated": "2018-04-23 17:56:23.957588",
+=======
+		"lastupdated": "2018-04-23 14:48:22.906242",
+>>>>>>> #806 move the transformation for robSensor_getSample in the factory
+=======
+<<<<<<< HEAD
+		"lastupdated": "2018-04-23 17:56:23.957588",
+=======
+<<<<<<< HEAD
+		"lastupdated": "2018-04-23 09:35:21.008379",
+=======
+<<<<<<< HEAD
+		"lastupdated": "2018-04-03 12:19:42.464103",
+=======
+<<<<<<< HEAD
+		"lastupdated": "2018-03-21 16:54:50.204886",
+=======
+<<<<<<< HEAD
+		"lastupdated": "2018-03-14 17:18:07.865391",
+=======
+		"lastupdated": "2018-02-07 16:55:31.254062",
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -896,8 +948,9 @@
 	"PLAY_QUARTER": "quarter note",
 	"PLAY_EIGHTH": "eighth note",
 	"PLAY_SIXTEENTH": "sixteenth note",
-	"LED": "LED",
 	"LED_ON": "turn LED on",
+	"LED": "LED",
+	"LCD": "LCD",
 	"LED_OFF": "turn LED off",
 	"SENSOR_GESTURE": "gesture",
 	"SENSOR_GESTURE_TOOLTIP": "Is the system in the selected state?",
@@ -1298,6 +1351,7 @@
 	"SENSOR_GESTURE_FREEFALL_GETSAMPLE_TOOLTIP": "Returns »true« if it is free falling.",
 	"RIGHT": "right",
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"LEFT": "left",
 	"ORA_ROBOT_PUSH_RUN_CALLIOPE2016": "Your program »$« is downloaded to Calliope, press the reset button to start it!",
 	"ORA_ROBOT_PUSH_RUN_NXT": "Your program »$« is downloaded to the NXT, start it on the robot!",
@@ -1435,9 +1489,38 @@
 =======
 	"LEFT": "left"
 >>>>>>> #745 added base Uno files, configuration draft
+<<<<<<< HEAD
 >>>>>>> #745 added base Uno files, configuration draft
+<<<<<<< HEAD
 >>>>>>> #745 added base Uno files, configuration draft
+<<<<<<< HEAD
 >>>>>>> #745 added base Uno files, configuration draft
+<<<<<<< HEAD
 >>>>>>> #745 added base Uno files, configuration draft
+<<<<<<< HEAD
 >>>>>>> #745 added base Uno files, configuration draft
+=======
+=======
+=======
+=======
+=======
+=======
+	"LEFT": "left",
+	"OUTPUT": "output",
+	"INPUT": "input",
+	"MOTION_SENSOR": "motion sensor",
+	"POTENTIOMETER": "potentiometer",
+	"SERVO_MOTOR": "servo motor",
+	"PULSE": "pulse",
+	"RELAY": "relay",
+	"HUMIDITY": "humidity",
+	"AND": "and",
+	"STEP_MOTOR": "step motor",
+	"SENSOR_MOISTURE": "moisture sensor"
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 }

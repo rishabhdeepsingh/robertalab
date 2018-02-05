@@ -890,8 +890,9 @@
 	"PLAY_QUARTER": "",
 	"PLAY_EIGHTH": "",
 	"PLAY_SIXTEENTH": "",
-	"LED": "",
 	"LED_ON": "",
+	"LED": "",
+	"LCD": "",
 	"LED_OFF": "",
 	"SENSOR_GESTURE": "",
 	"SENSOR_GESTURE_TOOLTIP": "",
@@ -1289,6 +1290,7 @@
 	"SENSOR_GESTURE_FREEFALL_GETSAMPLE_TOOLTIP": "",
 	"RIGHT": "",
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"LEFT": "",
 	"ORA_ROBOT_PUSH_RUN_CALLIOPE2016": "",
 	"ORA_ROBOT_PUSH_RUN_NXT": "",
@@ -1420,9 +1422,38 @@
 =======
 	"LEFT": ""
 >>>>>>> #745 added base Uno files, configuration draft
+<<<<<<< HEAD
 >>>>>>> #745 added base Uno files, configuration draft
+<<<<<<< HEAD
 >>>>>>> #745 added base Uno files, configuration draft
+<<<<<<< HEAD
 >>>>>>> #745 added base Uno files, configuration draft
+<<<<<<< HEAD
 >>>>>>> #745 added base Uno files, configuration draft
+<<<<<<< HEAD
 >>>>>>> #745 added base Uno files, configuration draft
+=======
+=======
+=======
+=======
+=======
+=======
+	"LEFT": "",
+	"OUTPUT": "",
+	"INPUT": "",
+	"MOTION_SENSOR": "",
+	"POTENTIOMETER": "",
+	"SERVO_MOTOR": "",
+	"PULSE": "",
+	"RELAY": "",
+	"HUMIDITY": "",
+	"AND": "",
+	"STEP_MOTOR": "",
+	"SENSOR_MOISTURE": ""
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 }

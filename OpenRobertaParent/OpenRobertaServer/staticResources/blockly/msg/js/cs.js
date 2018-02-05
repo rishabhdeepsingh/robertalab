@@ -238,10 +238,14 @@ Blockly.Msg.HINT_USER_NAME = "Enter your real name here if you like. This is jus
 Blockly.Msg.HINT_USER_PASSWORT = "12345 is no secure password. Rather think of a safe combination of numbers and letters that you will not forget.";  // untranslated
 Blockly.Msg.HINT_USER_PASSWORT_CONFIRM = "Got it? Better make sure!";  // untranslated
 <<<<<<< HEAD
+<<<<<<< HEAD
 Blockly.Msg.HUMIDITY_TOOLTIP = "Represents a humidity sensor.";  // untranslated
 Blockly.Msg.IF_TOOLTIP = "Checks the condition in »if«. If the condition is true, executes the »do« action.";  // untranslated
 Blockly.Msg.IMAGE_GET_TOOLTIP = "Returns the chosen image.";  // untranslated
 =======
+=======
+Blockly.Msg.HUMIDITY = "humidity";  // untranslated
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.IF_TOOLTIP = "Zkontroluje podmínku v »když«. Pokud je podmínka splněna, provede akce v části »tak«.";
 Blockly.Msg.IMAGE_GET_TOOLTIP = "Vrátí vybraný obrázek.";
 >>>>>>> #745 added base Uno files, configuration draft
@@ -303,6 +307,7 @@ Blockly.Msg.INTERNAL_PORT = "internal";  // untranslated
 Blockly.Msg.IRSEEKER_TOOLTIP = "Represents a HiTechnic NXT IRSeeker V2 sensor.";  // untranslated
 Blockly.Msg.JOYSTICK_GETSAMPLE_TOOLTIP = "Gets the current reading of one of the axises of the joystick";  // untranslated
 Blockly.Msg.KEY_ISPRESSED_TOOLTIP = "Je vybrané tlačítko stisknuto?";
+<<<<<<< HEAD
 Blockly.Msg.KEY_TOOLTIP = "Represents a button.";  // untranslated
 Blockly.Msg.LANGUAGE = "language";  // untranslated
 Blockly.Msg.LANGUAGE_ARABIC = "Arabic";  // untranslated
@@ -328,6 +333,9 @@ Blockly.Msg.LANGUAGE_SWEDISH = "Swedish";  // untranslated
 Blockly.Msg.LANGUAGE_TURKISH = "Turkish";  // untranslated
 Blockly.Msg.LCDI2C_TOOLTIP = "Represents an LCD I2C display.";  // untranslated
 Blockly.Msg.LCD_TOOLTIP = "Represents an LCD display.";  // untranslated
+=======
+Blockly.Msg.LCD = "LCD";  // untranslated
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.LED = "LED";  // untranslated
 Blockly.Msg.LEDBAR = "LED Bar";  // untranslated
 Blockly.Msg.LEDBAR_SET_TOOLTIP = "Sets the specified LED [0-9] on the Grove LED Bar v2.0 by Seeed to the given brightness [0-8]. The LED Bar has to be connected to the A1 (right) Grove connector.";  // untranslated
@@ -679,9 +687,16 @@ Blockly.Msg.MODE_SOUND = "zvuk";
 Blockly.Msg.MODE_TEMPERATURE = "temperature";  // untranslated
 Blockly.Msg.MODE_UNMODULATED = "unmodulated";  // untranslated
 Blockly.Msg.MODE_VALUE = "value";  // untranslated
+<<<<<<< HEAD
 Blockly.Msg.MODE_WORD = "word";  // untranslated
+=======
+<<<<<<< HEAD
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.MOISTURE_TOOLTIP = "Represents a moisture sensor.";  // untranslated
 Blockly.Msg.MOTION_TOOLTIP = "Represents a motion sensor.";  // untranslated
+=======
+Blockly.Msg.MOTION_SENSOR = "motion sensor";  // untranslated
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.MOTOR = "motor";
 Blockly.Msg.MOTORDIFF_ON_FOR_TOOLTIP = "Spustí pohyb robota danou rychlostí a zastaví ho po určené vzdálenosti.";
 Blockly.Msg.MOTORDIFF_ON_TOOLTIP = "Spustí pohyb robota danou rychlostí.";
@@ -1049,7 +1064,11 @@ Blockly.Msg.POPUP_TOUR = "prohlídka";
 Blockly.Msg.POPUP_USERNAME = "Uživatelské jméno";
 Blockly.Msg.POPUP_USERNAME_LOGOFF = "Nejste přihlášen.";
 Blockly.Msg.POPUP_VALUE = "Hodnota";
+<<<<<<< HEAD
 Blockly.Msg.PORT_ANKLE = "ankle";  // untranslated
+=======
+<<<<<<< HEAD
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.PORT_BUMPER = "bumper";  // untranslated
 Blockly.Msg.PORT_ELBOW = "elbow";  // untranslated
 Blockly.Msg.PORT_HAND = "hand";  // untranslated
@@ -1059,6 +1078,9 @@ Blockly.Msg.PORT_KNEE = "knee";  // untranslated
 Blockly.Msg.PORT_SHOULDER = "schoulder";  // untranslated
 Blockly.Msg.PORT_WRIST = "wrist";  // untranslated
 Blockly.Msg.POTENTIOMETER_TOOLTIP = "Represents a potentiometer .";  // untranslated
+=======
+Blockly.Msg.POTENTIOMETER = "potentiometer";  // untranslated
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "povolit příkazy";
 Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "s:";
 Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL = "https://cs.wikipedia.org/wiki/Funkce_(programov%C3%A1n%C3%AD)";
@@ -1094,13 +1116,17 @@ Blockly.Msg.PROGLIST_LOAD_TOOLTIP = "Klikněte zde pro nahrání konfigurace va�
 Blockly.Msg.PROGLIST_SHARE_TOOLTIP = "Klikněte zde pro sdílení vašeho programu s přítelem.";
 Blockly.Msg.PROGLIST_SHARE_WITH_GALLERY = "Opravdu chcete sdílet váš program se všemi?";
 Blockly.Msg.PROGLIST_SHARE_WITH_GALLERY_TOOLTIP = "Click here to upload your program to the gallery hence share it with all other users.";  // untranslated
+Blockly.Msg.PULSE = "pulse";  // untranslated
 Blockly.Msg.PULSE_HIGH = "pulse time HIGH";  // untranslated
 Blockly.Msg.PULSE_LOW = "pulse time LOW";  // untranslated
 Blockly.Msg.PULSE_TOOLTIP = "Represents a pulse sensor.";  // untranslated
 Blockly.Msg.RADIO_GET_RSSI_TOOLTIP = "Gets the RSSI of the last package.";  // untranslated
 Blockly.Msg.REDO = "Redo";  // untranslated
 Blockly.Msg.RELAY = "relay";  // untranslated
+<<<<<<< HEAD
 Blockly.Msg.RELAY_TOOLTIP = "Represents a relay.";  // untranslated
+=======
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.REMOVE_COMMENT = "Odstranit komentář";
 Blockly.Msg.RENAME_VARIABLE = "Přejmenovat proměnnou...";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "Přejmenuj všech '%1' proměnných na:";
@@ -1175,9 +1201,12 @@ Blockly.Msg.SENSOR_KEY_UP = "nahoru";
 Blockly.Msg.SENSOR_LIGHT = "světelný senzor";
 Blockly.Msg.SENSOR_MIC = "mikrofon";
 Blockly.Msg.SENSOR_MOISTURE = "moisture sensor";  // untranslated
+<<<<<<< HEAD
 Blockly.Msg.SENSOR_MOISTURE_GETSAMPLE_TOOLTIP = "Gets the current reading from the moisture sensor.";  // untranslated
 Blockly.Msg.SENSOR_MOTION = "motion sensor";  // untranslated
 Blockly.Msg.SENSOR_MOTION_GETSAMPLE_TOOLTIP = "Gets the current reading from the motion sensor.";  // untranslated
+=======
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.SENSOR_MS_TIMER = "v ms";
 Blockly.Msg.SENSOR_PIN = "pin";
 Blockly.Msg.SENSOR_PINTOUCH = "pin";  // untranslated
@@ -1222,7 +1251,10 @@ Blockly.Msg.SENSOR_VALUE = "hodnota";
 Blockly.Msg.SENSOR_WALL = "wall sensor";  // untranslated
 Blockly.Msg.SERVER_NOT_AVAILABLE = "Open Roberta Lab není momentálně dostupný. </br> Zkontrolujte prosím svoje internetové připojení a zkuste stránku obnovit. Pokud problém přetrvává, kontaktujte prosím:</br>roberta-zentrale@iais.fraunhofer.de";
 Blockly.Msg.SERVO_MOTOR = "servo motor";  // untranslated
+<<<<<<< HEAD
 Blockly.Msg.SERVO_TOOLTIP = "Represents a servo motor.";  // untranslated
+=======
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.SET = "nastav";
 <<<<<<< HEAD
 Blockly.Msg.SETLANGUAGE_TOOLTIP = "Set the language.";  // untranslated
@@ -1262,7 +1294,10 @@ Blockly.Msg.START_PROGRAM = "start";
 Blockly.Msg.START_PROGRAM_AUTOMOMOUSLIFE = "autonomous behaviour";  // untranslated
 Blockly.Msg.START_PROGRAM_DEBUG = "zobrazovat data ze senzorů";
 Blockly.Msg.START_TOOLTIP = "Počáteční bod hlavního programu.";
+<<<<<<< HEAD
 Blockly.Msg.STEPMOTOR_TOOLTIP = "Represents a step motor.";  // untranslated
+=======
+>>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.STEP_MOTOR = "step motor";  // untranslated
 Blockly.Msg.STRENGTH = "síla";
 Blockly.Msg.TAB_CONFIGURATION = "Konfigurace robota";
