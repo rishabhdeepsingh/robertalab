@@ -870,7 +870,10 @@
 	"SENSOR_COMPASS": "",
 	"SENSOR_COMPASS_EV3": "",
 	"COMPASS_TOOLTIP": "",
+<<<<<<< HEAD
 	"COMPASS_TOOLTIP_EV3": "",
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 	"COMPASS_CALIBRATE_TOOLTIP": "",
 	"SOUND_TOOLTIP": "",
 	"MOTOR_ARDU_TOOLTIP": "",
@@ -890,9 +893,8 @@
 	"PLAY_QUARTER": "",
 	"PLAY_EIGHTH": "",
 	"PLAY_SIXTEENTH": "",
-	"LED_ON": "",
 	"LED": "",
-	"LCD": "",
+	"LED_ON": "",
 	"LED_OFF": "",
 	"SENSOR_GESTURE": "",
 	"SENSOR_GESTURE_TOOLTIP": "",
@@ -989,9 +991,14 @@
 	"SAY": "",
 =======
 	"NAO_GETLANGUAGE": "",
+<<<<<<< HEAD
 	"NAO_SETLANGUAGE": "",
 	"NAO_SAY": "",
 >>>>>>> #745 added base Uno files, configuration draft
+=======
+	"SETLANGUAGE": "",
+	"SAY": "",
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 	"NAO_BLINK": "",
 	"NAO_LED": "",
 	"NAO_RANDOMEYES": "",
@@ -1020,27 +1027,27 @@
 	"NAO_POSTURE_CROUCH": "",
 	"NAO_FRAME_TORSO": "",
 	"NAO_FRAME_WORLD": "",
-	"NAO_LANGUAGE_GERMAN": "",
-	"NAO_LANGUAGE_ENGLISH": "",
-	"NAO_LANGUAGE_FRENCH": "",
-	"NAO_LANGUAGE_JAPANESE": "",
-	"NAO_LANGUAGE_CHINESE": "",
-	"NAO_LANGUAGE_SPANISH": "",
-	"NAO_LANGUAGE_KOREAN": "",
-	"NAO_LANGUAGE_ITALIAN": "",
-	"NAO_LANGUAGE_DUTCH": "",
-	"NAO_LANGUAGE_FINNISH": "",
-	"NAO_LANGUAGE_POLISH": "",
-	"NAO_LANGUAGE_RUSSIAN": "",
-	"NAO_LANGUAGE_TURKISH": "",
-	"NAO_LANGUAGE_ARABIC": "",
-	"NAO_LANGUAGE_CZECH": "",
-	"NAO_LANGUAGE_PORTUGUESE": "",
-	"NAO_LANGUAGE_BRAZILIAN": "",
-	"NAO_LANGUAGE_SWEDISH": "",
-	"NAO_LANGUAGE_DANISH": "",
-	"NAO_LANGUAGE_NORWEGIAN": "",
-	"NAO_LANGUAGE_GREEK": "",
+	"LANGUAGE_GERMAN": "",
+	"LANGUAGE_ENGLISH": "",
+	"LANGUAGE_FRENCH": "",
+	"LANGUAGE_JAPANESE": "",
+	"LANGUAGE_CHINESE": "",
+	"LANGUAGE_SPANISH": "",
+	"LANGUAGE_KOREAN": "",
+	"LANGUAGE_ITALIAN": "",
+	"LANGUAGE_DUTCH": "",
+	"LANGUAGE_FINNISH": "",
+	"LANGUAGE_POLISH": "",
+	"LANGUAGE_RUSSIAN": "",
+	"LANGUAGE_TURKISH": "",
+	"LANGUAGE_ARABIC": "",
+	"LANGUAGE_CZECH": "",
+	"LANGUAGE_PORTUGUESE": "",
+	"LANGUAGE_BRAZILIAN": "",
+	"LANGUAGE_SWEDISH": "",
+	"LANGUAGE_DANISH": "",
+	"LANGUAGE_NORWEGIAN": "",
+	"LANGUAGE_GREEK": "",
 	"NAO_INTENSITY": "",
 	"SLOT_FRONT": "",
 	"SLOT_MIDDLE": "",
@@ -1091,11 +1098,16 @@
 	"NAO_RELATIVE": "",
 	"NAO_FILENAME": "",
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"VOICE_SPEED": "",
 	"VOICE_PITCH": "",
 	"NAO_APPLYPOSTURE_TOOLTIP": "NAO tooltips",
 =======
 	"NAO_SHAPE": "",
+=======
+	"VOICE_SPEED": "",
+	"VOICE_PITCH": "",
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 	"NAO_MODE_TOOLTIP": "NAO tooltips",
 	"NAO_APPLYPOSTURE_TOOLTIP": "",
 >>>>>>> #745 added base Uno files, configuration draft
@@ -1112,8 +1124,10 @@
 	"NAO_SETVOLUME_TOOLTIP": "",
 	"NAO_GETVOLUME_TOOLTIP": "",
 	"NAO_GETLANGUAGE_TOOLTIP": "",
+	"SETLANGUAGE_TOOLTIP": "",
 	"NAO_SETLANGUAGE_TOOLTIP": "",
-	"NAO_SAY_TOOLTIP": "",
+	"SAY_TOOLTIP": "",
+	"SAY_PARAMETERS_TOOLTIP": "",
 	"NAO_PLAYFILE_TOOLTIP": "",
 	"NAO_TAKEPICTURE_TOOLTIP": "",
 	"NAO_RECORDVIDEO_TOOLTIP": "",
@@ -1439,6 +1453,8 @@
 =======
 =======
 	"LEFT": "",
+	"ORA_ROBOT_PUSH_RUN_CALLIOPE2016": "",
+	"ORA_ROBOT_PUSH_RUN_NXT": "",
 	"OUTPUT": "",
 	"INPUT": "",
 	"MOTION_SENSOR": "",
@@ -1449,11 +1465,31 @@
 	"HUMIDITY": "",
 	"AND": "",
 	"STEP_MOTOR": "",
+<<<<<<< HEAD
 	"SENSOR_MOISTURE": ""
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+=======
+=======
+=======
+=======
+=======
+=======
+	"SENSOR_MOISTURE": "",
+	"MODE_MOISTURE": ""
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 }

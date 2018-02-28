@@ -4,12 +4,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		"lastupdated": "2018-05-18 14:05:41.170660",
 =======
 =======
 >>>>>>> #745 chanhed arduino configuration blokcs so they would be always enabled
 =======
 >>>>>>> #756 implmented Arduino Configuration
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 <<<<<<< HEAD
 		"lastupdated": "2018-05-16 08:19:05.162911",
 =======
@@ -17,6 +20,8 @@
 >>>>>>> #745 chanhed arduino configuration blokcs so they would be always enabled
 =======
 >>>>>>> #756 implmented Arduino Configuration
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 <<<<<<< HEAD
 		"lastupdated": "2018-05-09 16:40:48.422142",
 =======
@@ -24,6 +29,8 @@
 >>>>>>> #745 chanhed arduino configuration blokcs so they would be always enabled
 =======
 >>>>>>> #756 implmented Arduino Configuration
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 <<<<<<< HEAD
 		"lastupdated": "2018-05-08 12:57:58.580718",
 =======
@@ -31,6 +38,8 @@
 >>>>>>> #745 chanhed arduino configuration blokcs so they would be always enabled
 =======
 >>>>>>> #756 implmented Arduino Configuration
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 <<<<<<< HEAD
 		"lastupdated": "2018-04-29 22:37:28.534024",
 =======
@@ -38,6 +47,8 @@
 >>>>>>> #745 chanhed arduino configuration blokcs so they would be always enabled
 =======
 >>>>>>> #756 implmented Arduino Configuration
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 <<<<<<< HEAD
 		"lastupdated": "2018-04-27 12:48:17.278433",
 =======
@@ -45,6 +56,8 @@
 >>>>>>> #745 chanhed arduino configuration blokcs so they would be always enabled
 =======
 >>>>>>> #756 implmented Arduino Configuration
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 <<<<<<< HEAD
 <<<<<<< 5a327f87939c03775f0e08c5971cf7bff8306a89
 		"lastupdated": "2018-04-23 17:56:23.957588",
@@ -56,6 +69,8 @@
 >>>>>>> #745 chanhed arduino configuration blokcs so they would be always enabled
 =======
 >>>>>>> #756 implmented Arduino Configuration
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 <<<<<<< HEAD
 		"lastupdated": "2018-04-23 17:56:23.957588",
 =======
@@ -63,6 +78,8 @@
 >>>>>>> #745 chanhed arduino configuration blokcs so they would be always enabled
 =======
 >>>>>>> #756 implmented Arduino Configuration
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 <<<<<<< HEAD
 		"lastupdated": "2018-04-23 09:35:21.008379",
 =======
@@ -70,6 +87,8 @@
 >>>>>>> #745 chanhed arduino configuration blokcs so they would be always enabled
 =======
 >>>>>>> #756 implmented Arduino Configuration
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 <<<<<<< HEAD
 		"lastupdated": "2018-04-03 12:19:42.464103",
 =======
@@ -77,6 +96,8 @@
 >>>>>>> #745 chanhed arduino configuration blokcs so they would be always enabled
 =======
 >>>>>>> #756 implmented Arduino Configuration
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 <<<<<<< HEAD
 		"lastupdated": "2018-03-21 16:54:50.204886",
 =======
@@ -84,6 +105,8 @@
 >>>>>>> #745 chanhed arduino configuration blokcs so they would be always enabled
 =======
 >>>>>>> #756 implmented Arduino Configuration
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 <<<<<<< HEAD
 		"lastupdated": "2018-03-14 17:18:07.865391",
 =======
@@ -161,17 +184,53 @@
 =======
 		"lastupdated": "2018-02-21 12:28:51.856000",
 >>>>>>> #756 implmented Arduino Configuration
+<<<<<<< HEAD
 >>>>>>> #756 implmented Arduino Configuration
+<<<<<<< HEAD
 >>>>>>> #756 implmented Arduino Configuration
+<<<<<<< HEAD
 >>>>>>> #756 implmented Arduino Configuration
+<<<<<<< HEAD
 >>>>>>> #756 implmented Arduino Configuration
+<<<<<<< HEAD
 >>>>>>> #756 implmented Arduino Configuration
+<<<<<<< HEAD
 >>>>>>> #756 implmented Arduino Configuration
+<<<<<<< HEAD
 >>>>>>> #756 implmented Arduino Configuration
+<<<<<<< HEAD
 >>>>>>> #756 implmented Arduino Configuration
+<<<<<<< HEAD
 >>>>>>> #756 implmented Arduino Configuration
+<<<<<<< HEAD
 >>>>>>> #756 implmented Arduino Configuration
+<<<<<<< HEAD
 >>>>>>> #756 implmented Arduino Configuration
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+		"lastupdated": "2018-02-28 14:24:11.875979",
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -586,7 +645,11 @@
 	"ULTRASONIC_TOOLTIP": "Represents an ultrasonic sensor.",
 	"COLOUR_TOOLTIP": "Represents a colour sensor.",
 	"INFRARED_TOOLTIP": "Represents an infrared sensor.",
+<<<<<<< HEAD
 	"IRSEEKER_TOOLTIP": "Represents a HiTechnic NXT IRSeeker V2 sensor.",
+=======
+	"IRSEEKER_TOOLTIP": "Represents a HighTechnic NXT IRSeeker V2 sensor.",
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 	"TOUCH_TOOLTIP": "Is the touch sensor pressed?",
 	"GYRO_TOOLTIP": "Represents a gyro sensor.",
 	"FLAME_TOOLTIP": "Represents a flame sensor.",
@@ -1012,7 +1075,7 @@
 	"SENSOR_AMBIENTLIGHT": "ambientlight sensor",
 	"LIGHT_GETSAMPLE_TOOLTIP": "Gets the current reading from the light sensor.",
 	"SENSOR_SOUND": "sound sensor",
-	"SOUND_GETSAMPLE_TOOLTIP": "Gets the current reading from the sound sensor.",
+	"SOUND_GETSAMPLE_TOOLTIP": "Gets the current reading from the sound sensor in the range 0 to 100. 0 is quiet and 100 is loud.",
 	"MENU_LIST_PROG": "my programs ...",
 	"MENU_LIST_CONF": "my configurations ...",
 	"MENU_LIST_PROG_EXAMPLES": "example programs ...",
@@ -1046,7 +1109,10 @@
 	"SENSOR_COMPASS": "compass sensor",
 	"SENSOR_COMPASS_EV3": "HT compass sensor",
 	"COMPASS_TOOLTIP": "Represents a compass sensor.",
+<<<<<<< HEAD
 	"COMPASS_TOOLTIP_EV3": "Represents a HiTechnic NXT compass sensor.",
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 	"COMPASS_CALIBRATE_TOOLTIP": "Calibrates the compass. Turn the compass sensor VERY slowly for two times (about 40 seconds).",
 	"SOUND_TOOLTIP": "Represents a sound sensor.",
 	"MOTOR_ARDU_TOOLTIP": "Represents a Bot'n Roll chassis motor.",
@@ -1066,9 +1132,8 @@
 	"PLAY_QUARTER": "quarter note",
 	"PLAY_EIGHTH": "eighth note",
 	"PLAY_SIXTEENTH": "sixteenth note",
-	"LED_ON": "turn LED on",
 	"LED": "LED",
-	"LCD": "LCD",
+	"LED_ON": "turn LED on",
 	"LED_OFF": "turn LED off",
 	"SENSOR_GESTURE": "gesture",
 	"SENSOR_GESTURE_TOOLTIP": "Is the system in the selected state?",
@@ -1165,9 +1230,14 @@
 	"SAY": "say",
 =======
 	"NAO_GETLANGUAGE": "get language",
+<<<<<<< HEAD
 	"NAO_SETLANGUAGE": "set language",
 	"NAO_SAY": "say",
 >>>>>>> #745 added base Uno files, configuration draft
+=======
+	"SETLANGUAGE": "set language",
+	"SAY": "say",
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 	"NAO_BLINK": "blink",
 	"NAO_LED": "LED",
 	"NAO_RANDOMEYES": "random eyes",
@@ -1196,27 +1266,27 @@
 	"NAO_POSTURE_CROUCH": "crouch",
 	"NAO_FRAME_TORSO": "torso",
 	"NAO_FRAME_WORLD": "world",
-	"NAO_LANGUAGE_GERMAN": "Deutsch",
-	"NAO_LANGUAGE_ENGLISH": "English",
-	"NAO_LANGUAGE_FRENCH": "Français",
-	"NAO_LANGUAGE_JAPANESE": "Japanese",
-	"NAO_LANGUAGE_CHINESE": "Chinese",
-	"NAO_LANGUAGE_SPANISH": "Español",
-	"NAO_LANGUAGE_KOREAN": "Korean",
-	"NAO_LANGUAGE_ITALIAN": "Italiano",
-	"NAO_LANGUAGE_DUTCH": "Dutch",
-	"NAO_LANGUAGE_FINNISH": "Suomi",
-	"NAO_LANGUAGE_POLISH": "Polski",
-	"NAO_LANGUAGE_RUSSIAN": "Українська",
-	"NAO_LANGUAGE_TURKISH": "Türkçe",
-	"NAO_LANGUAGE_ARABIC": "Arabic",
-	"NAO_LANGUAGE_CZECH": "Czech",
-	"NAO_LANGUAGE_PORTUGUESE": "Português",
-	"NAO_LANGUAGE_BRAZILIAN": "Brazilian",
-	"NAO_LANGUAGE_SWEDISH": "Svensk",
-	"NAO_LANGUAGE_DANISH": "Dansk",
-	"NAO_LANGUAGE_NORWEGIAN": "Norsk",
-	"NAO_LANGUAGE_GREEK": "Greek",
+	"LANGUAGE_GERMAN": "German",
+	"LANGUAGE_ENGLISH": "English",
+	"LANGUAGE_FRENCH": "French",
+	"LANGUAGE_JAPANESE": "Japanese",
+	"LANGUAGE_CHINESE": "Chinese",
+	"LANGUAGE_SPANISH": "Spanish",
+	"LANGUAGE_KOREAN": "Korean",
+	"LANGUAGE_ITALIAN": "Italian",
+	"LANGUAGE_DUTCH": "Dutch",
+	"LANGUAGE_FINNISH": "Finnish",
+	"LANGUAGE_POLISH": "Polish",
+	"LANGUAGE_RUSSIAN": "Russian",
+	"LANGUAGE_TURKISH": "Turkish",
+	"LANGUAGE_ARABIC": "Arabic",
+	"LANGUAGE_CZECH": "Czech",
+	"LANGUAGE_PORTUGUESE": "Portuguese",
+	"LANGUAGE_BRAZILIAN": "Brazilian",
+	"LANGUAGE_SWEDISH": "Swedish",
+	"LANGUAGE_DANISH": "Danish",
+	"LANGUAGE_NORWEGIAN": "Norwegian",
+	"LANGUAGE_GREEK": "Greek",
 	"NAO_INTENSITY": "intensity",
 	"SLOT_FRONT": "front",
 	"SLOT_MIDDLE": "middle",
@@ -1267,6 +1337,7 @@
 	"NAO_RELATIVE": "relative",
 	"NAO_FILENAME": "filename",
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"VOICE_SPEED": "voice speed",
 	"VOICE_PITCH": "voice pitch",
 	"NAO_APPLYPOSTURE_TOOLTIP": "Robot will take the selected posture or position. Use the dropdown menu to choose one.",
@@ -1275,6 +1346,10 @@
 	"NAO_HAND_TOOLTIP": "Open or close a single hand (wrist) of the robot.",
 =======
 	"NAO_SHAPE": "voice shape %",
+=======
+	"VOICE_SPEED": "voice speed",
+	"VOICE_PITCH": "voice pitch",
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 	"NAO_MODE_TOOLTIP": "This block allows to move the robot in to three different modes. Active makes the robot activate all motors and go to a standing position. Rest makes the robotgo to a prone stance and deactivate all motors. In Sit also all motors will be deactivated and the robot will sit down.",
 	"NAO_APPLYPOSTURE_TOOLTIP": "Robot goes into the selected posture. Use the dropdown menu to choose between different stand, sit and lying positions.",
 	"NAO_STIFFNESS_TOOLTIP": "The stiffness of the selected body part of the robot is turned on or off. Be aware that releasing the leg motors while the robot is standing may result in downfall.",
@@ -1291,8 +1366,10 @@
 	"NAO_SETVOLUME_TOOLTIP": "Set the volume in a range from 0 to 100.",
 	"NAO_GETVOLUME_TOOLTIP": "Get current volume.",
 	"NAO_GETLANGUAGE_TOOLTIP": "Get the active language. This is the language the robot is currently using for Text to Speech and Voice recognition.",
+	"SETLANGUAGE_TOOLTIP": "Set the language.",
 	"NAO_SETLANGUAGE_TOOLTIP": "Set the language. Be aware that it is necessary to download the language pack before you can use it. For more information refer to the manual of your robot.",
-	"NAO_SAY_TOOLTIP": "The robot says the given text. It is also possible to enter special charaters. The robot will use the selected language to try and speak the entered text. Modify the speed (range: 50-400) and the shape of the voice (range: 50-200) with the input fields",
+	"SAY_TOOLTIP": "The robot says the given text. It is also possible to enter special charaters. The robot will use the selected language to try and speak the entered text.",
+	"SAY_PARAMETERS_TOOLTIP": "The robot says the given text. It is also possible to enter special charaters. The robot will use the selected language to try and speak the entered text. Modify the speed (range: 0-100) and the pitch of the voice (range: 0-100) with the input fields",
 	"NAO_PLAYFILE_TOOLTIP": "Plays a sound file from the robot. Enter the name of the file. The file needs to be transferred to the robot beforehand.",
 	"NAO_TAKEPICTURE_TOOLTIP": "Takes a picture and saves it on the robot. Access the robots file system to view the picture.",
 	"NAO_RECORDVIDEO_TOOLTIP": "Records a video and saves it on the robot. Access the robots file system to view the video.",
@@ -1454,8 +1531,8 @@
 	"MODE_PULSE_LOW": "pulse time LOW",
 	"MODE_PULSE_HIGH": "pulse time HIGH",
 	"TEXT_COMMENT_TOOLTIP": "Write a comment to your code here, to make it easier for you and others to read and understand your code. It will also generate an inline comment in the generated source code",
-	"MENU_ROBOT_STOP_HINT_EV3": "Press <span class='typcn typcn-media-stop'></span>+<span class='typcn typcn-arrow-sorted-down'></span>on the robot to abort the program!",
-	"MENU_ROBOT_STOP_HINT_NXT": "Press <span class='typcn typcn-media-cancel'></span>on the robot to abort the program!",
+	"MENU_ROBOT_STOP_HINT_EV3": "Press <span class='typcn typcn-media-stop'></span>+<span class='typcn typcn-arrow-sorted-down'></span> buttons on the robot to abort the program!",
+	"MENU_ROBOT_STOP_HINT_NXT": "Press <span class='typcn typcn-media-cancel'></span> button on the robot to abort the program!",
 	"INFO_DOCUMENTATION_HINT": "Document your program here ...",
 	"INFO_TAGS": "Tags",
 	"SENSOR_IRSEEKER_GETSAMPLE_TOOLTIP": "Gets the position of an infrared beacon.",
@@ -1624,6 +1701,8 @@
 =======
 =======
 	"LEFT": "left",
+	"ORA_ROBOT_PUSH_RUN_CALLIOPE2016": "Your program »$« is downloaded to Calliope, press the reset button to start it!",
+	"ORA_ROBOT_PUSH_RUN_NXT": "Your program »$« is downloaded to the NXT, start it on the robot!",
 	"OUTPUT": "output",
 	"INPUT": "input",
 	"MOTION_SENSOR": "motion sensor",
@@ -1634,11 +1713,31 @@
 	"HUMIDITY": "humidity",
 	"AND": "and",
 	"STEP_MOTOR": "step motor",
+<<<<<<< HEAD
 	"SENSOR_MOISTURE": "moisture sensor"
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+=======
+=======
+=======
+=======
+=======
+=======
+	"SENSOR_MOISTURE": "moisture sensor",
+	"MODE_MOISTURE": "moisture"
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 }

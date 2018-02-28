@@ -167,7 +167,7 @@ Blockly.Msg.DATATABLE_CREATED_BY = "Создатель";
 Blockly.Msg.DATATABLE_CREATED_ON = "Дата создания";
 Blockly.Msg.DATATABLE_PROGRAMS = "программы";
 Blockly.Msg.DATATABLE_PROGRAM_NAME = "Название программы";
-Blockly.Msg.DATATABLE_SHARED = "Предоставленный для общего доступа";
+Blockly.Msg.DATATABLE_SHARED = "Shared";  // untranslated
 Blockly.Msg.DATATABLE_SHARED_WITH = "Предоставить доступ";
 Blockly.Msg.DELETE_ALL_BLOCKS = "Удалить все блоки (%1)?";
 Blockly.Msg.DELETE_BLOCK = "Удалить блок";
@@ -244,9 +244,13 @@ Blockly.Msg.IF_TOOLTIP = "Checks the condition in »if«. If the condition is tr
 =======
 =======
 Blockly.Msg.HUMIDITY = "humidity";  // untranslated
+<<<<<<< HEAD
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.IF_TOOLTIP = "Проверяет увловие »если«. Если условие выполняется, выполняет действие в условном блоке.";
 >>>>>>> #745 added base Uno files, configuration draft
+=======
+Blockly.Msg.IF_TOOLTIP = "Checks the condition in »if«. If the condition is true, executes the »do« action.";  // untranslated
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 Blockly.Msg.IMAGE_GET_TOOLTIP = "Returns the chosen image.";  // untranslated
 Blockly.Msg.IMAGE_GET_TOOLTIP_ANGRY = "angry";  // untranslated
 Blockly.Msg.IMAGE_GET_TOOLTIP_ASLEEP = "asleep";  // untranslated
@@ -303,12 +307,22 @@ Blockly.Msg.INFRARED_TOOLTIP = "Представляет инфракрасны�
 Blockly.Msg.INLINE_INPUTS = "Вставки внутри";
 Blockly.Msg.INPUT = "input";  // untranslated
 Blockly.Msg.INTERNAL_PORT = "internal";  // untranslated
+<<<<<<< HEAD
 Blockly.Msg.IRSEEKER_TOOLTIP = "Represents a HiTechnic NXT IRSeeker V2 sensor.";  // untranslated
+=======
+Blockly.Msg.IRSEEKER_TOOLTIP = "Represents a HighTechnic NXT IRSeeker V2 sensor.";  // untranslated
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 Blockly.Msg.JOYSTICK_GETSAMPLE_TOOLTIP = "Gets the current reading of one of the axises of the joystick";  // untranslated
 Blockly.Msg.KEY_ISPRESSED_TOOLTIP = "Нажата ли выбранная кнопка?";
 <<<<<<< HEAD
+<<<<<<< HEAD
 Blockly.Msg.KEY_TOOLTIP = "Represents a button.";  // untranslated
+<<<<<<< HEAD
 Blockly.Msg.LANGUAGE = "language";  // untranslated
+=======
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 Blockly.Msg.LANGUAGE_ARABIC = "Arabic";  // untranslated
 Blockly.Msg.LANGUAGE_BRAZILIAN = "Brazilian";  // untranslated
 Blockly.Msg.LANGUAGE_CHINESE = "Chinese";  // untranslated
@@ -330,11 +344,14 @@ Blockly.Msg.LANGUAGE_RUSSIAN = "Russian";  // untranslated
 Blockly.Msg.LANGUAGE_SPANISH = "Spanish";  // untranslated
 Blockly.Msg.LANGUAGE_SWEDISH = "Swedish";  // untranslated
 Blockly.Msg.LANGUAGE_TURKISH = "Turkish";  // untranslated
+<<<<<<< HEAD
 Blockly.Msg.LCDI2C_TOOLTIP = "Represents an LCD I2C display.";  // untranslated
 Blockly.Msg.LCD_TOOLTIP = "Represents an LCD display.";  // untranslated
 =======
 Blockly.Msg.LCD = "LCD";  // untranslated
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 Blockly.Msg.LED = "LED";  // untranslated
 Blockly.Msg.LEDBAR = "LED Bar";  // untranslated
 Blockly.Msg.LEDBAR_SET_TOOLTIP = "Sets the specified LED [0-9] on the Grove LED Bar v2.0 by Seeed to the given brightness [0-8]. The LED Bar has to be connected to the A1 (right) Grove connector.";  // untranslated
@@ -461,7 +478,7 @@ Blockly.Msg.LOGIC_TERNARY_HELPURL = "https://ru.wikipedia.org/wiki/Тернар�
 Blockly.Msg.LOGIC_TERNARY_IF_FALSE = "если ложь";
 Blockly.Msg.LOGIC_TERNARY_IF_TRUE = "если истина";
 Blockly.Msg.LOGIC_TERNARY_TOOLTIP = "Проверяет условие выбора. Если условие истинно, возвращает первое значение, в противном случае возвращает второе значение.";
-Blockly.Msg.LOOP = "повторять пока";
+Blockly.Msg.LOOP = "repeat until";  // untranslated
 Blockly.Msg.LOOPFOREVER_TOOLTIP = "Бесконечно повторять действие.";
 Blockly.Msg.LOOP_FOREVER = "повторять бесконечно";
 Blockly.Msg.MATH_ADDITION_SYMBOL = "+";  // untranslated
@@ -561,7 +578,7 @@ Blockly.Msg.MENU_CREATE_LINK = "create program link ...";  // untranslated
 Blockly.Msg.MENU_DELETE_USER = "удалить пользователя ...";
 Blockly.Msg.MENU_EDIT = "редактировать";
 Blockly.Msg.MENU_EDIT_TOOLTIP = "редактировать";
-Blockly.Msg.MENU_EV3 = "Подготовка робота";
+Blockly.Msg.MENU_EV3 = "Robot preparation";  // untranslated
 Blockly.Msg.MENU_EXPERT = "Эксперт";
 Blockly.Msg.MENU_EXPORT_PROG = "Экспортировать программу";
 Blockly.Msg.MENU_FAQ = "Вопросы и ответы";
@@ -573,7 +590,7 @@ Blockly.Msg.MENU_HELP_TOOLTIP = "помощь";
 Blockly.Msg.MENU_IMPORT_PROG = "импортировать программу";
 Blockly.Msg.MENU_LANGUAGE = "языки";
 Blockly.Msg.MENU_LANGUAGE_TOOLTIP = "языки";
-Blockly.Msg.MENU_LIST = "список ...";
+Blockly.Msg.MENU_LIST = "list ...";  // untranslated
 Blockly.Msg.MENU_LIST_CONF = "мои конфигурации ...";
 Blockly.Msg.MENU_LIST_PROG = "мои программы ...";
 Blockly.Msg.MENU_LIST_PROG_EXAMPLES = "примеры программ ...";
@@ -582,7 +599,7 @@ Blockly.Msg.MENU_LOG_IN = "вход ...";
 Blockly.Msg.MENU_LOG_OUT = "выход";
 Blockly.Msg.MENU_MESSAGE_DOWNLOAD = "Ваша программа успешно загружена.";
 Blockly.Msg.MENU_NEW = "новый ...";
-Blockly.Msg.MENU_PROGRAMMING = "программирование с NEPO";
+Blockly.Msg.MENU_PROGRAMMING = "programming with NEPO";  // untranslated
 Blockly.Msg.MENU_PROPERTIES = "свойства";
 Blockly.Msg.MENU_RIGHT_CODE_TOOLTIP = "Open/close the source code view.";  // untranslated
 Blockly.Msg.MENU_RIGHT_HELP_TOOLTIP = "Open/close the help view.";  // untranslated
@@ -591,8 +608,8 @@ Blockly.Msg.MENU_RIGHT_SIM_TOOLTIP = "Open/close the simulation view.";  // untr
 Blockly.Msg.MENU_ROBOT = "робот";
 Blockly.Msg.MENU_ROBOT_STATE_INFO = "информация";
 Blockly.Msg.MENU_ROBOT_STATE_TOOLTIP = "информация о роботе";
-Blockly.Msg.MENU_ROBOT_STOP_HINT_EV3 = "Press <span class='typcn typcn-media-stop'></span>+<span class='typcn typcn-arrow-sorted-down'></span>on the robot to abort the program!";  // untranslated
-Blockly.Msg.MENU_ROBOT_STOP_HINT_NXT = "Press <span class='typcn typcn-media-cancel'></span>on the robot to abort the program!";  // untranslated
+Blockly.Msg.MENU_ROBOT_STOP_HINT_EV3 = "Press <span class='typcn typcn-media-stop'></span>+<span class='typcn typcn-arrow-sorted-down'></span> buttons on the robot to abort the program!";  // untranslated
+Blockly.Msg.MENU_ROBOT_STOP_HINT_NXT = "Press <span class='typcn typcn-media-cancel'></span> button on the robot to abort the program!";  // untranslated
 Blockly.Msg.MENU_ROBOT_TOOLTIP = "роботы";
 Blockly.Msg.MENU_SAVE = "сохранить";
 Blockly.Msg.MENU_SAVE_AS = "сохранить как ...";
@@ -668,9 +685,19 @@ Blockly.Msg.MODE_IDONE = "ID";  // untranslated
 Blockly.Msg.MODE_INFO = "information";  // untranslated
 Blockly.Msg.MODE_LIGHT = "свет";
 Blockly.Msg.MODE_MODULATED = "modulated";  // untranslated
+<<<<<<< HEAD
 Blockly.Msg.MODE_MOISTURE = "moisture";  // untranslated
+=======
+<<<<<<< HEAD
+=======
+Blockly.Msg.MODE_MOISTURE = "moisture";  // untranslated
+<<<<<<< HEAD
 Blockly.Msg.MODE_NAMEALL = "names (list)";  // untranslated
 Blockly.Msg.MODE_NAMEONE = "name";  // untranslated
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 Blockly.Msg.MODE_OBSTACLE = "препятствие";
 Blockly.Msg.MODE_OPEN = "open";  // untranslated
 Blockly.Msg.MODE_ORIENTATION = "orientation";  // untranslated
@@ -779,27 +806,6 @@ Blockly.Msg.NAO_JOINT_KNEEPITCH = "knee pitch";  // untranslated
 Blockly.Msg.NAO_JOINT_SHOULDERPITCH = "shoulder pitch";  // untranslated
 Blockly.Msg.NAO_JOINT_SHOULDERROLL = "shoulder roll";  // untranslated
 Blockly.Msg.NAO_JOINT_WRISTYAW = "wrist yaw";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_ARABIC = "Arabic";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_BRAZILIAN = "Brazilian";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_CHINESE = "Chinese";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_CZECH = "Czech";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_DANISH = "Dansk";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_DUTCH = "Dutch";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_ENGLISH = "English";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_FINNISH = "Suomi";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_FRENCH = "Français";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_GERMAN = "Deutsch";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_GREEK = "Greek";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_ITALIAN = "Italiano";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_JAPANESE = "Japanese";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_KOREAN = "Korean";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_NORWEGIAN = "Norsk";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_POLISH = "Polski";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_PORTUGUESE = "Português";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_RUSSIAN = "Українська";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_SPANISH = "Español";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_SWEDISH = "Svensk";  // untranslated
-Blockly.Msg.NAO_LANGUAGE_TURKISH = "Türkçe";  // untranslated
 Blockly.Msg.NAO_LEARNFACEOF = "learn face of";  // untranslated
 Blockly.Msg.NAO_LEARNFACE_TOOLTIP = "Learn and save a face under a given name in the vision recognition database on the robot.";  // untranslated
 Blockly.Msg.NAO_LED = "LED";  // untranslated
@@ -852,6 +858,7 @@ Blockly.Msg.NAO_RECORDVIDEO_TOOLTIP = "Records a video and saves it on the robot
 Blockly.Msg.NAO_RELATIVE = "relative";  // untranslated
 Blockly.Msg.NAO_RESOLUTION = "resolution";  // untranslated
 <<<<<<< HEAD
+<<<<<<< HEAD
 Blockly.Msg.NAO_SETINTENSITY_TOOLTIP = "Set the intensity of selected LED(s) in a range from 0 to 100. Ears, head and chest LEDs are available";  // untranslated
 Blockly.Msg.NAO_SETLANGUAGE_TOOLTIP = "Set the language. Be aware that it is necessary to download the language pack before you can use it. For more information refer to the manual of your robot.";  // untranslated
 Blockly.Msg.NAO_SETVOLUME_TOOLTIP = "Set the volume in a range from 0 to 100.";  // untranslated
@@ -860,11 +867,11 @@ Blockly.Msg.NAO_STIFFNESS_TOOLTIP = "The stiffness of the selected body part of 
 =======
 Blockly.Msg.NAO_SAY = "say";  // untranslated
 Blockly.Msg.NAO_SAY_TOOLTIP = "The robot says the given text. It is also possible to enter special charaters. The robot will use the selected language to try and speak the entered text. Modify the speed (range: 50-400) and the shape of the voice (range: 50-200) with the input fields";  // untranslated
+=======
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 Blockly.Msg.NAO_SETINTENSITY_TOOLTIP = "Set the intensity of a group of LEDs in a range from 0 to 100.";  // untranslated
-Blockly.Msg.NAO_SETLANGUAGE = "set language";  // untranslated
 Blockly.Msg.NAO_SETLANGUAGE_TOOLTIP = "Set the language. Be aware that it is necessary to download the language pack before you can use it. For more information refer to the manual of your robot.";  // untranslated
 Blockly.Msg.NAO_SETVOLUME_TOOLTIP = "Set the volume in a range from 0 to 100.";  // untranslated
-Blockly.Msg.NAO_SHAPE = "voice shape %";  // untranslated
 Blockly.Msg.NAO_STIFFNESS = "stiffness of";  // untranslated
 Blockly.Msg.NAO_STIFFNESS_TOOLTIP = "The stiffness of the selected body part of the robot is turned on or off. Be aware that releasing the leg motors while the robot is standing may result in downfall.";  // untranslated
 >>>>>>> #745 added base Uno files, configuration draft
@@ -906,7 +913,7 @@ Blockly.Msg.ORA_CONFIGURATION_GET_ALL_SUCCESS = "Конфигурации заг
 Blockly.Msg.ORA_CONFIGURATION_GET_ONE_ERROR_NOT_FOUND = "В базе данных невозможно найти конфигурацию робота.";
 Blockly.Msg.ORA_CONFIGURATION_GET_ONE_SUCCESS = "Конфигурации загружена";
 Blockly.Msg.ORA_CONFIGURATION_SAVE_ERROR = "Во время сохранения конфигурации робота произошла ошибка.";
-Blockly.Msg.ORA_CONFIGURATION_SAVE_ERROR_NOT_SAVED_TO_DB = "Во время сохранения конфигурации робота в базу данных произошла ошибка.";
+Blockly.Msg.ORA_CONFIGURATION_SAVE_ERROR_NOT_SAVED_TO_DB = "An error error has occurred while saving the configuration in the database.";  // untranslated
 Blockly.Msg.ORA_CONFIGURATION_SAVE_SUCCESS = "Конфигурации сохранена";
 Blockly.Msg.ORA_GALLERY_UPLOAD_ERROR = "Your program »$« couldn't be uploaded to the gallery, it seems as if it is already uploaded.";  // untranslated
 Blockly.Msg.ORA_GALLERY_UPLOAD_SUCCESS = "Your program »$« is now in the gallery!";  // untranslated
@@ -915,7 +922,7 @@ Blockly.Msg.ORA_LIKE_DELETE_SUCCESS = "You do not like program »$« anymore!"; 
 Blockly.Msg.ORA_LIKE_SAVE_ERROR_EXISTS = "You couldn't like program »$«. Maybe you have already liked it.";  // untranslated
 Blockly.Msg.ORA_LIKE_SAVE_SUCCESS = "You like program »$« now!";  // untranslated
 Blockly.Msg.ORA_OWNER_DOES_NOT_EXIST = "Обладатель не существует.";
-Blockly.Msg.ORA_PROGRAM_CONFIGURATION_NOT_COMPATIBLE = "Программа несовместима с конфигурацией.";
+Blockly.Msg.ORA_PROGRAM_CONFIGURATION_NOT_COMPATIBLE = "Program is not compatible with the configuration";  // untranslated
 Blockly.Msg.ORA_PROGRAM_DELETE_ERROR = "Во время удаления конфигурации робота произошла ошибка. Пожалуйста, попробуйте снова!";
 Blockly.Msg.ORA_PROGRAM_DELETE_SUCCESS = "Программа удалена";
 Blockly.Msg.ORA_PROGRAM_ERROR_ID_INVALID = "Название вашей программы уже используется системой. Пожалуйста, выберите другое имя и попробуйте еще раз!";
@@ -938,20 +945,22 @@ Blockly.Msg.ORA_ROBOT_FIRMWAREUPDATE_POSSIBLE = "Прошивка обновле
 Blockly.Msg.ORA_ROBOT_NOT_CONNECTED = "Робот не подключен. Проверьте, включен ли ваш робот, подключите его к серверу и введите пароль от робота в меню соединения. Если при этом у вас возникли проблемы, пожалуйста, посмотрите на наших страницах помощи.";
 Blockly.Msg.ORA_ROBOT_NOT_WAITING = "Робот не ждет чтобы выполнить команду.";
 Blockly.Msg.ORA_ROBOT_PUSH_RUN = "jar файл был загружен на робота";
+Blockly.Msg.ORA_ROBOT_PUSH_RUN_CALLIOPE2016 = "Your program »$« is downloaded to Calliope, press the reset button to start it!";  // untranslated
+Blockly.Msg.ORA_ROBOT_PUSH_RUN_NXT = "Your program »$« is downloaded to the NXT, start it on the robot!";  // untranslated
 Blockly.Msg.ORA_ROBOT_SET_SUCCESS = "Switched to robot system »$«!";  // untranslated
 Blockly.Msg.ORA_SERVER_ERROR = "Ошибка сервера";
 Blockly.Msg.ORA_TOKEN_SET_ERROR_NO_ROBOT_WAITING = "Проверьте, включен ли Ваш робот и подключен ли он к серверу.  Если при этом у вас возникли проблемы, пожалуйста, посмотрите на наших страницах помощи.";
 Blockly.Msg.ORA_TOKEN_SET_ERROR_WRONG_ROBOTTYPE = "Вы пытаетесь соединиься робота не того типа, который выбран в меню. Пожалуйста, переключите тип в меню робота и попытайтесь снова импортировать!";
 Blockly.Msg.ORA_TOKEN_SET_SUCCESS = "Ваш робот подключен к серверу.";
-Blockly.Msg.ORA_TOOLBOX_DELETE_ERROR = "Во время удаления панели инструментов произошла ошибка. Пожалуйста, попробуйте снова!";
-Blockly.Msg.ORA_TOOLBOX_DELETE_SUCCESS = "Панель инструментов удалена";
+Blockly.Msg.ORA_TOOLBOX_DELETE_ERROR = "An error has occurred while deleting the toolbox, please try it again!";  // untranslated
+Blockly.Msg.ORA_TOOLBOX_DELETE_SUCCESS = "Toolbox deleted";  // untranslated
 Blockly.Msg.ORA_TOOLBOX_ERROR_ID_INVALID = "Имя панели инструментов недействительно.";
-Blockly.Msg.ORA_TOOLBOX_GET_ALL_SUCCESS = "Панель инструментов загружена";
+Blockly.Msg.ORA_TOOLBOX_GET_ALL_SUCCESS = "Toolbox loaded";  // untranslated
 Blockly.Msg.ORA_TOOLBOX_GET_ONE_ERROR_NOT_FOUND = "Панель инструментов не найдена в базе данных.";
 Blockly.Msg.ORA_TOOLBOX_GET_ONE_SUCCESS = "Панель инструментов загружена";
 Blockly.Msg.ORA_TOOLBOX_SAVE_ERROR = "Во время сохранения панели инструментов произошла ошибка.";
-Blockly.Msg.ORA_TOOLBOX_SAVE_ERROR_NOT_SAVED_TO_DB = "Во время сохранения базы данных произошла ошибка.";
-Blockly.Msg.ORA_TOOLBOX_SAVE_SUCCESS = "Панель инструментов сохранена";
+Blockly.Msg.ORA_TOOLBOX_SAVE_ERROR_NOT_SAVED_TO_DB = "An error error has occurred while saving the configuration in the database.";  // untranslated
+Blockly.Msg.ORA_TOOLBOX_SAVE_SUCCESS = "Toolbox saved";  // untranslated
 Blockly.Msg.ORA_TOOLBOX_TRANSFORM_ERROR = "Transformation error?";  // untranslated
 Blockly.Msg.ORA_USER_ACTIVATION_INVALID_URL = "The link is not valid anymore. Please ask for resending your verification mail again";  // untranslated
 Blockly.Msg.ORA_USER_ACTIVATION_SENT_MAIL_FAIL = "Sorry, we cannot send a mail to you, please contact »roberta-zentrale@iais.fraunhofer.de«";  // untranslated
@@ -1002,7 +1011,7 @@ Blockly.Msg.PLAY_NOTE_TOOLTIP = "Plays a music note";  // untranslated
 Blockly.Msg.PLAY_QUARTER = "quarter note";  // untranslated
 Blockly.Msg.PLAY_SETVOLUME_TOOLTIP = "Устанавливает громкость.";
 Blockly.Msg.PLAY_SIXTEENTH = "sixteenth note";  // untranslated
-Blockly.Msg.PLAY_TONE = "тон";
+Blockly.Msg.PLAY_TONE = "tone";  // untranslated
 Blockly.Msg.PLAY_TONE_TOOLTIP = "Проигрывает тон.";
 Blockly.Msg.PLAY_TOOLTIP = "Represents a buzzer.";  // untranslated
 Blockly.Msg.PLAY_VOLUME = "громкость";
@@ -1023,7 +1032,7 @@ Blockly.Msg.POPUP_CONFIRM_DELETE_GROUP = "Do you really want to delete these gro
 Blockly.Msg.POPUP_CONFIRM_DELETE_PROGRAM = "Вы действительно хотите удалить программу?";
 Blockly.Msg.POPUP_CONFIRM_DELETE_USER_GROUP = "Do you really want to remove these users below from the current group?";  // untranslated
 Blockly.Msg.POPUP_CONFIRM_UPDATE_FIRMWARE = "Доступна новая версия прошивки для Вашего робота. Вы можете попробовать запустить программу со старой версией, но лучше обновить вашего робота сейчас! Вам просто нужно нажать кнопку »Обновить сейчас«.";
-Blockly.Msg.POPUP_CONTINUE = "продолжить в любом случае";
+Blockly.Msg.POPUP_CONTINUE = "continue anyway";  // untranslated
 Blockly.Msg.POPUP_DOWNLOAD = "Download your program to »$«";  // untranslated
 Blockly.Msg.POPUP_DOWNLOAD_CHECK = "Okay, I've changed the download folder of my browser permanently. Don't show this popup again and download my programs directly.";  // untranslated
 Blockly.Msg.POPUP_DOWNLOAD_SAVE = "Save";  // untranslated
@@ -1135,7 +1144,10 @@ Blockly.Msg.RFID_TOOLTIP = "Represents an RFID reader.";  // untranslated
 Blockly.Msg.RGBLED_TOOLTIP = "Represents an RGB LED.";  // untranslated
 Blockly.Msg.RIGHT = "right";  // untranslated
 Blockly.Msg.ROLL = "roll";  // untranslated
-Blockly.Msg.SEND_DATA = "данные, которые должны быть отосланы";
+Blockly.Msg.SAY = "say";  // untranslated
+Blockly.Msg.SAY_PARAMETERS_TOOLTIP = "The robot says the given text. It is also possible to enter special charaters. The robot will use the selected language to try and speak the entered text. Modify the speed (range: 0-100) and the pitch of the voice (range: 0-100) with the input fields";  // untranslated
+Blockly.Msg.SAY_TOOLTIP = "The robot says the given text. It is also possible to enter special charaters. The robot will use the selected language to try and speak the entered text.";  // untranslated
+Blockly.Msg.SEND_DATA = "data to send";  // untranslated
 Blockly.Msg.SENSOR_ACCELEROMETER = "accelerometer";  // untranslated
 Blockly.Msg.SENSOR_AMBIENTLIGHT = "ambientlight sensor";  // untranslated
 Blockly.Msg.SENSOR_ANY = "anyplace";  // untranslated
@@ -1256,9 +1268,14 @@ Blockly.Msg.SERVO_TOOLTIP = "Represents a servo motor.";  // untranslated
 >>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.SET = "установить";
 <<<<<<< HEAD
+<<<<<<< HEAD
 Blockly.Msg.SETLANGUAGE_TOOLTIP = "Set the language.";  // untranslated
 =======
 >>>>>>> #745 added base Uno files, configuration draft
+=======
+Blockly.Msg.SETLANGUAGE = "set language";  // untranslated
+Blockly.Msg.SETLANGUAGE_TOOLTIP = "Set the language.";  // untranslated
+>>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 Blockly.Msg.SET_LED = "turn LED";  // untranslated
 Blockly.Msg.SIDE_BRUSH_OFF = "Turn Side Brush Off";  // untranslated
 Blockly.Msg.SIDE_BRUSH_OFF_TOOLTIP = "Turn the side brush off.";  // untranslated
@@ -1440,7 +1457,7 @@ Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Vari
 Blockly.Msg.VARIABLES_SET_TOOLTIP = "Присваивает переменной значение вставки.";
 Blockly.Msg.VARIABLES_TITLE = "переменная";
 Blockly.Msg.VARIABLES_TYPE_ARRAY_BOOLEAN = "Список логических переменных";
-Blockly.Msg.VARIABLES_TYPE_ARRAY_COLOUR = "Список цветов";
+Blockly.Msg.VARIABLES_TYPE_ARRAY_COLOUR = "List Colour";  // untranslated
 Blockly.Msg.VARIABLES_TYPE_ARRAY_CONNECTION = "Список соединений";
 Blockly.Msg.VARIABLES_TYPE_ARRAY_IMAGE = "List Image";  // untranslated
 Blockly.Msg.VARIABLES_TYPE_ARRAY_NUMBER = "Список числе";
@@ -1452,6 +1469,8 @@ Blockly.Msg.VARIABLES_TYPE_IMAGE = "Image";  // untranslated
 Blockly.Msg.VARIABLES_TYPE_NUMBER = "Число";
 Blockly.Msg.VARIABLES_TYPE_STRING = "Строка";
 Blockly.Msg.VARIABLE_USED_BEFORE_DECLARATION = "The variable is used before declaration.";  // untranslated
+Blockly.Msg.VOICE_PITCH = "voice pitch";  // untranslated
+Blockly.Msg.VOICE_SPEED = "voice speed";  // untranslated
 Blockly.Msg.WAIT = "ждать, мс";
 Blockly.Msg.WAIT_FOR_TOOLTIP = "Ждет определенного значения показания датчика.";
 Blockly.Msg.WAIT_OR = "или ждать до";
