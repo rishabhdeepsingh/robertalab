@@ -40,7 +40,9 @@ public enum SensorPort implements ISensorPort {
     C16( "C16", "P2" ),
     C17( "C17", "P8" ),
     C18( "C18", "P20" ),
-    C19( "C19", "P19" );
+    C19( "C19", "P19" ),
+    TEST1( "Test1" ),
+    TEST2( "Test2" );
 
     private final String[] values;
 

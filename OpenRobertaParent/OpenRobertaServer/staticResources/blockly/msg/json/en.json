@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		"lastupdated": "2018-05-18 14:05:41.170660",
 =======
 =======
@@ -13,6 +14,8 @@
 >>>>>>> #756 implmented Arduino Configuration
 =======
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+=======
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
 <<<<<<< HEAD
 		"lastupdated": "2018-05-16 08:19:05.162911",
 =======
@@ -22,6 +25,8 @@
 >>>>>>> #756 implmented Arduino Configuration
 =======
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+=======
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
 <<<<<<< HEAD
 		"lastupdated": "2018-05-09 16:40:48.422142",
 =======
@@ -31,6 +36,8 @@
 >>>>>>> #756 implmented Arduino Configuration
 =======
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+=======
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
 <<<<<<< HEAD
 		"lastupdated": "2018-05-08 12:57:58.580718",
 =======
@@ -40,6 +47,8 @@
 >>>>>>> #756 implmented Arduino Configuration
 =======
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+=======
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
 <<<<<<< HEAD
 		"lastupdated": "2018-04-29 22:37:28.534024",
 =======
@@ -49,6 +58,8 @@
 >>>>>>> #756 implmented Arduino Configuration
 =======
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+=======
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
 <<<<<<< HEAD
 		"lastupdated": "2018-04-27 12:48:17.278433",
 =======
@@ -58,6 +69,8 @@
 >>>>>>> #756 implmented Arduino Configuration
 =======
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+=======
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
 <<<<<<< HEAD
 <<<<<<< 5a327f87939c03775f0e08c5971cf7bff8306a89
 		"lastupdated": "2018-04-23 17:56:23.957588",
@@ -71,6 +84,8 @@
 >>>>>>> #756 implmented Arduino Configuration
 =======
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+=======
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
 <<<<<<< HEAD
 		"lastupdated": "2018-04-23 17:56:23.957588",
 =======
@@ -80,6 +95,8 @@
 >>>>>>> #756 implmented Arduino Configuration
 =======
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+=======
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
 <<<<<<< HEAD
 		"lastupdated": "2018-04-23 09:35:21.008379",
 =======
@@ -89,6 +106,8 @@
 >>>>>>> #756 implmented Arduino Configuration
 =======
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+=======
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
 <<<<<<< HEAD
 		"lastupdated": "2018-04-03 12:19:42.464103",
 =======
@@ -98,6 +117,8 @@
 >>>>>>> #756 implmented Arduino Configuration
 =======
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+=======
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
 <<<<<<< HEAD
 		"lastupdated": "2018-03-21 16:54:50.204886",
 =======
@@ -107,6 +128,8 @@
 >>>>>>> #756 implmented Arduino Configuration
 =======
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+=======
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
 <<<<<<< HEAD
 		"lastupdated": "2018-03-14 17:18:07.865391",
 =======
@@ -220,17 +243,53 @@
 =======
 		"lastupdated": "2018-02-28 14:24:11.875979",
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+<<<<<<< HEAD
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+		"lastupdated": "2018-03-01 17:37:58.578657",
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
+>>>>>>> #755, #756 implemented moisture sensor, added test code generation for moisture, ultrasonic and light sensors
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
