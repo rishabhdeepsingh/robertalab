@@ -309,11 +309,7 @@ Blockly.Msg.INFRARED_TOOLTIP = "Representa el sensor d'infraroig.";
 Blockly.Msg.INLINE_INPUTS = "Entrades en línia";
 Blockly.Msg.INPUT = "input";  // untranslated
 Blockly.Msg.INTERNAL_PORT = "internal";  // untranslated
-<<<<<<< HEAD
 Blockly.Msg.IRSEEKER_TOOLTIP = "Represents a HiTechnic NXT IRSeeker V2 sensor.";  // untranslated
-=======
-Blockly.Msg.IRSEEKER_TOOLTIP = "Represents a HighTechnic NXT IRSeeker V2 sensor.";  // untranslated
->>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 Blockly.Msg.JOYSTICK_GETSAMPLE_TOOLTIP = "Gets the current reading of one of the axises of the joystick";  // untranslated
 Blockly.Msg.KEY_ISPRESSED_TOOLTIP = "Està premut el botó seleccionat?";
 <<<<<<< HEAD
@@ -688,6 +684,7 @@ Blockly.Msg.MODE_INFO = "information";  // untranslated
 Blockly.Msg.MODE_LIGHT = "llum";
 Blockly.Msg.MODE_MODULATED = "modulated";  // untranslated
 <<<<<<< HEAD
+<<<<<<< HEAD
 Blockly.Msg.MODE_MOISTURE = "moisture";  // untranslated
 =======
 <<<<<<< HEAD
@@ -700,6 +697,9 @@ Blockly.Msg.MODE_NAMEONE = "name";  // untranslated
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 >>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
+=======
+Blockly.Msg.MODE_MOISTURE = "moisture";  // untranslated
+>>>>>>> #755 added test names for the sensor blocks in program
 Blockly.Msg.MODE_OBSTACLE = "obstàcle";
 Blockly.Msg.MODE_OPEN = "obre";
 Blockly.Msg.MODE_ORIENTATION = "orientació";
