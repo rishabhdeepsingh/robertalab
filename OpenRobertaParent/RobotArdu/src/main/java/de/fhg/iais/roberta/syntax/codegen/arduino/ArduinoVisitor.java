@@ -239,11 +239,7 @@ public abstract class ArduinoVisitor extends RobotCppVisitor {
 
     @Override
     public Void visitRepeatStmt(RepeatStmt<Void> repeatStmt) {
-<<<<<<< HEAD
         boolean isWaitStmt = repeatStmt.getMode() == RepeatStmt.Mode.WAIT;// || repeatStmt.getMode() == RepeatStmt.Mode.FOREVER_ARDU;
-=======
-        boolean isWaitStmt = (repeatStmt.getMode() == RepeatStmt.Mode.WAIT) || (repeatStmt.getMode() == RepeatStmt.Mode.FOREVER_ARDU);
->>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
         switch ( repeatStmt.getMode() ) {
             case UNTIL:
             case WHILE:

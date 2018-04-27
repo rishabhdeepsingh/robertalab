@@ -14,7 +14,7 @@ import de.fhg.iais.roberta.visitors.arduino.ArduinoAstVisitor;
 /**
  * This visitor collects information for used actors and sensors in blockly program.
  *
- * @author eovchinnikova
+ * @author kcvejoski
  */
 public class UsedHardwareCollectorVisitor extends RobotUsedHardwareCollectorVisitor implements ArduinoAstVisitor<Void> {
 
@@ -25,30 +25,25 @@ public class UsedHardwareCollectorVisitor extends RobotUsedHardwareCollectorVisi
 
     @Override
     public Void visitLedOnAction(LedOnAction<Void> ledOnAction) {
+        // TODO Auto-generated method stub
         return null;
     }
 
     @Override
     public Void visitLedOffAction(LedOffAction<Void> ledOffAction) {
+        // TODO Auto-generated method stub
         return null;
     }
 
     @Override
     public Void visitExternalLedOnAction(ExternalLedOnAction<Void> externalLedOnAction) {
+        // TODO Auto-generated method stub
         return null;
     }
 
     @Override
     public Void visitExternalLedOffAction(ExternalLedOffAction<Void> externalLedOffAction) {
+        // TODO Auto-generated method stub
         return null;
     }
-<<<<<<< HEAD
-=======
-
-    @Override
-    public Void visitRgbColor(RgbColor<Void> rgbColor) {
-        return null;
-    }
-
->>>>>>> #745 added base Uno files, configuration draft
 }

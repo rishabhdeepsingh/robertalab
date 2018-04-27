@@ -6,7 +6,6 @@ goog.provide('Blockly.Msg.es');
 
 goog.require('Blockly.Msg');
 
-Blockly.Msg.ABOUT = "about";  // untranslated
 Blockly.Msg.ACCELERATION_TOOLTIP = "Obtiene el valor de acceleración en mili-gravedades";
 Blockly.Msg.ACCELEROMETER_ROTATION_TOOLTIP = "Obtiene la inclinación o la rotación en grados.";
 Blockly.Msg.ACTION_LCD = "LCD";  // untranslated
@@ -103,7 +102,7 @@ Blockly.Msg.CONFIGURATION_NO_PORT = "no port";  // untranslated
 Blockly.Msg.CONFIGURATION_PORT = "Port1";  // untranslated
 Blockly.Msg.CONFLIST_DELETE_ALL_TOOLTIP = "Haz clic aquí para borrar todos los programas seleccionados.";
 Blockly.Msg.CONFLIST_DELETE_TOOLTIP = "Haz clic aquí para borrar la configuración de tu robot.";
-Blockly.Msg.CONFLIST_LOAD_TOOLTIP = "Haz clic aquí para cargar la configuración de tu robot en el entorno de configuración. ";
+Blockly.Msg.CONFLIST_LOAD_TOOLTIP = "Haz clic aquí para cargar la configuración de tu robot en el entorno de configuración.";
 Blockly.Msg.CONNECTION_BOB3_RECEIVE_TOOLTIP = "Reads a message via the IR receiver. Only numbers can be received.";  // untranslated
 Blockly.Msg.CONNECTION_BOB3_SEND_TOOLTIP = "Sends a message of type number to another Bob3. Hold the Bob3's face to face!";  // untranslated
 Blockly.Msg.CONNECTION_CHECK = "¿está activa la conexión al robot  %1 ?";
@@ -237,23 +236,9 @@ Blockly.Msg.HINT_USER_EMAIL = "This is voluntary! However, some functions of the
 Blockly.Msg.HINT_USER_NAME = "Enter your real name here if you like. This is just for you, no one else will see it.";  // untranslated
 Blockly.Msg.HINT_USER_PASSWORT = "12345 is no secure password. Rather think of a safe combination of numbers and letters that you will not forget.";  // untranslated
 Blockly.Msg.HINT_USER_PASSWORT_CONFIRM = "Got it? Better make sure!";  // untranslated
-<<<<<<< HEAD
-<<<<<<< HEAD
 Blockly.Msg.HUMIDITY_TOOLTIP = "Represents a humidity sensor.";  // untranslated
 Blockly.Msg.IF_TOOLTIP = "Checks the condition in »if«. If the condition is true, executes the »do« action.";  // untranslated
 Blockly.Msg.IMAGE_GET_TOOLTIP = "Returns the chosen image.";  // untranslated
-=======
-=======
-Blockly.Msg.HUMIDITY = "humidity";  // untranslated
-<<<<<<< HEAD
->>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
-Blockly.Msg.IF_TOOLTIP = "Comprueba la condición en 'si'. Si la condición es verdadera, ejecuta la acción 'entonces'.";
-Blockly.Msg.IMAGE_GET_TOOLTIP = "Devuelve la imagen elegida.";
->>>>>>> #745 added base Uno files, configuration draft
-=======
-Blockly.Msg.IF_TOOLTIP = "Checks the condition in »if«. If the condition is true, executes the »do« action.";  // untranslated
-Blockly.Msg.IMAGE_GET_TOOLTIP = "Returns the chosen image.";  // untranslated
->>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 Blockly.Msg.IMAGE_GET_TOOLTIP_ANGRY = "enfadado";
 Blockly.Msg.IMAGE_GET_TOOLTIP_ASLEEP = "dormido";
 Blockly.Msg.IMAGE_GET_TOOLTIP_BUTTERFLY = "mariposa";
@@ -312,15 +297,7 @@ Blockly.Msg.INTERNAL_PORT = "internal";  // untranslated
 Blockly.Msg.IRSEEKER_TOOLTIP = "Represents a HiTechnic NXT IRSeeker V2 sensor.";  // untranslated
 Blockly.Msg.JOYSTICK_GETSAMPLE_TOOLTIP = "Gets the current reading of one of the axises of the joystick";  // untranslated
 Blockly.Msg.KEY_ISPRESSED_TOOLTIP = "¿Está pulsado el botón seleccionado?";
-<<<<<<< HEAD
-<<<<<<< HEAD
 Blockly.Msg.KEY_TOOLTIP = "Represents a button.";  // untranslated
-<<<<<<< HEAD
-Blockly.Msg.LANGUAGE = "language";  // untranslated
-=======
-=======
->>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
->>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 Blockly.Msg.LANGUAGE_ARABIC = "Arabic";  // untranslated
 Blockly.Msg.LANGUAGE_BRAZILIAN = "Brazilian";  // untranslated
 Blockly.Msg.LANGUAGE_CHINESE = "Chinese";  // untranslated
@@ -342,14 +319,8 @@ Blockly.Msg.LANGUAGE_RUSSIAN = "Russian";  // untranslated
 Blockly.Msg.LANGUAGE_SPANISH = "Spanish";  // untranslated
 Blockly.Msg.LANGUAGE_SWEDISH = "Swedish";  // untranslated
 Blockly.Msg.LANGUAGE_TURKISH = "Turkish";  // untranslated
-<<<<<<< HEAD
 Blockly.Msg.LCDI2C_TOOLTIP = "Represents an LCD I2C display.";  // untranslated
 Blockly.Msg.LCD_TOOLTIP = "Represents an LCD display.";  // untranslated
-=======
-Blockly.Msg.LCD = "LCD";  // untranslated
->>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
-=======
->>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 Blockly.Msg.LED = "LED";  // untranslated
 Blockly.Msg.LEDBAR = "LED Bar";  // untranslated
 Blockly.Msg.LEDBAR_SET_TOOLTIP = "Sets the specified LED [0-9] on the Grove LED Bar v2.0 by Seeed to the given brightness [0-8]. The LED Bar has to be connected to the A1 (right) Grove connector.";  // untranslated
@@ -678,28 +649,9 @@ Blockly.Msg.MODE_DEGREE = "grado";
 Blockly.Msg.MODE_DIGITAL = "digital";  // untranslated
 Blockly.Msg.MODE_DISTANCE = "distancia";
 Blockly.Msg.MODE_HUMIDITY = "humidity";  // untranslated
-Blockly.Msg.MODE_IDALL = "IDs (list)";  // untranslated
-Blockly.Msg.MODE_IDONE = "ID";  // untranslated
-Blockly.Msg.MODE_INFO = "information";  // untranslated
 Blockly.Msg.MODE_LIGHT = "luz";
 Blockly.Msg.MODE_MODULATED = "modulated";  // untranslated
-<<<<<<< HEAD
-<<<<<<< HEAD
 Blockly.Msg.MODE_MOISTURE = "moisture";  // untranslated
-=======
-<<<<<<< HEAD
-=======
-Blockly.Msg.MODE_MOISTURE = "moisture";  // untranslated
-<<<<<<< HEAD
-Blockly.Msg.MODE_NAMEALL = "names (list)";  // untranslated
-Blockly.Msg.MODE_NAMEONE = "name";  // untranslated
-=======
->>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
->>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
->>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
-=======
-Blockly.Msg.MODE_MOISTURE = "moisture";  // untranslated
->>>>>>> #755 added test names for the sensor blocks in program
 Blockly.Msg.MODE_OBSTACLE = "obstáculo";
 Blockly.Msg.MODE_OPEN = "abrir";
 Blockly.Msg.MODE_ORIENTATION = "orientación";
@@ -715,16 +667,8 @@ Blockly.Msg.MODE_SOUND = "sonido";
 Blockly.Msg.MODE_TEMPERATURE = "temperature";  // untranslated
 Blockly.Msg.MODE_UNMODULATED = "unmodulated";  // untranslated
 Blockly.Msg.MODE_VALUE = "value";  // untranslated
-<<<<<<< HEAD
-Blockly.Msg.MODE_WORD = "word";  // untranslated
-=======
-<<<<<<< HEAD
->>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.MOISTURE_TOOLTIP = "Represents a moisture sensor.";  // untranslated
 Blockly.Msg.MOTION_TOOLTIP = "Represents a motion sensor.";  // untranslated
-=======
-Blockly.Msg.MOTION_SENSOR = "motion sensor";  // untranslated
->>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.MOTOR = "motor";
 Blockly.Msg.MOTORDIFF_ON_FOR_TOOLTIP = "Pone en marcha el robot con una velocidad determinada y lo detiene después de la distancia indicada.";
 Blockly.Msg.MOTORDIFF_ON_TOOLTIP = "Pone en marcha el robot con una velocidad determinada.";
@@ -755,6 +699,7 @@ Blockly.Msg.MOTOR_PORT = "puerto de motor";
 Blockly.Msg.MOTOR_REGULATION = "regulación";
 Blockly.Msg.MOTOR_RIGHT = "derecho";
 Blockly.Msg.MOTOR_ROTATION = "rotación";
+Blockly.Msg.MOTOR_ROTATION_PER_MINUTE = "rpm";  // untranslated
 Blockly.Msg.MOTOR_ROTATION_REVERSE = "dirección de la rotación";
 Blockly.Msg.MOTOR_SETPOWER_TOOLTIP = "Establece la potencia de este motor.";
 Blockly.Msg.MOTOR_SIDE = "lado";
@@ -772,13 +717,15 @@ Blockly.Msg.NAO_ANIMATION_TOOLTIP = "Ejecutar la animación seleccionada";
 Blockly.Msg.NAO_ANSWER = "respuesta";
 Blockly.Msg.NAO_APPLYPOSTURE = "aplicar postura";
 Blockly.Msg.NAO_APPLYPOSTURE_TOOLTIP = "El robot asume la postura seleccionada.";
-Blockly.Msg.NAO_AUTONOMOUS = "turn autonomous behaviour";  // untranslated
-Blockly.Msg.NAO_AUTONOMOUS_TOOLTIP = "Turn the robots autonomous behaviour on or off. While 'on' the robot will react to sounds, move slightly from side to side and try to track faces. Turn it off if this behaviour interrupts your program.";  // untranslated
+Blockly.Msg.NAO_AUTONOMOUS = "autonomous life";  // untranslated
+Blockly.Msg.NAO_AUTONOMOUS_TOOLTIP = "Turn the robots autonomous life on or off. When it is turned on the robot will react to sounds and try to detect faces. Turn it off if this behaviour interrupts your programm.";  // untranslated
 Blockly.Msg.NAO_BLINK = "parpadear";
 Blockly.Msg.NAO_CAMERA = "cámera";
 Blockly.Msg.NAO_CAMERA_BOTTOM = "abajo";
 Blockly.Msg.NAO_CAMERA_TOP = "arriba";
-Blockly.Msg.NAO_FACE_GET_INFORMATION_TOOLTIP = "Returns additional information about the given detected in an array with following values: [XAngle, YAngle, XSize, YSize, Heading], please note that all values are given in camera angles.";  // untranslated
+Blockly.Msg.NAO_DIALOG_TOOLTIP = "El robot intenta reconocer la frase y responde en caso de conseguirlo";
+Blockly.Msg.NAO_FACE_GET_INFORMATION = "get information about recognized face";  // untranslated
+Blockly.Msg.NAO_FACE_GET_INFORMATION_TOOLTIP = "This block will return additional information about the given recognized face in the format on a 1-d array with following values: [XAngle, YAngle, XSize, YSize, Heading], please note that all values are given in camera angles.";  // untranslated
 Blockly.Msg.NAO_FILENAME = "nombre de archivo";
 Blockly.Msg.NAO_FORGETFACEOF = "olvidar cara de";
 Blockly.Msg.NAO_FORGETFACE_TOOLTIP = "Olvida una cara previamente guardada con nombre";
@@ -786,6 +733,7 @@ Blockly.Msg.NAO_FRAME = "marco";
 Blockly.Msg.NAO_FRAME_TORSO = "torso";
 Blockly.Msg.NAO_FRAME_WORLD = "mundo";
 Blockly.Msg.NAO_FSR = "force sensitive resistor";  // untranslated
+Blockly.Msg.NAO_GETLANGUAGE = "obtener idioma";
 Blockly.Msg.NAO_GETLANGUAGE_TOOLTIP = "obtener idioma activo";
 Blockly.Msg.NAO_GETVOLUME_TOOLTIP = "Obtener volumen";
 Blockly.Msg.NAO_GYROMETER = "gorómetro";
@@ -823,7 +771,12 @@ Blockly.Msg.NAO_LED_FOOT = "pie";
 Blockly.Msg.NAO_LED_HEAD = "cabeza";
 Blockly.Msg.NAO_LED_TOOLTIP = "Establece el color de un grupo de LEDs.";
 Blockly.Msg.NAO_LOOKAT = "mirar";
-Blockly.Msg.NAO_MARK_GET_INFORMATION_TOOLTIP = "Returns additional information about the given NAO mark in an array with following values: [XAngle, YAngle, XSize, YSize, Heading], please note that all values are given in camera angles.";  // untranslated
+Blockly.Msg.NAO_MARK_GET_INFORMATION = "get information about NAO mark";  // untranslated
+Blockly.Msg.NAO_MARK_GET_INFORMATION_TOOLTIP = "This block will return additional information about the given NAO mark in the format on a 1-d array with following values: [XAngle, YAngle, XSize, YSize, Heading], please note that all values are given in camera angles.";  // untranslated
+Blockly.Msg.NAO_MODE_ACTIVE = "activo";
+Blockly.Msg.NAO_MODE_REST = "descansar";
+Blockly.Msg.NAO_MODE_SIT = "sit";  // untranslated
+Blockly.Msg.NAO_MODE_TOOLTIP = "This block allows to move the robot in to three different modes. Active makes the robot activate all motors and go to a standing position. Rest makes the robotgo to a prone stance and deactivate all motors. In Sit also all motors will be deactivated and the robot will sit down.";  // untranslated
 Blockly.Msg.NAO_MOVE = "mover";
 Blockly.Msg.NAO_MOVEJOINT_TOOLTIP = "Mover una sola articulación.";
 Blockly.Msg.NAO_PART_ARM = "brazo";
@@ -838,36 +791,24 @@ Blockly.Msg.NAO_PLAYFILE_TOOLTIP = "Reproducir archivo de sonido del robot.";
 Blockly.Msg.NAO_PLAY_FILE = "reproducir archivo";
 Blockly.Msg.NAO_POINTAT = "señalar";
 Blockly.Msg.NAO_POINTLOOKAT_TOOLTIP = "El robot señala o mira a la posición indicada";
-Blockly.Msg.NAO_POSTURE_CROUCH = "crouch";  // untranslated
-Blockly.Msg.NAO_POSTURE_LYINGBACK = "lie back";  // untranslated
-Blockly.Msg.NAO_POSTURE_LYINGBELLY = "lie belly";  // untranslated
-Blockly.Msg.NAO_POSTURE_REST = "rest";  // untranslated
-Blockly.Msg.NAO_POSTURE_SIT = "sit";  // untranslated
-Blockly.Msg.NAO_POSTURE_SITRELAX = "sit relaxed";  // untranslated
-Blockly.Msg.NAO_POSTURE_STAND = "stand";  // untranslated
-Blockly.Msg.NAO_POSTURE_STANDINIT = "stand init";  // untranslated
-Blockly.Msg.NAO_POSTURE_STANDZERO = "stand zero";  // untranslated
+Blockly.Msg.NAO_POSTURE_CROUCH = "Crouch";  // untranslated
+Blockly.Msg.NAO_POSTURE_LYINGBACK = "LyingBack";  // untranslated
+Blockly.Msg.NAO_POSTURE_LYINGBELLY = "LyingBelly";  // untranslated
+Blockly.Msg.NAO_POSTURE_SITRELAX = "SitRelax";  // untranslated
+Blockly.Msg.NAO_POSTURE_STAND = "Stand";  // untranslated
+Blockly.Msg.NAO_POSTURE_STANDINIT = "StandInit";  // untranslated
+Blockly.Msg.NAO_POSTURE_STANDZERO = "StandZero";  // untranslated
 Blockly.Msg.NAO_QQVGA = "160*120";
 Blockly.Msg.NAO_QVGA = "320*240";
 Blockly.Msg.NAO_RANDOMEYES = "ojos al azar";
 Blockly.Msg.NAO_RANDOMEYES_TOOLTIP = "The color of the eyes is changed randomly for a specified amount of time entered in milliseconds.";  // untranslated
 Blockly.Msg.NAO_RASTA = "rasta";  // untranslated
 Blockly.Msg.NAO_RASTA_TOOLTIP = "The color of the eyes is changed between green, yellow and red for a specified amount of time entered in milliseconds.";  // untranslated
-<<<<<<< HEAD
-<<<<<<< HEAD
-Blockly.Msg.NAO_RECOGNIZEWORD = "speech recognizer of";  // untranslated
-Blockly.Msg.NAO_RECOGNIZEWORD_TOOLTIP = "Returns a word from the given list when recognized by NAO";  // untranslated
-=======
-Blockly.Msg.NAO_RECOGNIZEDWORD = "palabra reconocida";
-Blockly.Msg.NAO_RECOGNIZEDWORD_TOOLTIP = "Devuelve la última palabra que el robot ha reconocido.";
-=======
 Blockly.Msg.NAO_RECOGNIZEDWORD = "recognized word";  // untranslated
 Blockly.Msg.NAO_RECOGNIZEDWORD_TOOLTIP = "Returns the last word the robot recognized.";  // untranslated
->>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 Blockly.Msg.NAO_RECOGNIZEWORD = "recognize word from list";  // untranslated
 Blockly.Msg.NAO_RECOGNIZEWORDOR = "o palabra reconocida";
 Blockly.Msg.NAO_RECOGNIZEWORD_TOOLTIP = "Return a word from the given list when recognized by NAO";  // untranslated
->>>>>>> #745 added base Uno files, configuration draft
 Blockly.Msg.NAO_RECORDVIDEO = "grabar vídeo";
 Blockly.Msg.NAO_RECORDVIDEO_TOOLTIP = "Graba un vídeo y la guarda en el robot.";
 Blockly.Msg.NAO_RELATIVE = "relativo";
@@ -875,17 +816,8 @@ Blockly.Msg.NAO_RESOLUTION = "resolución";
 Blockly.Msg.NAO_SETINTENSITY_TOOLTIP = "Fijarla intensidad de un grupo de LEDs.";
 Blockly.Msg.NAO_SETLANGUAGE_TOOLTIP = "Fijar el idioma.";
 Blockly.Msg.NAO_SETVOLUME_TOOLTIP = "Fijar el volumen.";
-<<<<<<< HEAD
-<<<<<<< HEAD
-Blockly.Msg.NAO_STIFFNESS = "lock motors";  // untranslated
-Blockly.Msg.NAO_STIFFNESS_TOOLTIP = "The stiffness of the selected body part of the robot will be turned on or off. Be aware that releasing the leg motors while the robot is standing may result in robot collapsing.";  // untranslated
-=======
-Blockly.Msg.NAO_SHAPE = "voice shape %";  // untranslated
-=======
->>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 Blockly.Msg.NAO_STIFFNESS = "stiffness of";  // untranslated
 Blockly.Msg.NAO_STIFFNESS_TOOLTIP = "The stiffness of the selected body part of the robot is turned on or off. Be aware that releasing the leg motors while the robot is standing may result in downfall.";  // untranslated
->>>>>>> #745 added base Uno files, configuration draft
 Blockly.Msg.NAO_STOP = "stop movement";  // untranslated
 Blockly.Msg.NAO_STOP_TOOLTIP = "El robot para todo movimiento.";
 Blockly.Msg.NAO_TAI_CHI = "tai chi";
@@ -1001,12 +933,11 @@ Blockly.Msg.ORA_USER_TO_SHARE_SAME_AS_LOGIN_USER = "No puedes compartir un archi
 Blockly.Msg.ORA_USER_UPDATE_SUCCESS = "¡Tu contraseña se ha cambiada con éxito!";
 Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";  // untranslated
 Blockly.Msg.OUTPUT = "output";  // untranslated
+Blockly.Msg.PIN_GETSAMPLE_ANALOG_TOOLTIP = "Returns the value from the specified analog pin. The value is between 0 and 1023.";  // untranslated
+Blockly.Msg.PIN_GETSAMPLE_DIGITAL_TOOLTIP = "Returns the value from the specified digital pin. The value is either HIGH »1« or LOW »0«.";  // untranslated
+Blockly.Msg.PIN_GETSAMPLE_PULSEHIGH_TOOLTIP = "Returns the pulse HIGH on a pin in microseconds or -1 if no complete pulse was received within the timeout.";  // untranslated
+Blockly.Msg.PIN_GETSAMPLE_PULSELOW_TOOLTIP = "Returns the pulse LOW on a pin in microseconds or -1 if no complete pulse was received within the timeout.";  // untranslated
 Blockly.Msg.PIN_ISTOUCHED_TOOLTIP = "¿Se está tocando el pin?";
-Blockly.Msg.PIN_PULL = "pull";  // untranslated
-Blockly.Msg.PIN_PULL_DOWN = "down";  // untranslated
-Blockly.Msg.PIN_PULL_NONE = "none";  // untranslated
-Blockly.Msg.PIN_PULL_UP = "up";  // untranslated
-Blockly.Msg.PIN_SET_PULL_TOOLTIP = "Sets the pull of the chosen pin";  // untranslated
 Blockly.Msg.PIN_WRITE = "escribir";
 Blockly.Msg.PITCH = "pitch";  // untranslated
 Blockly.Msg.PLAY = "reproducir";
@@ -1083,11 +1014,7 @@ Blockly.Msg.POPUP_TOUR = "acer una visita virtual";
 Blockly.Msg.POPUP_USERNAME = "Nombre de usuario";
 Blockly.Msg.POPUP_USERNAME_LOGOFF = "No has iniciado sesión.";
 Blockly.Msg.POPUP_VALUE = "Valor";
-<<<<<<< HEAD
 Blockly.Msg.PORT_ANKLE = "ankle";  // untranslated
-=======
-<<<<<<< HEAD
->>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.PORT_BUMPER = "bumper";  // untranslated
 Blockly.Msg.PORT_ELBOW = "elbow";  // untranslated
 Blockly.Msg.PORT_HAND = "hand";  // untranslated
@@ -1097,9 +1024,6 @@ Blockly.Msg.PORT_KNEE = "knee";  // untranslated
 Blockly.Msg.PORT_SHOULDER = "schoulder";  // untranslated
 Blockly.Msg.PORT_WRIST = "wrist";  // untranslated
 Blockly.Msg.POTENTIOMETER_TOOLTIP = "Represents a potentiometer .";  // untranslated
-=======
-Blockly.Msg.POTENTIOMETER = "potentiometer";  // untranslated
->>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "permitir declaraciones";
 Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "con:";
 Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL = "https://es.wikipedia.org/wiki/Subrutina";
@@ -1135,17 +1059,13 @@ Blockly.Msg.PROGLIST_LOAD_TOOLTIP = "Click here to load your robot configuration
 Blockly.Msg.PROGLIST_SHARE_TOOLTIP = "Haz clic aquí para compartir el programa con un amigo.";
 Blockly.Msg.PROGLIST_SHARE_WITH_GALLERY = "¿Realmente quieres compartir este programa con todo el mundo?";
 Blockly.Msg.PROGLIST_SHARE_WITH_GALLERY_TOOLTIP = "Click here to upload your program to the gallery hence share it with all other users.";  // untranslated
-Blockly.Msg.PULSE = "pulse";  // untranslated
 Blockly.Msg.PULSE_HIGH = "pulse time HIGH";  // untranslated
 Blockly.Msg.PULSE_LOW = "pulse time LOW";  // untranslated
 Blockly.Msg.PULSE_TOOLTIP = "Represents a pulse sensor.";  // untranslated
 Blockly.Msg.RADIO_GET_RSSI_TOOLTIP = "Gets the RSSI of the last package.";  // untranslated
 Blockly.Msg.REDO = "Rehacer";
 Blockly.Msg.RELAY = "relay";  // untranslated
-<<<<<<< HEAD
 Blockly.Msg.RELAY_TOOLTIP = "Represents a relay.";  // untranslated
-=======
->>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.REMOVE_COMMENT = "Eliminar comentario";
 Blockly.Msg.RENAME_VARIABLE = "Renombrar la variable…";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "Renombrar todas las variables «%1» a:";
@@ -1153,6 +1073,7 @@ Blockly.Msg.RESEND_ACTIVATION = "resend verification email";  // untranslated
 Blockly.Msg.RETURN = "volver";
 Blockly.Msg.RFID_TOOLTIP = "Represents an RFID reader.";  // untranslated
 Blockly.Msg.RGBLED_TOOLTIP = "Represents an RGB LED.";  // untranslated
+Blockly.Msg.RGB_LED_TOOLTIP = "Turns the LED on or off and changes the color.";  // untranslated
 Blockly.Msg.RIGHT = "right";  // untranslated
 Blockly.Msg.ROLL = "roll";  // untranslated
 Blockly.Msg.SAY = "say";  // untranslated
@@ -1170,18 +1091,17 @@ Blockly.Msg.SENSOR_CODE = "code pad";  // untranslated
 Blockly.Msg.SENSOR_COLOUR = "sensor de color";
 Blockly.Msg.SENSOR_COMPASS = "sensor de brújula";
 Blockly.Msg.SENSOR_COMPASS_EV3 = "HT compass sensor";  // untranslated
-Blockly.Msg.SENSOR_DETECTFACE = "face detector";  // untranslated
+Blockly.Msg.SENSOR_DETECTFACE = "get last recognized face(s)";  // untranslated
 Blockly.Msg.SENSOR_DETECTFACE_GETSAMPLE_TOOLTIP = "Detect a face previously learned and saved.";  // untranslated
-Blockly.Msg.SENSOR_DETECTMARK = "NAO Mark sensor";  // untranslated
-Blockly.Msg.SENSOR_DETECTMARK_GETSAMPLE_TOOLTIP = "Returns one or an array of IDs (number) of the last detected NAO Mark(s). If no marks are detected, -1 or an array consisting of 1 element with value -1 is returned. For a list of NAO marks with corresponding numbers refer to the wiki.";  // untranslated
+Blockly.Msg.SENSOR_DETECTMARK = "get last detected NAO mark(s)";  // untranslated
+Blockly.Msg.SENSOR_DETECTMARK_GETSAMPLE_TOOLTIP = "Returns an array of IDs of last detected NAO marks. If no marks are detected, an array consisting of 1 element with value -1 is returned. For a list of NAO marks with corresponding numbers refer to the wiki.";  // untranslated
 Blockly.Msg.SENSOR_DROP = "drop sensor";  // untranslated
 Blockly.Msg.SENSOR_DROP_GETSAMPLE_TOOLTIP = "Gets the current reading from the drop sensor.";  // untranslated
-Blockly.Msg.SENSOR_DROP_OFF = "drop-off sensor";  // untranslated
-Blockly.Msg.SENSOR_ELECTRICCURRENT = "current sensor";  // untranslated
+Blockly.Msg.SENSOR_ELECTRICCURRENT = "electric current of";  // untranslated
 Blockly.Msg.SENSOR_ELECTRICCURRENT_GETSAMPLE_TOOLTIP = "Get the electric current from the motorboard in the selected joint.";  // untranslated
 Blockly.Msg.SENSOR_ENCODER = "encoder";
 Blockly.Msg.SENSOR_FLAME = "flame sensor";  // untranslated
-Blockly.Msg.SENSOR_FSR = "force-sensing resistor";  // untranslated
+Blockly.Msg.SENSOR_FSR = "fsr sensor";  // untranslated
 Blockly.Msg.SENSOR_FSR_GETSAMPLE_TOOLTIP = "Get the current reading from the force sensitive resistor under the feet of the robot.";  // untranslated
 Blockly.Msg.SENSOR_GESTURE = "gesto";
 Blockly.Msg.SENSOR_GESTURE_ACTIVE = "¿activo?";
@@ -1223,20 +1143,13 @@ Blockly.Msg.SENSOR_KEY_UP = "arriba";
 Blockly.Msg.SENSOR_LIGHT = "sensor de luz";
 Blockly.Msg.SENSOR_MIC = "micófono";
 Blockly.Msg.SENSOR_MOISTURE = "moisture sensor";  // untranslated
-<<<<<<< HEAD
 Blockly.Msg.SENSOR_MOISTURE_GETSAMPLE_TOOLTIP = "Gets the current reading from the moisture sensor.";  // untranslated
 Blockly.Msg.SENSOR_MOTION = "motion sensor";  // untranslated
 Blockly.Msg.SENSOR_MOTION_GETSAMPLE_TOOLTIP = "Gets the current reading from the motion sensor.";  // untranslated
-=======
->>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.SENSOR_MS_TIMER = "en ms";
 Blockly.Msg.SENSOR_PIN = "pin";
 Blockly.Msg.SENSOR_PINTOUCH = "pin";  // untranslated
 Blockly.Msg.SENSOR_PINTOUCH_BOB3 = "arm";  // untranslated
-Blockly.Msg.SENSOR_PIN_ANALOG_GETSAMPLE_TOOLTIP = "Returns the value from the specified analog pin. The value is between 0 and 1023.";  // untranslated
-Blockly.Msg.SENSOR_PIN_DIGITAL_GETSAMPLE_TOOLTIP = "Returns the value from the specified digital pin. The value is either HIGH »1« or LOW »0«.";  // untranslated
-Blockly.Msg.SENSOR_PIN_PULSE_HIGH_GETSAMPLE_TOOLTIP = "Returns the pulse HIGH on a pin in microseconds or -1 if no complete pulse was received within the timeout.";  // untranslated
-Blockly.Msg.SENSOR_PIN_PULSE_LOW_GETSAMPLE_TOOLTIP = "Returns the pulse LOW on a pin in microseconds or -1 if no complete pulse was received within the timeout.";  // untranslated
 Blockly.Msg.SENSOR_POTENTIOMETER = "potentiometer";  // untranslated
 Blockly.Msg.SENSOR_POTENTIOMETER_GETSAMPLE_TOOLTIP = "Gets the current reading from the potentiometer.";  // untranslated
 Blockly.Msg.SENSOR_PRESSED = "(pulsado)";
@@ -1263,35 +1176,29 @@ Blockly.Msg.SENSOR_UNIT_AMPERE = "A";  // untranslated
 Blockly.Msg.SENSOR_UNIT_CM = "cm";  // untranslated
 Blockly.Msg.SENSOR_UNIT_DEGREE = "°";  // untranslated
 Blockly.Msg.SENSOR_UNIT_MILLIG = "milli-g";  // untranslated
-Blockly.Msg.SENSOR_UNIT_MM = "mm";  // untranslated
 Blockly.Msg.SENSOR_UNIT_MS = "ms";  // untranslated
 Blockly.Msg.SENSOR_UNIT_NEWTON = "N";  // untranslated
 Blockly.Msg.SENSOR_UNIT_OMEGA = "ω";  // untranslated
 Blockly.Msg.SENSOR_UNIT_PERCENT = "%";  // untranslated
 Blockly.Msg.SENSOR_UNIT_VOLT = "V";  // untranslated
 Blockly.Msg.SENSOR_VALUE = "valor";
-Blockly.Msg.SENSOR_WALL = "wall sensor";  // untranslated
 Blockly.Msg.SERVER_NOT_AVAILABLE = "Open Roberta Lab no está disponible en este momento. </br> Por favor, comprueba tu conexión a Internet e intenta recargar este sitio web. Si el problema persiste, no dudes en contactarnos vía e-mail:</br>roberta-zentrale@iais.fraunhofer.de";
 Blockly.Msg.SERVO_MOTOR = "servo motor";  // untranslated
-<<<<<<< HEAD
 Blockly.Msg.SERVO_TOOLTIP = "Represents a servo motor.";  // untranslated
-=======
->>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.SET = "set";
-<<<<<<< HEAD
-<<<<<<< HEAD
-Blockly.Msg.SETLANGUAGE_TOOLTIP = "Set the language.";  // untranslated
-=======
->>>>>>> #745 added base Uno files, configuration draft
-=======
 Blockly.Msg.SETLANGUAGE = "set language";  // untranslated
 Blockly.Msg.SETLANGUAGE_TOOLTIP = "Set the language.";  // untranslated
->>>>>>> #756 added hardware visitor that extracts information about used configuration blocks
 Blockly.Msg.SET_LED = "turn LED";  // untranslated
+<<<<<<< HEAD
 Blockly.Msg.SIDE_BRUSH_OFF = "Turn Side Brush Off";  // untranslated
 Blockly.Msg.SIDE_BRUSH_OFF_TOOLTIP = "Turn the side brush off.";  // untranslated
 Blockly.Msg.SIDE_BRUSH_STATUS = "Side Brush";  // untranslated
 Blockly.Msg.SIDE_BRUSH_TOOLTIP = "Turn on/off the side brush.";  // untranslated
+=======
+Blockly.Msg.SET_RELAY = "turn relay";  // untranslated
+Blockly.Msg.SET_RELAY_TOOLTIP = "Turns the relay on or off";  // untranslated
+Blockly.Msg.SET_RGB_LED = "turn RGB LED";  // untranslated
+>>>>>>> #756,#817 added toolboxes with all sensors and actors; #848 generated sensor code
 Blockly.Msg.SIM_BLOCK_NOT_SUPPORTED = "Desafortunadamente, no puedes utilizar este bloque en la simulación.";
 Blockly.Msg.SIM_CONFIGURATION_WARNING_SENSOR_MISSING = "¡Este sensor no está en la configuración! El comportamiento del programa en el robot real será diferente al esperado.";
 Blockly.Msg.SIM_CONFIGURATION_WARNING_WRONG_INFRARED_SENSOR_PORT = "¡El sensor de infrarojos no está conectado en la configuración! El comportamiento del programa en el robot real será diferente al esperado, ¡por favor comprueba a configuración del robot!";
@@ -1310,7 +1217,6 @@ Blockly.Msg.SLOT_RIGHT_PITCH = "right pitch";  // untranslated
 Blockly.Msg.SLOT_RIGHT_ROLL = "right roll";  // untranslated
 Blockly.Msg.SLOT_RIGHT_YAW = "right yaw";  // untranslated
 Blockly.Msg.SLOT_RIGHT_YAW_PITCH = "right yaw pitch";  // untranslated
-Blockly.Msg.SLOT_SIDE = "side";  // untranslated
 Blockly.Msg.SLOT_YAW = "yaw";  // untranslated
 Blockly.Msg.SOUND_GETSAMPLE_TOOLTIP = "Obtiene la lectura actual del sensor de sonido";
 Blockly.Msg.SOUND_TOOLTIP = "Representa un sensor de sonido";
@@ -1318,14 +1224,11 @@ Blockly.Msg.START = "Inicio del programa";
 Blockly.Msg.START_ACTIVITY = "actividad";
 Blockly.Msg.START_ACTIVITY_TOOLTIP = "Inicia una actividad adicional";
 Blockly.Msg.START_PROGRAM = "Inicio del programa";
-Blockly.Msg.START_PROGRAM_AUTOMOMOUSLIFE = "autonomous behaviour";  // untranslated
 Blockly.Msg.START_PROGRAM_DEBUG = "mostrar datos de sensor";
 Blockly.Msg.START_TOOLTIP = "Punto de inicio del programa principal";
-<<<<<<< HEAD
 Blockly.Msg.STEPMOTOR_TOOLTIP = "Represents a step motor.";  // untranslated
-=======
->>>>>>> #756 added base Uno files, main configuration block, most of the sensor/actor configuration blocks
 Blockly.Msg.STEP_MOTOR = "step motor";  // untranslated
+Blockly.Msg.STEP_MOTOR_ON_TOOLTIP = "Turns motor on with a provided speed in rpm and stops motor after execution of provided number of rotations.";  // untranslated
 Blockly.Msg.STRENGTH = "fuerza";
 Blockly.Msg.TAB_CONFIGURATION = "Configuración del robot";
 Blockly.Msg.TAB_PROGRAM = "Programa";
@@ -1393,7 +1296,6 @@ Blockly.Msg.TEXT_TRIM_OPERATOR_BOTH = "quitar espacios de ambos lados de";
 Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT = "quitar espacios iniciales de";
 Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "quitar espacios finales de";
 Blockly.Msg.TEXT_TRIM_TOOLTIP = "Devuelve una copia del texto sin los espacios de uno o ambos extremos.";
-Blockly.Msg.THETA = "theta";  // untranslated
 Blockly.Msg.TIMEOUT = "timeout";  // untranslated
 Blockly.Msg.TIMER_GETSAMPLE_TOOLTIP = "Obtiene la lectura actual del temporizador";
 Blockly.Msg.TIMER_RESET_TOOLTIP = "Reinicia el temporizador";
@@ -1494,7 +1396,6 @@ Blockly.Msg.Y = "y";
 Blockly.Msg.YAW = "yaw";  // untranslated
 Blockly.Msg.YES = "sí";
 Blockly.Msg.YOUNGER_THEN_14 = "I am younger than 16!";  // untranslated
-Blockly.Msg.Z = "z";  // untranslated
 Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 Blockly.Msg.SENSOR_PINTOUCH_PRESSED_GETSAMPLE_TOOLTIP = Blockly.Msg.PIN_ISTOUCHED_TOOLTIP;
 Blockly.Msg.LISTS_SET_INDEX_INPUT_IN_LIST = Blockly.Msg.LISTS_INLIST;

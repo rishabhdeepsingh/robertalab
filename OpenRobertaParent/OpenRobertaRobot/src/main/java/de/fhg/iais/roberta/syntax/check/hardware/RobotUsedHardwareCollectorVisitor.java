@@ -44,12 +44,16 @@ import de.fhg.iais.roberta.syntax.sensor.generic.AccelerometerSensor;
 import de.fhg.iais.roberta.syntax.sensor.generic.BrickSensor;
 import de.fhg.iais.roberta.syntax.sensor.generic.ColorSensor;
 import de.fhg.iais.roberta.syntax.sensor.generic.CompassSensor;
+import de.fhg.iais.roberta.syntax.sensor.generic.DropSensor;
 import de.fhg.iais.roberta.syntax.sensor.generic.EncoderSensor;
 import de.fhg.iais.roberta.syntax.sensor.generic.GyroSensor;
+import de.fhg.iais.roberta.syntax.sensor.generic.HumiditySensor;
 import de.fhg.iais.roberta.syntax.sensor.generic.IRSeekerSensor;
 import de.fhg.iais.roberta.syntax.sensor.generic.InfraredSensor;
 import de.fhg.iais.roberta.syntax.sensor.generic.LightSensor;
-import de.fhg.iais.roberta.syntax.sensor.generic.MoistureSensor;
+import de.fhg.iais.roberta.syntax.sensor.generic.MotionSensor;
+import de.fhg.iais.roberta.syntax.sensor.generic.PulseSensor;
+import de.fhg.iais.roberta.syntax.sensor.generic.RfidSensor;
 import de.fhg.iais.roberta.syntax.sensor.generic.SoundSensor;
 import de.fhg.iais.roberta.syntax.sensor.generic.TemperatureSensor;
 import de.fhg.iais.roberta.syntax.sensor.generic.TimerSensor;
@@ -183,8 +187,8 @@ public abstract class RobotUsedHardwareCollectorVisitor extends CheckVisitor imp
     }
 
     @Override
-    public Void visitMoistureSensor(MoistureSensor<Void> moistureSensor) {
-        this.usedSensors.add(new UsedSensor((ISensorPort) moistureSensor.getPort(), SensorType.MOISTURE, moistureSensor.getMode()));
+    public Void visitHumiditySensor(HumiditySensor<Void> humiditySensor) {
+        this.usedSensors.add(new UsedSensor((ISensorPort) humiditySensor.getPort(), SensorType.HUMIDITY, humiditySensor.getMode()));
         return null;
     }
 
@@ -195,8 +199,32 @@ public abstract class RobotUsedHardwareCollectorVisitor extends CheckVisitor imp
     }
 
     @Override
+    public Void visitMotionSensor(MotionSensor<Void> motionSensor) {
+        this.usedSensors.add(new UsedSensor((ISensorPort) motionSensor.getPort(), SensorType.MOTION, motionSensor.getMode()));
+        return null;
+    }
+
+    @Override
+    public Void visitDropSensor(DropSensor<Void> dropSensor) {
+        this.usedSensors.add(new UsedSensor((ISensorPort) dropSensor.getPort(), SensorType.DROP, dropSensor.getMode()));
+        return null;
+    }
+
+    @Override
     public Void visitAccelerometer(AccelerometerSensor<Void> accelerometerSensor) {
         this.usedSensors.add(new UsedSensor((ISensorPort) accelerometerSensor.getPort(), SensorType.ACCELEROMETER, accelerometerSensor.getMode()));
+        return null;
+    }
+
+    @Override
+    public Void visitPulseSensor(PulseSensor<Void> pulseSensor) {
+        this.usedSensors.add(new UsedSensor((ISensorPort) pulseSensor.getPort(), SensorType.PULSE, pulseSensor.getMode()));
+        return null;
+    }
+
+    @Override
+    public Void visitRfidSensor(RfidSensor<Void> rfidSensor) {
+        this.usedSensors.add(new UsedSensor((ISensorPort) rfidSensor.getPort(), SensorType.RFID, rfidSensor.getMode()));
         return null;
     }
 
