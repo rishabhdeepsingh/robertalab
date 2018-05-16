@@ -18,7 +18,7 @@
         <block type="mbedActions_write_to_pin" id="mn`ZM!*q4{%trv~~RjUy" intask="true">
             <mutation protocol="DIGITAL"></mutation>
             <field name="VALUETYPE">DIGITAL</field>
-            <field name="PIN">4</field>
+            <field name="PIN">A0</field>
             <value name="VALUE">
                 <block type="math_number" id="tO#12P:}0Q:?hF0!welA" intask="true">
                     <field name="NUM">1</field>

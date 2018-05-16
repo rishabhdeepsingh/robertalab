@@ -187,12 +187,9 @@
                                                             <field
                                                                 name="SENSORTYPE">TOUCH
                                                             </field>
-                                                            <field
-                                                                name="SENSORPORT">1
-                                                            </field>
+                                                            <field name="SENSORPORT">1</field>
                                                             <field name="SLOT" />
-                                                            <data>ev3
-                                                            </data>
+                                                            <data>ev3 </data>
                                                         </block>
                                                     </value>
                                                     <value name="B">
@@ -200,9 +197,7 @@
                                                             type="logic_boolean"
                                                             id="v-W`hjbDfimV[aH5M,ZL"
                                                             intask="true">
-                                                            <field
-                                                                name="BOOL">TRUE
-                                                            </field>
+                                                            <field name="BOOL">TRUE</field>
                                                         </block>
                                                     </value>
                                                 </block>
@@ -234,9 +229,7 @@
                                                             <field
                                                                 name="SENSORTYPE">TOUCH
                                                             </field>
-                                                            <field
-                                                                name="SENSORPORT">1
-                                                            </field>
+                                                            <field name="SENSORPORT">1</field>
                                                             <field name="SLOT" />
                                                             <data>ev3
                                                             </data>

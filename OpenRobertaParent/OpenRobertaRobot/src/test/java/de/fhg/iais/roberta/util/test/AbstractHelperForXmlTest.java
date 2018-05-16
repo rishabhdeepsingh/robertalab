@@ -79,7 +79,6 @@ public abstract class AbstractHelperForXmlTest {
      */
     public Jaxb2BlocklyProgramTransformer<Void> generateTransformer(String pathToProgramXml) throws Exception {
         BlockSet project = JaxbHelper.path2BlockSet(pathToProgramXml);
-
         Jaxb2BlocklyProgramTransformer<Void> transformer = new Jaxb2BlocklyProgramTransformer<>(this.robotFactory);
         transformer.transform(project);
         return transformer;

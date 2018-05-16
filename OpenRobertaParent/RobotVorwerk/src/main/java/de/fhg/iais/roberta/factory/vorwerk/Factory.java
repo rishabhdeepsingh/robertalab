@@ -1,6 +1,7 @@
 package de.fhg.iais.roberta.factory.vorwerk;
 
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Properties;
 
 import de.fhg.iais.roberta.components.Configuration;
@@ -24,6 +25,7 @@ public class Factory extends AbstractRobotFactory {
     protected ICompilerWorkflow robotCompilerWorkflow;
     protected Properties vorwerkProperties;
     protected String name;
+    Map<String, SensorPort> sensorToPorts = IRobotFactory.getPortsFromProperties(Util1.loadProperties("classpath:Vorwerkports.properties"));
 
     public Factory(RobertaProperties robertaProperties) {
         super(robertaProperties);
@@ -48,7 +50,7 @@ public class Factory extends AbstractRobotFactory {
 
     @Override
     public ISensorPort getSensorPort(String port) {
-        return IRobotFactory.getModeValue(port, SensorPort.class);
+        return getPortValue(port, this.sensorToPorts);
     }
 
     @Override
