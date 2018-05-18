@@ -1,11 +1,11 @@
 package org.panda_lang.pandomium.settings;
 
+import java.io.File;
+
 import org.panda_lang.pandomium.settings.categories.DependenciesSettings;
 import org.panda_lang.pandomium.settings.categories.LoaderSettings;
 import org.panda_lang.pandomium.settings.categories.NativesSettings;
 import org.panda_lang.pandomium.util.os.PandomiumOSType;
-
-import java.io.File;
 
 public class PandomiumSettingsBuilder {
 
@@ -20,7 +20,7 @@ public class PandomiumSettingsBuilder {
     }
 
     public PandomiumSettingsBuilder dependencyURL(PandomiumOSType os, String url) {
-        switch (os) {
+        switch ( os ) {
             case OS_WINDOWS:
                 dependenciesSettings.setWindowsModule(url);
                 break;
@@ -40,8 +40,8 @@ public class PandomiumSettingsBuilder {
     public PandomiumSettingsBuilder nativeDirectory(String nativeDirectory) {
         File file = new File(nativeDirectory);
 
-        if (!file.exists()) {
-            if (!file.mkdirs()) {
+        if ( !file.exists() ) {
+            if ( !file.mkdirs() ) {
                 throw new RuntimeException("Cannot create native directory");
             }
         }

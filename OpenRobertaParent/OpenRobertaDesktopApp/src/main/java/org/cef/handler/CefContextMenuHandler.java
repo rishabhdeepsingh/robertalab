@@ -18,9 +18,9 @@ public interface CefContextMenuHandler {
      * Called before a context menu is displayed.
      *
      * @param browser The corresponding browser.
-     * @param params  provides information about the context menu state.
-     * @param model   can be cleared to show no context menu or modified
-     *                to show a custom menu.
+     * @param params provides information about the context menu state.
+     * @param model can be cleared to show no context menu or modified
+     *        to show a custom menu.
      */
     public void onBeforeContextMenu(CefBrowser browser, CefContextMenuParams params, CefMenuModel model);
 
@@ -30,9 +30,9 @@ public interface CefContextMenuHandler {
      * cef_menu_id_t for the command ids that have default implementations. All
      * user-defined command ids should be between MENU_ID_USER_FIRST and
      *
-     * @param browser    The corresponding browser.
-     * @param params     Will have the same values as what was passed to onBeforeContextMenu().
-     * @param commandId  The id of the command.
+     * @param browser The corresponding browser.
+     * @param params Will have the same values as what was passed to onBeforeContextMenu().
+     * @param commandId The id of the command.
      * @param eventFlags A combination of event flags defined in EventFlags
      * @return true if the command was handled or false for the default implementation.
      */

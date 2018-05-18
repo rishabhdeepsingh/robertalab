@@ -15,11 +15,11 @@ public interface CefDragHandler {
     /**
      * Called when an external drag event enters the browser window.
      *
-     * @param browser  The corresponding browser.
+     * @param browser The corresponding browser.
      * @param dragData contains the drag event data
-     * @param mask     represents the type of drag operation. See DragOperationMask for possible values.
+     * @param mask represents the type of drag operation. See DragOperationMask for possible values.
      * @return false for default drag handling behavior or true to
-     * cancel the drag event.
+     *         cancel the drag event.
      */
     public boolean onDragEnter(CefBrowser browser, CefDragData dragData, int mask);
 

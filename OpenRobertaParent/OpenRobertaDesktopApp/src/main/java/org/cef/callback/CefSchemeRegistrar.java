@@ -19,9 +19,11 @@ public interface CefSchemeRegistrar {
      * at http://www.ietf.org/rfc/rfc1738.txt
      * <p>
      * In particular, the syntax for standard scheme URLs must be of the form:
+     * 
      * <pre>
      *  [scheme]://[username]:[password]@[host]:[port]/[url-path]
      * </pre>
+     * 
      * Standard scheme URLs must have a host component that is a fully qualified
      * domain name as defined in Section 3.5 of RFC 1034 [13] and Section 2.1 of
      * RFC 1123. These URLs will be canonicalized to "scheme://host/path" in the

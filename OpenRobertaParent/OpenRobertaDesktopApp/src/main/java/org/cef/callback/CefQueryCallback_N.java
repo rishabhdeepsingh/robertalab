@@ -14,7 +14,7 @@ class CefQueryCallback_N extends CefNativeAdapter implements CefQueryCallback {
     public void success(String response) {
         try {
             N_Success(response);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -23,7 +23,7 @@ class CefQueryCallback_N extends CefNativeAdapter implements CefQueryCallback {
     public void failure(int error_code, String error_message) {
         try {
             N_Failure(error_code, error_message);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }

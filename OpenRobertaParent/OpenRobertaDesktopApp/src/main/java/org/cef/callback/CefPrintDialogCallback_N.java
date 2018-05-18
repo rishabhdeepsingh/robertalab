@@ -15,7 +15,7 @@ class CefPrintDialogCallback_N extends CefNativeAdapter implements CefPrintDialo
     public void Continue(CefPrintSettings settings) {
         try {
             N_Continue(settings);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -24,7 +24,7 @@ class CefPrintDialogCallback_N extends CefNativeAdapter implements CefPrintDialo
     public void cancel() {
         try {
             N_Cancel();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }

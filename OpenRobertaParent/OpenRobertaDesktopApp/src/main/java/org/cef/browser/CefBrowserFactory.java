@@ -11,7 +11,7 @@ import org.cef.handler.CefClientHandler;
  */
 public class CefBrowserFactory {
     public static CefBrowser create(CefClientHandler clientHandler, String url, boolean isOffscreenRendered, boolean isTransparent, CefRequestContext context) {
-        if (isOffscreenRendered) {
+        if ( isOffscreenRendered ) {
             return new CefBrowserOsr(clientHandler, url, isTransparent, context);
         }
         return new CefBrowserWr(clientHandler, url, context);

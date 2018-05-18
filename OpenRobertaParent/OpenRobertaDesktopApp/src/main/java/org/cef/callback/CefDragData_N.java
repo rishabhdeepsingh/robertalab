@@ -11,6 +11,17 @@ class CefDragData_N extends CefDragData implements CefNative {
         super();
     }
 
+    public static CefDragData createNative() {
+        try {
+            return CefDragData_N.N_Create();
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+            return null;
+        }
+    }
+
+    private final native static CefDragData_N N_Create();
+
     @Override
     public void setNativeRef(String identifer, long nativeRef) {
         N_CefHandle = nativeRef;
@@ -21,20 +32,11 @@ class CefDragData_N extends CefDragData implements CefNative {
         return N_CefHandle;
     }
 
-    public static CefDragData createNative() {
-        try {
-            return CefDragData_N.N_Create();
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-            return null;
-        }
-    }
-
     @Override
     public CefDragData clone() {
         try {
             return N_Clone();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
             return null;
         }
@@ -44,7 +46,7 @@ class CefDragData_N extends CefDragData implements CefNative {
     public void dispose() {
         try {
             N_Dispose();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -53,7 +55,7 @@ class CefDragData_N extends CefDragData implements CefNative {
     public boolean isReadOnly() {
         try {
             return N_IsReadOnly();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
             return true;
         }
@@ -63,7 +65,7 @@ class CefDragData_N extends CefDragData implements CefNative {
     public boolean isLink() {
         try {
             return N_IsLink();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -73,7 +75,7 @@ class CefDragData_N extends CefDragData implements CefNative {
     public boolean isFragment() {
         try {
             return N_IsFragment();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -83,7 +85,7 @@ class CefDragData_N extends CefDragData implements CefNative {
     public boolean isFile() {
         try {
             return N_IsFile();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -93,67 +95,115 @@ class CefDragData_N extends CefDragData implements CefNative {
     public String getLinkURL() {
         try {
             return N_GetLinkURL();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
+    }
+
+    public void setLinkURL(String url) {
+        try {
+            N_SetLinkURL(url);
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
     }
 
     @Override
     public String getLinkTitle() {
         try {
             return N_GetLinkTitle();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
+    }
+
+    public void setLinkTitle(String title) {
+        try {
+            N_SetLinkTitle(title);
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
     }
 
     @Override
     public String getLinkMetadata() {
         try {
             return N_GetLinkMetadata();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
+    }
+
+    public void setLinkMetadata(String data) {
+        try {
+            N_SetLinkMetadata(data);
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
     }
 
     @Override
     public String getFragmentText() {
         try {
             return N_GetFragmentText();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
+    }
+
+    public void setFragmentText(String text) {
+        try {
+            N_SetFragmentText(text);
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
     }
 
     @Override
     public String getFragmentHtml() {
         try {
             return N_GetFragmentHtml();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
+    }
+
+    public void setFragmentHtml(String html) {
+        try {
+            N_SetFragmentHtml(html);
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
     }
 
     @Override
     public String getFragmentBaseURL() {
         try {
             return N_GetFragmentBaseURL();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
+    }
+
+    public void setFragmentBaseURL(String baseUrl) {
+        try {
+            N_SetFragmentBaseURL(baseUrl);
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
     }
 
     @Override
     public int getFileContents(OutputStream writer) {
         try {
             return N_GetFileContents(writer);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
@@ -163,7 +213,7 @@ class CefDragData_N extends CefDragData implements CefNative {
     public String getFileName() {
         try {
             return N_GetFileName();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -173,64 +223,16 @@ class CefDragData_N extends CefDragData implements CefNative {
     public boolean getFileNames(Vector<String> names) {
         try {
             return N_GetFileNames(names);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
     }
 
-    public void setLinkURL(String url) {
-        try {
-            N_SetLinkURL(url);
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-    }
-
-    public void setLinkTitle(String title) {
-        try {
-            N_SetLinkTitle(title);
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-    }
-
-    public void setLinkMetadata(String data) {
-        try {
-            N_SetLinkMetadata(data);
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-    }
-
-    public void setFragmentText(String text) {
-        try {
-            N_SetFragmentText(text);
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-    }
-
-    public void setFragmentHtml(String html) {
-        try {
-            N_SetFragmentHtml(html);
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-    }
-
-    public void setFragmentBaseURL(String baseUrl) {
-        try {
-            N_SetFragmentBaseURL(baseUrl);
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-    }
-
     public void resetFileContents() {
         try {
             N_ResetFileContents();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -238,12 +240,10 @@ class CefDragData_N extends CefDragData implements CefNative {
     public void addFile(String path, String displayName) {
         try {
             N_AddFile(path, displayName);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
-
-    private final native static CefDragData_N N_Create();
 
     private final native CefDragData_N N_Clone();
 
@@ -296,11 +296,33 @@ class CefDragData_N extends CefDragData implements CefNative {
         Vector<String> names = new Vector<>();
         getFileNames(names);
         String fileNamesStr = "{";
-        for (String s : names) {
+        for ( String s : names ) {
             fileNamesStr += s + ",";
         }
         fileNamesStr += "}";
 
-        return "CefDragData_N [isLink()=" + isLink() + ", isFragment()=" + isFragment() + ", isFile()=" + isFile() + ", getLinkURL()=" + getLinkURL() + ", getLinkTitle()=" + getLinkTitle() + ", getLinkMetadata()=" + getLinkMetadata() + ", getFragmentText()=" + getFragmentText() + ", getFragmentHtml()=" + getFragmentHtml() + ", getFragmentBaseURL()=" + getFragmentBaseURL() + ", getFileName()=" + getFileName() + ", getFileNames(vector)=" + fileNamesStr + "]";
+        return "CefDragData_N [isLink()="
+            + isLink()
+            + ", isFragment()="
+            + isFragment()
+            + ", isFile()="
+            + isFile()
+            + ", getLinkURL()="
+            + getLinkURL()
+            + ", getLinkTitle()="
+            + getLinkTitle()
+            + ", getLinkMetadata()="
+            + getLinkMetadata()
+            + ", getFragmentText()="
+            + getFragmentText()
+            + ", getFragmentHtml()="
+            + getFragmentHtml()
+            + ", getFragmentBaseURL()="
+            + getFragmentBaseURL()
+            + ", getFileName()="
+            + getFileName()
+            + ", getFileNames(vector)="
+            + fileNamesStr
+            + "]";
     }
 }

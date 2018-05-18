@@ -4,9 +4,9 @@
 
 package org.cef.handler;
 
-import org.cef.browser.CefBrowser;
-
 import java.awt.*;
+
+import org.cef.browser.CefBrowser;
 
 /**
  * An abstract adapter class for receiving windowed render events.

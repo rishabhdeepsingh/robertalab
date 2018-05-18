@@ -136,7 +136,7 @@ import org.cef.handler.CefMessageRouterHandler;
  * callback.success("my_response");
  * return true;
  * }
- * return false;  // Not handled.
+ * return false; // Not handled.
  * }
  * <p>
  * 6. Notice that the success callback is executed in JavaScript.
@@ -169,7 +169,7 @@ public abstract class CefMessageRouter {
 
     public static final CefMessageRouter create(CefMessageRouterConfig config, CefMessageRouterHandler handler) {
         CefMessageRouter router = CefMessageRouter_N.createNative(config);
-        if (router != null && handler != null) {
+        if ( router != null && handler != null ) {
             router.addHandler(handler, true);
         }
         return router;
@@ -192,7 +192,7 @@ public abstract class CefMessageRouter {
      * must either outlive the router or be removed before deletion.
      *
      * @param handler the according handler to be added
-     * @param first   if If set to true it will be added as the first handler
+     * @param first if If set to true it will be added as the first handler
      * @return true if the handler is added successfully
      */
     public abstract boolean addHandler(CefMessageRouterHandler handler, boolean first);

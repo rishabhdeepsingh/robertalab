@@ -15,7 +15,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public int getXCoord() {
         try {
             return N_GetXCoord();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
@@ -25,7 +25,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public int getYCoord() {
         try {
             return N_GetYCoord();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
@@ -35,7 +35,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public int getTypeFlags() {
         try {
             return N_GetTypeFlags();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
@@ -45,7 +45,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public String getLinkUrl() {
         try {
             return N_GetLinkUrl();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -55,7 +55,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public String getUnfilteredLinkUrl() {
         try {
             return N_GetUnfilteredLinkUrl();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -65,7 +65,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public String getSourceUrl() {
         try {
             return N_GetSourceUrl();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -75,7 +75,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public boolean hasImageContents() {
         try {
             return N_HasImageContents();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -85,7 +85,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public String getPageUrl() {
         try {
             return N_GetPageUrl();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -95,7 +95,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public String getFrameUrl() {
         try {
             return N_GetFrameUrl();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -105,7 +105,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public String getFrameCharset() {
         try {
             return N_GetFrameCharset();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -115,7 +115,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public MediaType getMediaType() {
         try {
             return N_GetMediaType();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -125,7 +125,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public int getMediaStateFlags() {
         try {
             return N_GetMediaStateFlags();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
@@ -135,7 +135,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public String getSelectionText() {
         try {
             return N_GetSelectionText();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -145,7 +145,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public String getMisspelledWord() {
         try {
             return N_GetMisspelledWord();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -155,7 +155,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public boolean getDictionarySuggestions(Vector<String> suggestions) {
         try {
             return N_GetDictionarySuggestions(suggestions);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -165,7 +165,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public boolean isEditable() {
         try {
             return N_IsEditable();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -175,7 +175,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public boolean isSpellCheckEnabled() {
         try {
             return N_IsSpellCheckEnabled();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -185,7 +185,7 @@ class CefContextMenuParams_N extends CefNativeAdapter implements CefContextMenuP
     public int getEditStateFlags() {
         try {
             return N_GetEditStateFlags();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;

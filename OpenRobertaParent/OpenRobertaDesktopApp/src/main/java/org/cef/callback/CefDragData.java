@@ -17,17 +17,17 @@ public abstract class CefDragData {
     CefDragData() {
     }
 
-    @Override
-    protected void finalize() throws Throwable {
-        dispose();
-        super.finalize();
-    }
-
     /**
      * Create a new CefDragData object.
      */
     public static final CefDragData create() {
         return CefDragData_N.createNative();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        dispose();
+        super.finalize();
     }
 
     /**
@@ -68,9 +68,23 @@ public abstract class CefDragData {
     public abstract String getLinkURL();
 
     /**
+     * Set the link URL that is being dragged.
+     *
+     * @param url The link URL to be set.
+     */
+    public abstract void setLinkURL(String url);
+
+    /**
      * Return the title associated with the link being dragged.
      */
     public abstract String getLinkTitle();
+
+    /**
+     * Set the title associated with the link being dragged.
+     *
+     * @param title The tile associated with the link.
+     */
+    public abstract void setLinkTitle(String title);
 
     /**
      * Return the metadata, if any, associated with the link being dragged.
@@ -78,9 +92,23 @@ public abstract class CefDragData {
     public abstract String getLinkMetadata();
 
     /**
+     * Set the metadata associated with the link being dragged.
+     *
+     * @param data The metadata associated with the link.
+     */
+    public abstract void setLinkMetadata(String data);
+
+    /**
      * Return the plain text fragment that is being dragged.
      */
     public abstract String getFragmentText();
+
+    /**
+     * Set the plain text fragment that is being dragged.
+     *
+     * @param text The plain text fragment to be set.
+     */
+    public abstract void setFragmentText(String text);
 
     /**
      * Return the text/html fragment that is being dragged.
@@ -88,10 +116,24 @@ public abstract class CefDragData {
     public abstract String getFragmentHtml();
 
     /**
+     * Set the text/html fragment that is being dragged.
+     *
+     * @param html The html fragment to be set.
+     */
+    public abstract void setFragmentHtml(String html);
+
+    /**
      * Return the base URL that the fragment came from. This value is used for
      * resolving relative URLs and may be empty.
      */
     public abstract String getFragmentBaseURL();
+
+    /**
+     * Set the base URL that the fragment came from.
+     *
+     * @param baseUrl The base URL to be set.
+     */
+    public abstract void setFragmentBaseURL(String baseUrl);
 
     /**
      * Write the contents of the file being dragged out of the web view into
@@ -101,7 +143,7 @@ public abstract class CefDragData {
      *
      * @param writer Writes the contents into this object.
      * @return The number of bytes sent to writer. If writer is NULL the size of
-     * the file contents in bytes is returned.
+     *         the file contents in bytes is returned.
      */
     public abstract int getFileContents(OutputStream writer);
 
@@ -117,48 +159,6 @@ public abstract class CefDragData {
     public abstract boolean getFileNames(Vector<String> names);
 
     /**
-     * Set the link URL that is being dragged.
-     *
-     * @param url The link URL to be set.
-     */
-    public abstract void setLinkURL(String url);
-
-    /**
-     * Set the title associated with the link being dragged.
-     *
-     * @param title The tile associated with the link.
-     */
-    public abstract void setLinkTitle(String title);
-
-    /**
-     * Set the metadata associated with the link being dragged.
-     *
-     * @param data The metadata associated with the link.
-     */
-    public abstract void setLinkMetadata(String data);
-
-    /**
-     * Set the plain text fragment that is being dragged.
-     *
-     * @param text The plain text fragment to be set.
-     */
-    public abstract void setFragmentText(String text);
-
-    /**
-     * Set the text/html fragment that is being dragged.
-     *
-     * @param html The html fragment to be set.
-     */
-    public abstract void setFragmentHtml(String html);
-
-    /**
-     * Set the base URL that the fragment came from.
-     *
-     * @param baseUrl The base URL to be set.
-     */
-    public abstract void setFragmentBaseURL(String baseUrl);
-
-    /**
      * Reset the file contents. You should do this before calling
      * CefBrowser.dragTargetDragEnter as the web view does not allow us to
      * drag in this kind of data.
@@ -168,13 +168,35 @@ public abstract class CefDragData {
     /**
      * Add a file that is being dragged into the webview.
      *
-     * @param path        The file and path to be set.
+     * @param path The file and path to be set.
      * @param displayName The name to be displayed.
      */
     public abstract void addFile(String path, String displayName);
 
     @Override
     public String toString() {
-        return "CefDragData [isReadOnly()=" + isReadOnly() + ", isLink()=" + isLink() + ", isFragment()=" + isFragment() + ", isFile()=" + isFile() + ", getLinkURL()=" + getLinkURL() + ", getLinkTitle()=" + getLinkTitle() + ", getLinkMetadata()=" + getLinkMetadata() + ", getFragmentText()=" + getFragmentText() + ", getFragmentHtml()=" + getFragmentHtml() + ", getFragmentBaseURL()=" + getFragmentBaseURL() + ", getFileName()=" + getFileName() + "]";
+        return "CefDragData [isReadOnly()="
+            + isReadOnly()
+            + ", isLink()="
+            + isLink()
+            + ", isFragment()="
+            + isFragment()
+            + ", isFile()="
+            + isFile()
+            + ", getLinkURL()="
+            + getLinkURL()
+            + ", getLinkTitle()="
+            + getLinkTitle()
+            + ", getLinkMetadata()="
+            + getLinkMetadata()
+            + ", getFragmentText()="
+            + getFragmentText()
+            + ", getFragmentHtml()="
+            + getFragmentHtml()
+            + ", getFragmentBaseURL()="
+            + getFragmentBaseURL()
+            + ", getFileName()="
+            + getFileName()
+            + "]";
     }
 }

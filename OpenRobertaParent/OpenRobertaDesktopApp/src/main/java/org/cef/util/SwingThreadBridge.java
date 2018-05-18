@@ -1,9 +1,10 @@
 package org.cef.util;
 
-import org.cef.CefThreadBridge;
+import java.lang.reflect.InvocationTargetException;
 
 import javax.swing.*;
-import java.lang.reflect.InvocationTargetException;
+
+import org.cef.CefThreadBridge;
 
 public class SwingThreadBridge implements CefThreadBridge {
 

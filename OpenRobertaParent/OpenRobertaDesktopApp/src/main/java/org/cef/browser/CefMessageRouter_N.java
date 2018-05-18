@@ -15,6 +15,20 @@ class CefMessageRouter_N extends CefMessageRouter implements CefNative {
         super(config);
     }
 
+    public static final CefMessageRouter createNative(CefMessageRouterConfig config) {
+        // keep a reference to the request and client objects.
+        CefMessageRouter_N result = new CefMessageRouter_N(config);
+        try {
+            result.N_Create(config);
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
+        if ( result.N_CefHandle == 0 ) {
+            return null;
+        }
+        return result;
+    }
+
     @Override
     public void setNativeRef(String identifer, long nativeRef) {
         N_CefHandle = nativeRef;
@@ -25,25 +39,11 @@ class CefMessageRouter_N extends CefMessageRouter implements CefNative {
         return N_CefHandle;
     }
 
-    public static final CefMessageRouter createNative(CefMessageRouterConfig config) {
-        // keep a reference to the request and client objects.
-        CefMessageRouter_N result = new CefMessageRouter_N(config);
-        try {
-            result.N_Create(config);
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-        if (result.N_CefHandle == 0) {
-            return null;
-        }
-        return result;
-    }
-
     @Override
     public void dispose() {
         try {
             N_Dispose();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -52,7 +52,7 @@ class CefMessageRouter_N extends CefMessageRouter implements CefNative {
     public boolean addHandler(CefMessageRouterHandler handler, boolean first) {
         try {
             return N_AddHandler(handler, first);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
             return false;
         }
@@ -62,7 +62,7 @@ class CefMessageRouter_N extends CefMessageRouter implements CefNative {
     public boolean removeHandler(CefMessageRouterHandler handler) {
         try {
             return N_RemoveHandler(handler);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
             return false;
         }
@@ -72,7 +72,7 @@ class CefMessageRouter_N extends CefMessageRouter implements CefNative {
     public void cancelPending(CefBrowser browser, CefMessageRouterHandler handler) {
         try {
             N_CancelPending(browser, handler);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -81,7 +81,7 @@ class CefMessageRouter_N extends CefMessageRouter implements CefNative {
     public int getPendingCount(CefBrowser browser, CefMessageRouterHandler handler) {
         try {
             return N_GetPendingCount(browser, handler);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
             return 0;
         }

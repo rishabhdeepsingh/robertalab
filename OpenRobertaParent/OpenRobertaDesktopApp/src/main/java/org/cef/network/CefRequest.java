@@ -126,16 +126,16 @@ public abstract class CefRequest {
         getHeaderMap(headerMap);
         Set<Entry<String, String>> entrySet = headerMap.entrySet();
         String mimeType = null;
-        for (Entry<String, String> entry : entrySet) {
+        for ( Entry<String, String> entry : entrySet ) {
             String key = entry.getKey();
             returnValue += "    " + key + "=" + entry.getValue() + "\n";
-            if (key.equals("Content-Type")) {
+            if ( key.equals("Content-Type") ) {
                 mimeType = entry.getValue();
             }
         }
 
         CefPostData pd = getPostData();
-        if (pd != null) {
+        if ( pd != null ) {
             returnValue += pd.toString(mimeType);
         }
 
@@ -146,23 +146,23 @@ public abstract class CefRequest {
      * Resource type for a request.
      */
     public enum ResourceType {
-        RT_MAIN_FRAME,    //!< Top level page.
-        RT_SUB_FRAME,     //!< Frame or iframe.
-        RT_STYLESHEET,    //!< CSS stylesheet.
-        RT_SCRIPT,        //!< External script.
-        RT_IMAGE,         //!< Image (jpg/gif/png/etc).
+        RT_MAIN_FRAME, //!< Top level page.
+        RT_SUB_FRAME, //!< Frame or iframe.
+        RT_STYLESHEET, //!< CSS stylesheet.
+        RT_SCRIPT, //!< External script.
+        RT_IMAGE, //!< Image (jpg/gif/png/etc).
         RT_FONT_RESOURCE, //!< Font.
-        RT_SUB_RESOURCE,  //!< Some other subresource. This is the default type if
+        RT_SUB_RESOURCE, //!< Some other subresource. This is the default type if
         //   the actual type is unknown.
-        RT_OBJECT,        //!< Object (or embed) tag for a plugin, or a resource
+        RT_OBJECT, //!< Object (or embed) tag for a plugin, or a resource
         //   that a plugin requested.
-        RT_MEDIA,         //!< Media resource.
-        RT_WORKER,        //!< Main resource of a dedicated worker.
+        RT_MEDIA, //!< Media resource.
+        RT_WORKER, //!< Main resource of a dedicated worker.
         RT_SHARED_WORKER, //!< Main resource of a shared worker.
-        RT_PREFETCH,      //!< Explicitly requested prefetch.
-        RT_FAVICON,       //!< Favicon.
-        RT_XHR,           //!< XMLHttpRequest.
-        RT_PING,          //!< A request for a <ping>
+        RT_PREFETCH, //!< Explicitly requested prefetch.
+        RT_FAVICON, //!< Favicon.
+        RT_XHR, //!< XMLHttpRequest.
+        RT_PING, //!< A request for a <ping>
         RT_SERVICE_WORKER //!< Main resource of a service worker.
     }
 
@@ -176,14 +176,14 @@ public abstract class CefRequest {
          * also the default value for requests like sub-resource loads that are not
          * navigations.
          */
-        TT_LINK(0),
+        TT_LINK( 0 ),
 
         /**
          * Source is some other "explicit" navigation action such as creating a new
          * browser or using the LoadURL function. This is also the default value
          * for navigations where the actual type is unknown.
          */
-        TT_EXPLICIT(1),
+        TT_EXPLICIT( 1 ),
 
         /**
          * Source is a subframe navigation. This is any content that is automatically
@@ -192,7 +192,7 @@ public abstract class CefRequest {
          * The user may not even realize the content in these pages is a separate
          * frame, so may not care about the URL.
          */
-        TT_AUTO_SUBFRAME(3),
+        TT_AUTO_SUBFRAME( 3 ),
 
         /**
          * Source is a subframe navigation explicitly requested by the user that will
@@ -201,21 +201,21 @@ public abstract class CefRequest {
          * the background because the user probably cares about the fact that this
          * link was loaded.
          */
-        TT_MANUAL_SUBFRAME(4),
+        TT_MANUAL_SUBFRAME( 4 ),
 
         /**
          * Source is a form submission by the user. NOTE: In some situations
          * submitting a form does not result in this transition type. This can happen
          * if the form uses a script to submit the contents.
          */
-        TT_FORM_SUBMIT(7),
+        TT_FORM_SUBMIT( 7 ),
 
         /**
          * Source is a "reload" of the page via the Reload function or by re-visiting
          * the same URL. NOTE: This is distinct from the concept of whether a
          * particular load uses "reload semantics" (i.e. bypasses cached data).
          */
-        TT_RELOAD(8);
+        TT_RELOAD( 8 );
 
         private int value;
 
@@ -291,6 +291,58 @@ public abstract class CefRequest {
         }
     }
 
+    /**
+     * Transition qualifiers.
+     * Any of the core values above can be augmented by one or more qualifiers.
+     * These qualifiers further define the transition.
+     */
+    public enum TransitionFlags {
+        /**
+         * Attempted to visit a URL but was blocked.
+         */
+        TT_BLOCKED_FLAG( 0x00800000 ),
+
+        /**
+         * Used the Forward or Back function to navigate among browsing history.
+         */
+        TT_FORWARD_BACK_FLAG( 0x01000000 ),
+
+        /**
+         * The beginning of a navigation chain.
+         */
+        TT_CHAIN_START_FLAG( 0x10000000 ),
+
+        /**
+         * The last transition in a redirect chain.
+         */
+        TT_CHAIN_END_FLAG( 0x20000000 ),
+
+        /**
+         * Redirects caused by JavaScript or a meta refresh tag on the page.
+         */
+        TT_CLIENT_REDIRECT_FLAG( 0x40000000 ),
+
+        /**
+         * Redirects sent from the server by HTTP headers.
+         */
+        TT_SERVER_REDIRECT_FLAG( 0x80000000 );
+
+        private final int flag;
+
+        private TransitionFlags(int flag) {
+            this.flag = flag;
+        }
+
+        /**
+         * Returns the integer representation of the enum.
+         *
+         * @return Integer representation of the enum.
+         */
+        public int getValue() {
+            return flag;
+        }
+    }
+
     public static final class CefUrlRequestFlags {
         /**
          * Default behavior.
@@ -329,57 +381,5 @@ public abstract class CefRequest {
          * originated in the browser process.
          */
         public static final int UR_FLAG_NO_RETRY_ON_5XX = 1 << 7;
-    }
-
-    /**
-     * Transition qualifiers.
-     * Any of the core values above can be augmented by one or more qualifiers.
-     * These qualifiers further define the transition.
-     */
-    public enum TransitionFlags {
-        /**
-         * Attempted to visit a URL but was blocked.
-         */
-        TT_BLOCKED_FLAG(0x00800000),
-
-        /**
-         * Used the Forward or Back function to navigate among browsing history.
-         */
-        TT_FORWARD_BACK_FLAG(0x01000000),
-
-        /**
-         * The beginning of a navigation chain.
-         */
-        TT_CHAIN_START_FLAG(0x10000000),
-
-        /**
-         * The last transition in a redirect chain.
-         */
-        TT_CHAIN_END_FLAG(0x20000000),
-
-        /**
-         * Redirects caused by JavaScript or a meta refresh tag on the page.
-         */
-        TT_CLIENT_REDIRECT_FLAG(0x40000000),
-
-        /**
-         * Redirects sent from the server by HTTP headers.
-         */
-        TT_SERVER_REDIRECT_FLAG(0x80000000);
-
-        private final int flag;
-
-        private TransitionFlags(int flag) {
-            this.flag = flag;
-        }
-
-        /**
-         * Returns the integer representation of the enum.
-         *
-         * @return Integer representation of the enum.
-         */
-        public int getValue() {
-            return flag;
-        }
     }
 }

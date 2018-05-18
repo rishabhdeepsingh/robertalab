@@ -284,6 +284,13 @@ public interface CefMenuModel {
      */
     boolean getAcceleratorAt(int index, IntRef key_code, BoolRef shift_pressed, BoolRef ctrl_pressed, BoolRef alt_pressed);
 
+    /**
+     * Supported menu item types.
+     */
+    public enum MenuItemType {
+        MENUITEMTYPE_NONE, MENUITEMTYPE_COMMAND, MENUITEMTYPE_CHECK, MENUITEMTYPE_RADIO, MENUITEMTYPE_SEPARATOR, MENUITEMTYPE_SUBMENU,
+    }
+
     public static final class MenuId {
         public static final int MENU_ID_BACK = 100;
         public static final int MENU_ID_FORWARD = 101;
@@ -319,12 +326,5 @@ public interface CefMenuModel {
         // defined in the tools/gritsettings/resource_ids file.
         public static final int MENU_ID_USER_FIRST = 26500;
         public static final int MENU_ID_USER_LAST = 28500;
-    }
-
-    /**
-     * Supported menu item types.
-     */
-    public enum MenuItemType {
-        MENUITEMTYPE_NONE, MENUITEMTYPE_COMMAND, MENUITEMTYPE_CHECK, MENUITEMTYPE_RADIO, MENUITEMTYPE_SEPARATOR, MENUITEMTYPE_SUBMENU,
     }
 }

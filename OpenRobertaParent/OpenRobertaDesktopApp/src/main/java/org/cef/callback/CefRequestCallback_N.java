@@ -13,7 +13,7 @@ class CefRequestCallback_N extends CefNativeAdapter implements CefRequestCallbac
     public void Continue(boolean allow) {
         try {
             N_Continue(allow);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -22,7 +22,7 @@ class CefRequestCallback_N extends CefNativeAdapter implements CefRequestCallbac
     public void Cancel() {
         try {
             N_Cancel();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }

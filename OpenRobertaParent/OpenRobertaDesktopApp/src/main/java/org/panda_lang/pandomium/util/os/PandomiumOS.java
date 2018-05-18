@@ -19,13 +19,11 @@ public class PandomiumOS {
     private static PandomiumOSType getOSType() {
         String os = System.getProperty("os.name").toLowerCase();
 
-        if (os.startsWith("windows")) {
+        if ( os.startsWith("windows") ) {
             return PandomiumOSType.OS_WINDOWS;
-        }
-        else if (os.startsWith("linux")) {
+        } else if ( os.startsWith("linux") ) {
             return PandomiumOSType.OS_LINUX;
-        }
-        else if (os.startsWith("mac")) {
+        } else if ( os.startsWith("mac") ) {
             return PandomiumOSType.OS_MAC;
         }
 

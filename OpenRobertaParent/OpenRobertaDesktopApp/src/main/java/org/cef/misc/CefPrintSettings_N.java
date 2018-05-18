@@ -4,10 +4,10 @@
 
 package org.cef.misc;
 
-import org.cef.callback.CefNative;
-
 import java.awt.*;
 import java.util.Vector;
+
+import org.cef.callback.CefNative;
 
 class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     // Used internally to store a pointer to the CEF object.
@@ -15,6 +15,19 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
 
     CefPrintSettings_N() {
         super();
+    }
+
+    public static final CefPrintSettings createNative() {
+        CefPrintSettings_N result = new CefPrintSettings_N();
+        try {
+            result.N_CefPrintSettings_CTOR();
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
+        if ( result.N_CefHandle == 0 ) {
+            return null;
+        }
+        return result;
     }
 
     @Override
@@ -27,24 +40,11 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
         return N_CefHandle;
     }
 
-    public static final CefPrintSettings createNative() {
-        CefPrintSettings_N result = new CefPrintSettings_N();
-        try {
-            result.N_CefPrintSettings_CTOR();
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-        if (result.N_CefHandle == 0) {
-            return null;
-        }
-        return result;
-    }
-
     @Override
     protected void finalize() throws Throwable {
         try {
             N_CefPrintSettings_DTOR();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         } finally {
             super.finalize();
@@ -55,7 +55,7 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     public boolean isValid() {
         try {
             return N_IsValid();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -65,7 +65,7 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     public boolean isReadOnly() {
         try {
             return N_IsReadOnly();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -75,7 +75,7 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     public CefPrintSettings copy() {
         try {
             return N_Copy();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -85,7 +85,7 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     public void setOrientation(boolean landscape) {
         try {
             N_SetOrientation(landscape);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -94,7 +94,7 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     public boolean isLandscape() {
         try {
             return N_IsLandscape();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -104,16 +104,7 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     public void setPrinterPrintableArea(Dimension physical_size_device_units, Rectangle printable_area_device_units, boolean landscape_needs_flip) {
         try {
             N_SetPrinterPrintableArea(physical_size_device_units, printable_area_device_units, landscape_needs_flip);
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-    }
-
-    @Override
-    public void setDeviceName(String name) {
-        try {
-            N_SetDeviceName(name);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -122,17 +113,17 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     public String getDeviceName() {
         try {
             return N_GetDeviceName();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
     }
 
     @Override
-    public void setDPI(int dpi) {
+    public void setDeviceName(String name) {
         try {
-            N_SetDPI(dpi);
-        } catch (UnsatisfiedLinkError ule) {
+            N_SetDeviceName(name);
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -141,17 +132,26 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     public int getDPI() {
         try {
             return N_GetDPI();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
     }
 
     @Override
+    public void setDPI(int dpi) {
+        try {
+            N_SetDPI(dpi);
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
+    }
+
+    @Override
     public void setPageRanges(Vector<CefPageRange> ranges) {
         try {
             N_SetPageRanges(ranges);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -160,7 +160,7 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     public int getPageRangesCount() {
         try {
             return N_GetPageRangesCount();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
@@ -170,16 +170,7 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     public void getPageRanges(Vector<CefPageRange> ranges) {
         try {
             N_GetPageRanges(ranges);
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-    }
-
-    @Override
-    public void setSelectionOnly(boolean selection_only) {
-        try {
-            N_SetSelectionOnly(selection_only);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -188,17 +179,26 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     public boolean isSelectionOnly() {
         try {
             return N_IsSelectionOnly();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
     }
 
     @Override
+    public void setSelectionOnly(boolean selection_only) {
+        try {
+            N_SetSelectionOnly(selection_only);
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
+    }
+
+    @Override
     public void setCollate(boolean collate) {
         try {
             N_SetCollate(collate);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -207,36 +207,27 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     public boolean willCollate() {
         try {
             return N_WillCollate();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
     }
 
     @Override
-    public void setColorModel(ColorModel model) {
-        try {
-            N_SetColorModel(model);
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-    }
-
-    @Override
     public ColorModel getColorModel() {
         try {
             return N_GetColorModel();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
     }
 
     @Override
-    public void setCopies(int copies) {
+    public void setColorModel(ColorModel model) {
         try {
-            N_SetCopies(copies);
-        } catch (UnsatisfiedLinkError ule) {
+            N_SetColorModel(model);
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -245,17 +236,17 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     public int getCopies() {
         try {
             return N_GetCopies();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
     }
 
     @Override
-    public void setDuplexMode(DuplexMode mode) {
+    public void setCopies(int copies) {
         try {
-            N_SetDuplexMode(mode);
-        } catch (UnsatisfiedLinkError ule) {
+            N_SetCopies(copies);
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -264,10 +255,19 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
     public DuplexMode getDuplexMode() {
         try {
             return N_GetDuplexMode();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public void setDuplexMode(DuplexMode mode) {
+        try {
+            N_SetDuplexMode(mode);
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
     }
 
     private final native void N_CefPrintSettings_CTOR();
@@ -282,7 +282,10 @@ class CefPrintSettings_N extends CefPrintSettings implements CefNative {
 
     private final native boolean N_IsLandscape();
 
-    private final native void N_SetPrinterPrintableArea(Dimension physical_size_device_units, Rectangle printable_area_device_units, boolean landscape_needs_flip);
+    private final native void N_SetPrinterPrintableArea(
+        Dimension physical_size_device_units,
+        Rectangle printable_area_device_units,
+        boolean landscape_needs_flip);
 
     private final native void N_SetDeviceName(String name);
 

@@ -1,11 +1,11 @@
 package org.panda_lang.pandomium.util;
 
+import java.io.*;
+
 import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 import org.apache.commons.compress.utils.IOUtils;
 import org.tukaani.xz.XZInputStream;
-
-import java.io.*;
 
 public class ArchiveUtils {
 
@@ -17,25 +17,25 @@ public class ArchiveUtils {
         TarArchiveInputStream tarStream = new TarArchiveInputStream(tarArchive);
         TarArchiveEntry entry;
 
-        while ((entry = tarStream.getNextTarEntry()) != null) {
+        while ( (entry = tarStream.getNextTarEntry()) != null ) {
             unpackTarArchiveEntry(tarStream, entry, outputDirectory);
         }
 
     }
 
     public static void unpackTar(TarArchiveInputStream tarStream, TarArchiveEntry[] entries, File outputDirectory) throws IOException {
-        for (TarArchiveEntry entry : entries) {
+        for ( TarArchiveEntry entry : entries ) {
             unpackTarArchiveEntry(tarStream, entry, outputDirectory);
         }
     }
 
     public static void unpackTarArchiveEntry(TarArchiveInputStream tarStream, TarArchiveEntry entry, File outputDirectory) throws IOException {
         String fileName = entry.getName().substring(entry.getName().indexOf("/"), entry.getName().length());
-        File outputFile = new File(outputDirectory,fileName);
+        File outputFile = new File(outputDirectory, fileName);
 
-        if (entry.isDirectory()) {
-            if (!outputFile.exists()) {
-                if (!outputFile.mkdirs()) {
+        if ( entry.isDirectory() ) {
+            if ( !outputFile.exists() ) {
+                if ( !outputFile.mkdirs() ) {
                     throw new IllegalStateException(String.format("Couldn't create directory %s.", outputFile.getAbsolutePath()));
                 }
             }

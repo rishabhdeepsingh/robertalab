@@ -29,8 +29,8 @@ public interface CefRequestHandler {
      * CefLoadHandler.onLoadError() will be called with an errorCode value of
      * ERR_ABORTED.
      *
-     * @param browser     The corresponding browser.
-     * @param request     The request itself. Can't be modified.
+     * @param browser The corresponding browser.
+     * @param request The request itself. Can't be modified.
      * @param is_redirect true if the request was redirected.
      * @return true to cancel or false to allow to proceed.
      */
@@ -39,13 +39,13 @@ public interface CefRequestHandler {
     /**
      * Called on the IO thread before a resource request is loaded.
      *
-     * @param browser  The corresponding browser.
-     * @param request  The request object may be modified.
+     * @param browser The corresponding browser.
+     * @param request The request object may be modified.
      * @param callback The request object may be modified.
      * @return To cancel the request return true otherwise return false.
      */
     boolean onBeforeResourceLoad(CefBrowser browser, CefRequest request
-            // CefRequestCallback callback
+    // CefRequestCallback callback
     );
 
     /**
@@ -63,11 +63,11 @@ public interface CefRequestHandler {
     /**
      * Called on the IO thread when a resource load is redirected.
      *
-     * @param browser  The corresponding browser.
-     * @param request  The request itself. Should not be modified in this callback.
+     * @param browser The corresponding browser.
+     * @param request The request itself. Should not be modified in this callback.
      * @param response The response that resulted in the redirect. Should not be
-     *                 modified in this callback.
-     * @param new_url  Contains the new URL and can be changed if desired.
+     *        modified in this callback.
+     * @param new_url Contains the new URL and can be changed if desired.
      */
     void onResourceRedirect(CefBrowser browser, CefRequest request, CefResponse response, StringRef new_url);
 
@@ -77,14 +77,14 @@ public interface CefRequestHandler {
      * when the authentication information is available.
      * Return false to cancel the request.
      *
-     * @param browser  The corresponding browser.
-     * @param isProxy  indicates whether the host is a proxy server.
-     * @param host     contains the hostname.
-     * @param port     contains the port number.
-     * @param realm    The realm of the request.
-     * @param scheme   The scheme of the request.
+     * @param browser The corresponding browser.
+     * @param isProxy indicates whether the host is a proxy server.
+     * @param host contains the hostname.
+     * @param port contains the port number.
+     * @param realm The realm of the request.
+     * @param scheme The scheme of the request.
      * @param callback call CefAuthCallback::Continue() when the authentication
-     *                 information is available.
+     *        information is available.
      * @return true to continue the request or false to cancel.
      */
     boolean getAuthCredentials(CefBrowser browser, boolean isProxy, String host, int port, String realm, String scheme, CefAuthCallback callback);
@@ -93,11 +93,11 @@ public interface CefRequestHandler {
      * Called on the IO thread when JavaScript requests a specific storage quota
      * size via the webkitStorageInfo.requestQuota function.
      *
-     * @param browser    The corresponding browser.
+     * @param browser The corresponding browser.
      * @param origin_url is the origin of the page making the request.
-     * @param new_size   is the requested quota size in bytes.
-     * @param callback   call CefRequestCallback::Continue() either in this method or
-     *                   at a later time to grant or deny the request.
+     * @param new_size is the requested quota size in bytes.
+     * @param callback call CefRequestCallback::Continue() either in this method or
+     *        at a later time to grant or deny the request.
      * @return true to handle the request or false to cancel the request.
      */
     boolean onQuotaRequest(CefBrowser browser, String origin_url, long new_size, CefRequestCallback callback);
@@ -120,11 +120,11 @@ public interface CefRequestHandler {
      * canceled automatically. If "ignore-certificate-errors" command-line switch
      * is set all invalid certificates will be accepted without calling this method.
      *
-     * @param browser     The corresponding browser.
-     * @param cert_error  Error code describing the error.
+     * @param browser The corresponding browser.
+     * @param cert_error Error code describing the error.
      * @param request_url The requesting URL.
-     * @param callback    call CefRequestCallback::Continue() to continue
-     *                    or cancel the request.
+     * @param callback call CefRequestCallback::Continue() to continue
+     *        or cancel the request.
      * @return true to handle the request or false to reject it.
      */
     boolean onCertificateError(CefBrowser browser, CefLoadHandler.ErrorCode cert_error, String request_url, CefRequestCallback callback);
@@ -132,7 +132,7 @@ public interface CefRequestHandler {
     /**
      * Called on the browser process UI thread when a plugin has crashed.
      *
-     * @param browser    The corresponding browser.
+     * @param browser The corresponding browser.
      * @param pluginPath the path of the plugin that crashed.
      */
     void onPluginCrashed(CefBrowser browser, String pluginPath);
@@ -148,8 +148,8 @@ public interface CefRequestHandler {
      * Process termination status values.
      */
     enum TerminationStatus {
-        TS_ABNORMAL_TERMINATION,  //!< Non-zero exit status.
-        TS_PROCESS_WAS_KILLED,    //!< SIGKILL or task manager kill.
-        TS_PROCESS_CRASHED        //!< Segmentation fault.
+        TS_ABNORMAL_TERMINATION, //!< Non-zero exit status.
+        TS_PROCESS_WAS_KILLED, //!< SIGKILL or task manager kill.
+        TS_PROCESS_CRASHED //!< Segmentation fault.
     }
 }

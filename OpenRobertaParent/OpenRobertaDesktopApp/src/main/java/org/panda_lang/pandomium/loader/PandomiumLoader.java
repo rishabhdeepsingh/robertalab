@@ -1,11 +1,11 @@
 package org.panda_lang.pandomium.loader;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import org.panda_lang.pandomium.Pandomium;
 import org.panda_lang.pandomium.settings.PandomiumSettings;
 import org.panda_lang.pandomium.settings.categories.LoaderSettings;
-
-import java.util.ArrayList;
-import java.util.Collection;
 
 public class PandomiumLoader {
 
@@ -26,12 +26,12 @@ public class PandomiumLoader {
         LoaderSettings loaderSettings = settings.getLoader();
 
         progressListeners.add((state, progress) -> {
-            if (state == PandomiumProgressListener.State.RUNNING) {
+            if ( state == PandomiumProgressListener.State.RUNNING ) {
                 Pandomium.getLogger().info("Progress: " + progress + "%");
             }
         });
 
-        if (!loaderSettings.isLoadAsync()) {
+        if ( !loaderSettings.isLoadAsync() ) {
             worker.run();
             return;
         }
@@ -46,7 +46,7 @@ public class PandomiumLoader {
     }
 
     protected void callListeners(PandomiumProgressListener.State state) {
-        for (PandomiumProgressListener listener : progressListeners) {
+        for ( PandomiumProgressListener listener : progressListeners ) {
             listener.onUpdate(state, progress);
         }
     }

@@ -1,8 +1,8 @@
 package org.panda_lang.pandomium.wrapper;
 
-import org.cef.browser.CefBrowser;
-
 import java.awt.*;
+
+import org.cef.browser.CefBrowser;
 
 public class PandomiumBrowser {
 

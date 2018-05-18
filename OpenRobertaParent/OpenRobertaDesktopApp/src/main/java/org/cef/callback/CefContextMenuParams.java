@@ -122,28 +122,28 @@ public interface CefContextMenuParams {
     int getEditStateFlags();
 
     /**
+     * Supported context menu media types.
+     */
+    public enum MediaType {
+        CM_MEDIATYPE_NONE, //!< No special node is in context.
+        CM_MEDIATYPE_IMAGE, //!< An image node is selected.
+        CM_MEDIATYPE_VIDEO, //!< A video node is selected.
+        CM_MEDIATYPE_AUDIO, //!< An audio node is selected.
+        CM_MEDIATYPE_FILE, //!< A file node is selected.
+        CM_MEDIATYPE_PLUGIN, //!< A plugin node is selected.
+    }
+
+    /**
      * Supported context menu type flags.
      */
     public static final class TypeFlags {
-        public final static int CM_TYPEFLAG_NONE = 0;      //!< No node is selected.
+        public final static int CM_TYPEFLAG_NONE = 0; //!< No node is selected.
         public final static int CM_TYPEFLAG_PAGE = 1 << 0; //!< The top page is selected.
         public final static int CM_TYPEFLAG_FRAME = 1 << 1; //!< A subframe page is selected.
         public final static int CM_TYPEFLAG_LINK = 1 << 2; //!< A link is selected.
         public final static int CM_TYPEFLAG_MEDIA = 1 << 3; //!< A media node is selected.
         public final static int CM_TYPEFLAG_SELECTION = 1 << 4; //!< There is a textual or mixed selection that is selected.
         public final static int CM_TYPEFLAG_EDITABLE = 1 << 5; //!< An editable element is selected.
-    }
-
-    /**
-     * Supported context menu media types.
-     */
-    public enum MediaType {
-        CM_MEDIATYPE_NONE,    //!< No special node is in context.
-        CM_MEDIATYPE_IMAGE,   //!< An image node is selected.
-        CM_MEDIATYPE_VIDEO,   //!< A video node is selected.
-        CM_MEDIATYPE_AUDIO,   //!< An audio node is selected.
-        CM_MEDIATYPE_FILE,    //!< A file node is selected.
-        CM_MEDIATYPE_PLUGIN,  //!< A plugin node is selected.
     }
 
     /**

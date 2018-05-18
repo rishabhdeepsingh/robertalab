@@ -37,7 +37,7 @@ public abstract class CefPostDataElement {
     public abstract void setToFile(String fileName);
 
     /**
-     * The post data element will represent bytes.  The bytes passed
+     * The post data element will represent bytes. The bytes passed
      * in will be copied.
      */
     public abstract void setToBytes(int size, byte[] bytes);
@@ -71,45 +71,40 @@ public abstract class CefPostDataElement {
     public String toString(String mimeType) {
         int bytesCnt = getBytesCount();
         byte[] bytes = null;
-        if (bytesCnt > 0) {
+        if ( bytesCnt > 0 ) {
             bytes = new byte[bytesCnt];
         }
 
         boolean asText = false;
-        if (mimeType != null) {
-            if (mimeType.startsWith("text/")) {
+        if ( mimeType != null ) {
+            if ( mimeType.startsWith("text/") ) {
                 asText = true;
-            }
-            else if (mimeType.startsWith("application/xml")) {
+            } else if ( mimeType.startsWith("application/xml") ) {
                 asText = true;
-            }
-            else if (mimeType.startsWith("application/xhtml")) {
+            } else if ( mimeType.startsWith("application/xhtml") ) {
                 asText = true;
-            }
-            else if (mimeType.startsWith("application/x-www-form-urlencoded")) {
+            } else if ( mimeType.startsWith("application/x-www-form-urlencoded") ) {
                 asText = true;
             }
         }
 
         String returnValue = "";
 
-        if (getType() == Type.PDE_TYPE_BYTES) {
+        if ( getType() == Type.PDE_TYPE_BYTES ) {
             int setBytes = getBytes(bytes.length, bytes);
             returnValue += "    Content-Length: " + bytesCnt + "\n";
-            if (asText) {
+            if ( asText ) {
                 returnValue += "\n    " + new String(bytes);
-            }
-            else {
-                for (int i = 0; i < setBytes; i++) {
-                    if (i % 40 == 0) {
+            } else {
+                for ( int i = 0; i < setBytes; i++ ) {
+                    if ( i % 40 == 0 ) {
                         returnValue += "\n    ";
                     }
                     returnValue += String.format("%02X", bytes[i]) + " ";
                 }
             }
             returnValue += "\n";
-        }
-        else if (getType() == Type.PDE_TYPE_FILE) {
+        } else if ( getType() == Type.PDE_TYPE_FILE ) {
             returnValue += "\n    Bytes of file: " + getFile() + "\n";
         }
         return returnValue;

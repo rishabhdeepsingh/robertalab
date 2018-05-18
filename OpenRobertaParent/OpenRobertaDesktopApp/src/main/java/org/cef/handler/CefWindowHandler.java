@@ -4,9 +4,9 @@
 
 package org.cef.handler;
 
-import org.cef.browser.CefBrowser;
-
 import java.awt.*;
+
+import org.cef.browser.CefBrowser;
 
 /**
  * Implement this interface to handle events if window rendering is enabled.
@@ -28,15 +28,15 @@ public interface CefWindowHandler {
      * MOUSE_MOVED, MOUSE_PRESSED, MOUSE_RELEASED and MOUSE_WHEEL for a
      * horizontal wheel movement.
      *
-     * @param browser  The browser generating the event.
-     * @param event    A mouse event like MouseEvent.MOUSE_MOVED.
-     * @param screenX  The absolute X position on the screen.
-     * @param screenY  The absolute Y position on the screen.
+     * @param browser The browser generating the event.
+     * @param event A mouse event like MouseEvent.MOUSE_MOVED.
+     * @param screenX The absolute X position on the screen.
+     * @param screenY The absolute Y position on the screen.
      * @param modifier The modifier keys down during event (e.g. Shift, Ctrl).
-     * @param button   An integer indicating which mouse button state changed.
-     *                 If parameter event is set to MouseEvent.MOUSE_WHEEL, the value of this
-     *                 parameter specifies the rotation indicator (negative value for left scroll
-     *                 and positive value for right scroll).
+     * @param button An integer indicating which mouse button state changed.
+     *        If parameter event is set to MouseEvent.MOUSE_WHEEL, the value of this
+     *        parameter specifies the rotation indicator (negative value for left scroll
+     *        and positive value for right scroll).
      */
     public void onMouseEvent(CefBrowser browser, int event, int screenX, int screenY, int modifier, int button);
 }

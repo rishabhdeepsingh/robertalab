@@ -19,7 +19,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public boolean isValid() {
         try {
             return N_IsValid();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -29,7 +29,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public boolean isInProgress() {
         try {
             return N_IsInProgress();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -39,7 +39,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public boolean isComplete() {
         try {
             return N_IsComplete();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -49,7 +49,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public boolean isCanceled() {
         try {
             return N_IsCanceled();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -59,7 +59,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public long getCurrentSpeed() {
         try {
             return N_GetCurrentSpeed();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
@@ -69,7 +69,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public int getPercentComplete() {
         try {
             return N_GetPercentComplete();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
@@ -79,7 +79,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public long getTotalBytes() {
         try {
             return N_GetTotalBytes();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
@@ -89,7 +89,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public long getReceivedBytes() {
         try {
             return N_GetReceivedBytes();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
@@ -99,7 +99,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public Date getStartTime() {
         try {
             return N_GetStartTime();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -109,7 +109,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public Date getEndTime() {
         try {
             return N_GetEndTime();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -119,7 +119,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public String getFullPath() {
         try {
             return N_GetFullPath();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -129,7 +129,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public int getId() {
         try {
             return N_GetId();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
@@ -139,7 +139,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public String getURL() {
         try {
             return N_GetURL();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -149,7 +149,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public String getSuggestedFileName() {
         try {
             return N_GetSuggestedFileName();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -159,7 +159,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public String getContentDisposition() {
         try {
             return N_GetContentDisposition();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -169,7 +169,7 @@ class CefDownloadItem_N extends CefNativeAdapter implements CefDownloadItem {
     public String getMimeType() {
         try {
             return N_GetMimeType();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;

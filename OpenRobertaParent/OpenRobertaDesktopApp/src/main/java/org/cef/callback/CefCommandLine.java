@@ -78,7 +78,7 @@ public interface CefCommandLine {
     /**
      * Add a switch with the specified value to the end of the command line.
      *
-     * @param name  name of the switch.
+     * @param name name of the switch.
      * @param value value for the switch.
      */
     public void appendSwitchWithValue(String name, String value);

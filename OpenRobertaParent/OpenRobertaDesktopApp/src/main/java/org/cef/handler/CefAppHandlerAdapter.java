@@ -23,20 +23,20 @@ public abstract class CefAppHandlerAdapter implements CefAppHandler {
 
     @Override
     public void onBeforeCommandLineProcessing(String process_type, CefCommandLine command_line) {
-        if (process_type.isEmpty() && args_ != null) {
+        if ( process_type.isEmpty() && args_ != null ) {
             // Forward switches and arguments from Java to Cef
             boolean parseSwitchesDone = false;
-            for (String arg : args_) {
-                if (parseSwitchesDone || arg.length() < 2) {
+            for ( String arg : args_ ) {
+                if ( parseSwitchesDone || arg.length() < 2 ) {
                     command_line.appendArgument(arg);
                     continue;
                 }
                 // Arguments with '--', '-' and, on Windows, '/' prefixes are considered switches.
                 int switchCnt = arg.startsWith("--") ? 2 : arg.startsWith("/") ? 1 : arg.startsWith("-") ? 1 : 0;
-                switch (switchCnt) {
+                switch ( switchCnt ) {
                     case 2:
                         // An argument of "--" will terminate switch parsing with all subsequent tokens
-                        if (arg.length() == 2) {
+                        if ( arg.length() == 2 ) {
                             parseSwitchesDone = true;
                             continue;
                         }
@@ -45,10 +45,9 @@ public abstract class CefAppHandlerAdapter implements CefAppHandler {
                         // Switches can optionally have a value specified using the '=' delimiter
                         // (e.g. "-switch=value").
                         String[] switchVals = arg.substring(switchCnt).split("=");
-                        if (switchVals.length == 2) {
+                        if ( switchVals.length == 2 ) {
                             command_line.appendSwitchWithValue(switchVals[0], switchVals[1]);
-                        }
-                        else {
+                        } else {
                             command_line.appendSwitch(switchVals[0]);
                         }
                         break;
@@ -90,7 +89,7 @@ public abstract class CefAppHandlerAdapter implements CefAppHandler {
 
     @Override
     public void onScheduleMessagePumpWork(long delay_ms) {
-        if (CefApp.getState() == CefAppState.TERMINATED) {
+        if ( CefApp.getState() == CefAppState.TERMINATED ) {
             CefApp.getLogger().info("Skipping sheduled message pump work [CefApp is terminated]");
             return;
         }
