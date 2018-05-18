@@ -4,15 +4,15 @@
 
 package org.cef.browser;
 
+import java.awt.*;
+import java.util.Vector;
+
 import org.cef.callback.CefRunFileDialogCallback;
 import org.cef.callback.CefStringVisitor;
 import org.cef.handler.CefDialogHandler.FileDialogMode;
 import org.cef.handler.CefRenderHandler;
 import org.cef.handler.CefWindowHandler;
 import org.cef.network.CefRequest;
-
-import java.awt.*;
-import java.util.Vector;
 
 /**
  * Interface representing a browser.
@@ -171,7 +171,7 @@ public interface CefBrowser {
      * reporting.
      *
      * @param code The code to be executed.
-     * @param url  The URL where the script in question can be found.
+     * @param url The URL where the script in question can be found.
      * @param line The base line number to use for error reporting.
      */
     public void executeJavaScript(String code, String url, int line);
@@ -225,22 +225,28 @@ public interface CefBrowser {
      * pending at any given time.The dialog will be initiated asynchronously on
      * the UI thread.
      *
-     * @param mode                 represents the type of dialog to display.
-     * @param title                to be used for the dialog and may be empty to show the
-     *                             default title ("Open" or "Save" depending on the mode).
-     * @param defaultFilePath      is the path with optional directory and/or file name
-     *                             component that should be initially selected in the dialog.
-     * @param acceptFilters        are used to restrict the selectable file types and may
-     *                             any combination of (a) valid lower-cased MIME types (e.g. "text/*" or
-     *                             "image/*"), (b) individual file extensions (e.g. ".txt" or ".png"), or (c)
-     *                             combined description and file extension delimited using "|" and ";" (e.g.
-     *                             "Image Types|.png;.gif;.jpg").
+     * @param mode represents the type of dialog to display.
+     * @param title to be used for the dialog and may be empty to show the
+     *        default title ("Open" or "Save" depending on the mode).
+     * @param defaultFilePath is the path with optional directory and/or file name
+     *        component that should be initially selected in the dialog.
+     * @param acceptFilters are used to restrict the selectable file types and may
+     *        any combination of (a) valid lower-cased MIME types (e.g. "text/*" or
+     *        "image/*"), (b) individual file extensions (e.g. ".txt" or ".png"), or (c)
+     *        combined description and file extension delimited using "|" and ";" (e.g.
+     *        "Image Types|.png;.gif;.jpg").
      * @param selectedAcceptFilter is the 0-based index of the filter that should
-     *                             be selected by default.
-     * @param callback             will be executed after the dialog is dismissed or
-     *                             immediately if another dialog is already pending.
+     *        be selected by default.
+     * @param callback will be executed after the dialog is dismissed or
+     *        immediately if another dialog is already pending.
      */
-    public void runFileDialog(FileDialogMode mode, String title, String defaultFilePath, Vector<String> acceptFilters, int selectedAcceptFilter, CefRunFileDialogCallback callback);
+    public void runFileDialog(
+        FileDialogMode mode,
+        String title,
+        String defaultFilePath,
+        Vector<String> acceptFilters,
+        int selectedAcceptFilter,
+        CefRunFileDialogCallback callback);
 
     /**
      * Download the file at url using CefDownloadHandler.
@@ -259,9 +265,9 @@ public interface CefBrowser {
      *
      * @param identifier can be used to have multiple searches running simultaniously.
      * @param searchText to be searched for.
-     * @param forward    indicates whether to search forward or backward within the page.
-     * @param matchCase  indicates whether the search should be case-sensitive.
-     * @param findNext   indicates whether this is the first request or a follow-up.
+     * @param forward indicates whether to search forward or backward within the page.
+     * @param matchCase indicates whether the search should be case-sensitive.
+     * @param findNext indicates whether this is the first request or a follow-up.
      */
     public void find(int identifier, String searchText, boolean forward, boolean matchCase, boolean findNext);
 

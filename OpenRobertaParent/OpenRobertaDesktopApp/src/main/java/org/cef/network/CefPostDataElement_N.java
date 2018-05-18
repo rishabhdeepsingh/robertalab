@@ -14,6 +14,19 @@ class CefPostDataElement_N extends CefPostDataElement implements CefNative {
         super();
     }
 
+    public static final CefPostDataElement createNative() {
+        CefPostDataElement_N result = new CefPostDataElement_N();
+        try {
+            result.N_CefPostDataElement_CTOR();
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
+        if ( result.N_CefHandle == 0 ) {
+            return null;
+        }
+        return result;
+    }
+
     @Override
     public void setNativeRef(String identifer, long nativeRef) {
         N_CefHandle = nativeRef;
@@ -24,24 +37,11 @@ class CefPostDataElement_N extends CefPostDataElement implements CefNative {
         return N_CefHandle;
     }
 
-    public static final CefPostDataElement createNative() {
-        CefPostDataElement_N result = new CefPostDataElement_N();
-        try {
-            result.N_CefPostDataElement_CTOR();
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-        if (result.N_CefHandle == 0) {
-            return null;
-        }
-        return result;
-    }
-
     @Override
     protected void finalize() throws Throwable {
         try {
             N_CefPostDataElement_DTOR();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         } finally {
             super.finalize();
@@ -52,7 +52,7 @@ class CefPostDataElement_N extends CefPostDataElement implements CefNative {
     public boolean isReadOnly() {
         try {
             return N_IsReadOnly();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -62,7 +62,7 @@ class CefPostDataElement_N extends CefPostDataElement implements CefNative {
     public void setToEmpty() {
         try {
             N_SetToEmpty();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -71,7 +71,7 @@ class CefPostDataElement_N extends CefPostDataElement implements CefNative {
     public void setToFile(String fileName) {
         try {
             N_SetToFile(fileName);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -80,7 +80,7 @@ class CefPostDataElement_N extends CefPostDataElement implements CefNative {
     public void setToBytes(int size, byte[] bytes) {
         try {
             N_SetToBytes(size, bytes);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -89,7 +89,7 @@ class CefPostDataElement_N extends CefPostDataElement implements CefNative {
     public Type getType() {
         try {
             return N_GetType();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -99,7 +99,7 @@ class CefPostDataElement_N extends CefPostDataElement implements CefNative {
     public String getFile() {
         try {
             return N_GetFile();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -109,7 +109,7 @@ class CefPostDataElement_N extends CefPostDataElement implements CefNative {
     public int getBytesCount() {
         try {
             return N_GetBytesCount();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
@@ -119,7 +119,7 @@ class CefPostDataElement_N extends CefPostDataElement implements CefNative {
     public int getBytes(int size, byte[] bytes) {
         try {
             return N_GetBytes(size, bytes);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;

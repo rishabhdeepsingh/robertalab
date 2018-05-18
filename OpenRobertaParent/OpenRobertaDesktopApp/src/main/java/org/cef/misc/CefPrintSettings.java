@@ -58,24 +58,24 @@ public abstract class CefPrintSettings {
     public abstract void setPrinterPrintableArea(Dimension physical_size_device_units, Rectangle printable_area_device_units, boolean landscape_needs_flip);
 
     /**
-     * Set the device name.
-     */
-    public abstract void setDeviceName(String name);
-
-    /**
      * Get the device name.
      */
     public abstract String getDeviceName();
 
     /**
-     * Set the DPI (dots per inch).
+     * Set the device name.
      */
-    public abstract void setDPI(int dpi);
+    public abstract void setDeviceName(String name);
 
     /**
      * Get the DPI (dots per inch).
      */
     public abstract int getDPI();
+
+    /**
+     * Set the DPI (dots per inch).
+     */
+    public abstract void setDPI(int dpi);
 
     /**
      * Set the page ranges.
@@ -93,14 +93,14 @@ public abstract class CefPrintSettings {
     public abstract void getPageRanges(Vector<CefPageRange> ranges);
 
     /**
-     * Set whether only the selection will be printed.
-     */
-    public abstract void setSelectionOnly(boolean selection_only);
-
-    /**
      * Returns true if only the selection will be printed.
      */
     public abstract boolean isSelectionOnly();
+
+    /**
+     * Set whether only the selection will be printed.
+     */
+    public abstract void setSelectionOnly(boolean selection_only);
 
     /**
      * Set whether pages will be collated.
@@ -113,19 +113,14 @@ public abstract class CefPrintSettings {
     public abstract boolean willCollate();
 
     /**
-     * Set the color model.
-     */
-    public abstract void setColorModel(ColorModel model);
-
-    /**
      * Get the color model.
      */
     public abstract ColorModel getColorModel();
 
     /**
-     * Set the number of copies.
+     * Set the color model.
      */
-    public abstract void setCopies(int copies);
+    public abstract void setColorModel(ColorModel model);
 
     /**
      * Get the number of copies.
@@ -133,9 +128,9 @@ public abstract class CefPrintSettings {
     public abstract int getCopies();
 
     /**
-     * Set the duplex mode.
+     * Set the number of copies.
      */
-    public abstract void setDuplexMode(DuplexMode mode);
+    public abstract void setCopies(int copies);
 
     /**
      * Get the duplex mode.
@@ -143,19 +138,35 @@ public abstract class CefPrintSettings {
     public abstract DuplexMode getDuplexMode();
 
     /**
+     * Set the duplex mode.
+     */
+    public abstract void setDuplexMode(DuplexMode mode);
+
+    /**
      * Print job color mode values.
      */
     public enum ColorModel {
-        COLOR_MODEL_UNKNOWN, COLOR_MODEL_GRAY, COLOR_MODEL_COLOR, COLOR_MODEL_CMYK, COLOR_MODEL_CMY, COLOR_MODEL_KCMY, COLOR_MODEL_CMY_K,  //!< CMY_K represents CMY+K.
-        COLOR_MODEL_BLACK, COLOR_MODEL_GRAYSCALE, COLOR_MODEL_RGB, COLOR_MODEL_RGB16, COLOR_MODEL_RGBA, COLOR_MODEL_COLORMODE_COLOR,  //!< Used in samsung printer ppds.
-        COLOR_MODEL_COLORMODE_MONOCHROME,  //!< Used in samsung printer ppds.
-        COLOR_MODEL_HP_COLOR_COLOR,  //!< Used in HP color printer ppds.
-        COLOR_MODEL_HP_COLOR_BLACK,  //!< Used in HP color printer ppds.
-        COLOR_MODEL_PRINTOUTMODE_NORMAL,  //!< Used in foomatic ppds.
-        COLOR_MODEL_PRINTOUTMODE_NORMAL_GRAY,  //!< Used in foomatic ppds.
-        COLOR_MODEL_PROCESSCOLORMODEL_CMYK,  //!< Used in canon printer ppds.
-        COLOR_MODEL_PROCESSCOLORMODEL_GREYSCALE,  //!< Used in canon printer ppds.
-        COLOR_MODEL_PROCESSCOLORMODEL_RGB,  //!< Used in canon printer ppds
+        COLOR_MODEL_UNKNOWN,
+        COLOR_MODEL_GRAY,
+        COLOR_MODEL_COLOR,
+        COLOR_MODEL_CMYK,
+        COLOR_MODEL_CMY,
+        COLOR_MODEL_KCMY,
+        COLOR_MODEL_CMY_K, //!< CMY_K represents CMY+K.
+        COLOR_MODEL_BLACK,
+        COLOR_MODEL_GRAYSCALE,
+        COLOR_MODEL_RGB,
+        COLOR_MODEL_RGB16,
+        COLOR_MODEL_RGBA,
+        COLOR_MODEL_COLORMODE_COLOR, //!< Used in samsung printer ppds.
+        COLOR_MODEL_COLORMODE_MONOCHROME, //!< Used in samsung printer ppds.
+        COLOR_MODEL_HP_COLOR_COLOR, //!< Used in HP color printer ppds.
+        COLOR_MODEL_HP_COLOR_BLACK, //!< Used in HP color printer ppds.
+        COLOR_MODEL_PRINTOUTMODE_NORMAL, //!< Used in foomatic ppds.
+        COLOR_MODEL_PRINTOUTMODE_NORMAL_GRAY, //!< Used in foomatic ppds.
+        COLOR_MODEL_PROCESSCOLORMODEL_CMYK, //!< Used in canon printer ppds.
+        COLOR_MODEL_PROCESSCOLORMODEL_GREYSCALE, //!< Used in canon printer ppds.
+        COLOR_MODEL_PROCESSCOLORMODEL_RGB, //!< Used in canon printer ppds
     }
 
     /**

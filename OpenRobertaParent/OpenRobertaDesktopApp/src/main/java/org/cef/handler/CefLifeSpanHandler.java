@@ -26,33 +26,35 @@ public interface CefLifeSpanHandler {
      * the new browser window should be scriptable and in the same process as the
      * source browser.
      *
-     * @param browser              The source of the popup request.
-     * @param frame                The source of the popup request.
-     * @param target_url           May be empty if none is specified with the request.
-     * @param target_frame_name    May be empty if none is specified with the request.
-     * @param target_disposition   Indicates where the user intended to open
-     *                             the popup (e.g. current tab, new tab, etc).
-     * @param user_gesture         Will be true if the popup was opened via explicit user
-     *                             gesture (e.g. clicking a link) or false if the popup opened automatically
-     *                             (e.g. via the DomContentLoaded event).
-     * @param popupFeatures        Contains information about the requested popup window
-     * @param windowInfo           Can be modified.
-     * @param client               Can be modified.
-     * @param settings             Can be modified.
+     * @param browser The source of the popup request.
+     * @param frame The source of the popup request.
+     * @param target_url May be empty if none is specified with the request.
+     * @param target_frame_name May be empty if none is specified with the request.
+     * @param target_disposition Indicates where the user intended to open
+     *        the popup (e.g. current tab, new tab, etc).
+     * @param user_gesture Will be true if the popup was opened via explicit user
+     *        gesture (e.g. clicking a link) or false if the popup opened automatically
+     *        (e.g. via the DomContentLoaded event).
+     * @param popupFeatures Contains information about the requested popup window
+     * @param windowInfo Can be modified.
+     * @param client Can be modified.
+     * @param settings Can be modified.
      * @param no_javascript_access Can be modified.
      * @return To cancel creation of the popup window return true.
      */
     // TODO(jcef) forward all params form JNI to Java (the commented out ones)
-    boolean onBeforePopup(CefBrowser browser,
-            // CefFrame frame,
-            String target_url, String target_frame_name
-            // WindowOpenDisposition target_disposition,
-            // bool user_gesture,
-            // CefPopupFeatures popupFeatures,
-            // CefWindowInfo windowInfo,
-            // CefClient client,
-            //CefBrowserSettings settings,
-            // boolean no_javascript_access
+    boolean onBeforePopup(
+        CefBrowser browser,
+        // CefFrame frame,
+        String target_url,
+        String target_frame_name
+    // WindowOpenDisposition target_disposition,
+    // bool user_gesture,
+    // CefPopupFeatures popupFeatures,
+    // CefWindowInfo windowInfo,
+    // CefClient client,
+    //CefBrowserSettings settings,
+    // boolean no_javascript_access
     );
 
     /**

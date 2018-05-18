@@ -1,10 +1,10 @@
 package org.panda_lang.pandomium.settings;
 
 import org.panda_lang.pandomium.PandomiumConstants;
-import org.panda_lang.pandomium.settings.categories.LoaderSettings;
-import org.panda_lang.pandomium.util.os.PandomiumOSType;
 import org.panda_lang.pandomium.settings.categories.DependenciesSettings;
+import org.panda_lang.pandomium.settings.categories.LoaderSettings;
 import org.panda_lang.pandomium.settings.categories.NativesSettings;
+import org.panda_lang.pandomium.util.os.PandomiumOSType;
 
 public class PandomiumSettings {
 
@@ -18,6 +18,21 @@ public class PandomiumSettings {
         this.loader = loader;
     }
 
+    public static PandomiumSettings getDefaultSettings() {
+        return PandomiumSettings
+            .builder()
+            .dependencyURL(PandomiumOSType.OS_WINDOWS, PandomiumConstants.PANDOMIUM_NATIVES_REPOSITORY + "win64-native.tar.xz")
+            .dependencyURL(PandomiumOSType.OS_MAC, PandomiumConstants.PANDOMIUM_NATIVES_REPOSITORY + "mac64-native.tar.xz")
+            .dependencyURL(PandomiumOSType.OS_LINUX, PandomiumConstants.PANDOMIUM_NATIVES_REPOSITORY + "linux64-native.tar.xz")
+            .loadAsync(false)
+            .nativeDirectory("native")
+            .build();
+    }
+
+    public static PandomiumSettingsBuilder builder() {
+        return new PandomiumSettingsBuilder();
+    }
+
     public LoaderSettings getLoader() {
         return loader;
     }
@@ -28,20 +43,6 @@ public class PandomiumSettings {
 
     public DependenciesSettings getDependencies() {
         return dependencies;
-    }
-
-    public static PandomiumSettings getDefaultSettings() {
-        return PandomiumSettings.builder()
-                .dependencyURL(PandomiumOSType.OS_WINDOWS, PandomiumConstants.PANDOMIUM_NATIVES_REPOSITORY + "win64-native.tar.xz")
-                .dependencyURL(PandomiumOSType.OS_MAC, PandomiumConstants.PANDOMIUM_NATIVES_REPOSITORY + "mac64-native.tar.xz")
-                .dependencyURL(PandomiumOSType.OS_LINUX, PandomiumConstants.PANDOMIUM_NATIVES_REPOSITORY + "linux64-native.tar.xz")
-                .loadAsync(false)
-                .nativeDirectory("native")
-                .build();
-    }
-
-    public static PandomiumSettingsBuilder builder() {
-        return new PandomiumSettingsBuilder();
     }
 
 }

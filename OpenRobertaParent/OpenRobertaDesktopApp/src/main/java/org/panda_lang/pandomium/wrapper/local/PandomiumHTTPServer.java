@@ -1,10 +1,10 @@
 package org.panda_lang.pandomium.wrapper.local;
 
-import fi.iki.elonen.NanoHTTPD;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
+import fi.iki.elonen.NanoHTTPD;
 
 public class PandomiumHTTPServer extends NanoHTTPD {
 
@@ -22,16 +22,17 @@ public class PandomiumHTTPServer extends NanoHTTPD {
         this.initialized = true;
         super.start(NanoHTTPD.SOCKET_READ_TIMEOUT, false);
     }
+
     public void registerRoute(String route, String content) {
         check();
         routes.put(route, content);
     }
 
     private void check() {
-        if (!isInitialized()) {
+        if ( !isInitialized() ) {
             try {
                 initialize();
-            } catch (IOException e) {
+            } catch ( IOException e ) {
                 e.printStackTrace();
             }
         }
@@ -41,8 +42,8 @@ public class PandomiumHTTPServer extends NanoHTTPD {
     public Response serve(IHTTPSession session) {
         String uri = session.getUri();
 
-        for (Map.Entry<String, String> route : routes.entrySet()) {
-            if (!uri.contains(route.getKey())) {
+        for ( Map.Entry<String, String> route : routes.entrySet() ) {
+            if ( !uri.contains(route.getKey()) ) {
                 continue;
             }
 

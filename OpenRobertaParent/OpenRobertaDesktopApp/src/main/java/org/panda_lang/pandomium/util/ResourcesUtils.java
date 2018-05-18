@@ -16,7 +16,7 @@ public class ResourcesUtils {
         String classPath = System.getProperty("java.class.path", ".");
         String[] classPathElements = classPath.split(System.getProperty("path.separator"));
 
-        for (String element : classPathElements) {
+        for ( String element : classPathElements ) {
             resources.addAll(getResources(element, pattern));
         }
 
@@ -26,10 +26,9 @@ public class ResourcesUtils {
     private static Collection<String> getResources(String element, Pattern pattern) {
         final ArrayList<String> retval = new ArrayList<String>();
         final File file = new File(element);
-        if (file.isDirectory()) {
+        if ( file.isDirectory() ) {
             retval.addAll(getResourcesFromDirectory(file, pattern));
-        }
-        else {
+        } else {
             retval.addAll(getResourcesFromJarFile(file, pattern));
         }
         return retval;
@@ -41,24 +40,24 @@ public class ResourcesUtils {
 
         try {
             zf = new ZipFile(file);
-        } catch (IOException e) {
+        } catch ( IOException e ) {
             throw new Error(e);
         }
 
         Enumeration e = zf.entries();
-        while (e.hasMoreElements()) {
+        while ( e.hasMoreElements() ) {
             ZipEntry ze = (ZipEntry) e.nextElement();
             String fileName = ze.getName();
             boolean accept = pattern.matcher(fileName).matches();
 
-            if (accept) {
+            if ( accept ) {
                 resources.add(fileName);
             }
         }
 
         try {
             zf.close();
-        } catch (final IOException e1) {
+        } catch ( final IOException e1 ) {
             throw new Error(e1);
         }
 
@@ -69,23 +68,22 @@ public class ResourcesUtils {
         ArrayList<String> resources = new ArrayList<>();
         File[] fileList = directory.listFiles();
 
-        if (fileList == null) {
+        if ( fileList == null ) {
             return resources;
         }
 
-        for (File file : fileList) {
-            if (file.isDirectory()) {
+        for ( File file : fileList ) {
+            if ( file.isDirectory() ) {
                 resources.addAll(getResourcesFromDirectory(file, pattern));
-            }
-            else {
+            } else {
                 try {
                     String fileName = file.getCanonicalPath();
                     boolean accept = pattern.matcher(fileName).matches();
 
-                    if (accept) {
+                    if ( accept ) {
                         resources.add(fileName);
                     }
-                } catch (final IOException e) {
+                } catch ( final IOException e ) {
                     throw new Error(e);
                 }
             }

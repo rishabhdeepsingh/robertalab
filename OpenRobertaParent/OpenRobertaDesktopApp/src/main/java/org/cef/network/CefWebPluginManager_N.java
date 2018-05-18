@@ -9,12 +9,19 @@ import org.cef.callback.CefWebPluginInfoVisitor;
 import org.cef.callback.CefWebPluginUnstableCallback;
 
 class CefWebPluginManager_N extends CefWebPluginManager implements CefNative {
+    private static CefWebPluginManager_N instance = null;
     // Used internally to store a pointer to the CEF object.
     private long N_CefHandle = 0;
-    private static CefWebPluginManager_N instance = null;
 
     CefWebPluginManager_N() {
         super();
+    }
+
+    public static synchronized CefWebPluginManager_N getInstance() {
+        if ( instance == null ) {
+            instance = new CefWebPluginManager_N();
+        }
+        return instance;
     }
 
     @Override
@@ -27,18 +34,11 @@ class CefWebPluginManager_N extends CefWebPluginManager implements CefNative {
         return N_CefHandle;
     }
 
-    public static synchronized CefWebPluginManager_N getInstance() {
-        if (instance == null) {
-            instance = new CefWebPluginManager_N();
-        }
-        return instance;
-    }
-
     @Override
     public void visitPlugins(CefWebPluginInfoVisitor visitor) {
         try {
             N_VisitPlugins(visitor);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -47,7 +47,7 @@ class CefWebPluginManager_N extends CefWebPluginManager implements CefNative {
     public void refreshPlugins() {
         try {
             N_RefreshPlugins();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -56,7 +56,7 @@ class CefWebPluginManager_N extends CefWebPluginManager implements CefNative {
     public void unregisterInternalPlugin(String path) {
         try {
             N_UnregisterInternalPlugin(path);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -65,7 +65,7 @@ class CefWebPluginManager_N extends CefWebPluginManager implements CefNative {
     public void registerPluginCrash(String path) {
         try {
             N_RegisterPluginCrash(path);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -74,7 +74,7 @@ class CefWebPluginManager_N extends CefWebPluginManager implements CefNative {
     public void isWebPluginUnstable(String path, CefWebPluginUnstableCallback callback) {
         try {
             N_IsWebPluginUnstable(path, callback);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }

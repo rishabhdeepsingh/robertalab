@@ -4,12 +4,12 @@
 
 package org.cef.handler;
 
+import java.util.HashMap;
+import java.util.Vector;
+
 import org.cef.browser.CefBrowser;
 import org.cef.browser.CefMessageRouter;
 import org.cef.callback.CefNative;
-
-import java.util.HashMap;
-import java.util.Vector;
 
 /**
  * Implement this interface to provide handler implementations.
@@ -22,22 +22,22 @@ public abstract class CefClientHandler implements CefNative {
     public CefClientHandler() {
         try {
             N_CefClientHandler_CTOR();
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
 
     @Override
     public void setNativeRef(String identifer, long nativeRef) {
-        synchronized (N_CefHandle) {
+        synchronized ( N_CefHandle ) {
             N_CefHandle.put(identifer, nativeRef);
         }
     }
 
     @Override
     public long getNativeRef(String identifer) {
-        synchronized (N_CefHandle) {
-            if (N_CefHandle.containsKey(identifer)) {
+        synchronized ( N_CefHandle ) {
+            if ( N_CefHandle.containsKey(identifer) ) {
                 return N_CefHandle.get(identifer);
             }
         }
@@ -47,13 +47,13 @@ public abstract class CefClientHandler implements CefNative {
     protected void dispose() {
         try {
             // Call native DTOR if handler will be destroyed
-            for (int i = 0; i < msgRouters.size(); i++) {
+            for ( int i = 0; i < msgRouters.size(); i++ ) {
                 msgRouters.get(i).dispose();
             }
             msgRouters.clear();
 
             N_CefClientHandler_DTOR();
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -173,7 +173,7 @@ public abstract class CefClientHandler implements CefNative {
         try {
             msgRouters.add(h);
             N_addMessageRouter(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -181,7 +181,7 @@ public abstract class CefClientHandler implements CefNative {
     protected void removeContextMenuHandler(CefContextMenuHandler h) {
         try {
             N_removeContextMenuHandler(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -189,7 +189,7 @@ public abstract class CefClientHandler implements CefNative {
     protected void removeDialogHandler(CefDialogHandler h) {
         try {
             N_removeDialogHandler(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -197,7 +197,7 @@ public abstract class CefClientHandler implements CefNative {
     protected void removeDisplayHandler(CefDisplayHandler h) {
         try {
             N_removeDisplayHandler(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -205,7 +205,7 @@ public abstract class CefClientHandler implements CefNative {
     protected void removeDownloadHandler(CefDisplayHandler h) {
         try {
             N_removeDownloadHandler(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -213,7 +213,7 @@ public abstract class CefClientHandler implements CefNative {
     protected void removeDragHandler(CefDragHandler h) {
         try {
             N_removeDragHandler(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -221,7 +221,7 @@ public abstract class CefClientHandler implements CefNative {
     protected void removeFocusHandler(CefFocusHandler h) {
         try {
             N_removeFocusHandler(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -229,7 +229,7 @@ public abstract class CefClientHandler implements CefNative {
     protected void removeGeolocationHandler(CefGeolocationHandler h) {
         try {
             N_removeGeolocationHandler(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -237,7 +237,7 @@ public abstract class CefClientHandler implements CefNative {
     protected void removeJSDialogHandler(CefJSDialogHandler h) {
         try {
             N_removeJSDialogHandler(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -245,7 +245,7 @@ public abstract class CefClientHandler implements CefNative {
     protected void removeKeyboardHandler(CefKeyboardHandler h) {
         try {
             N_removeKeyboardHandler(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -253,7 +253,7 @@ public abstract class CefClientHandler implements CefNative {
     protected void removeLifeSpanHandler(CefLifeSpanHandler h) {
         try {
             N_removeLifeSpanHandler(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -261,7 +261,7 @@ public abstract class CefClientHandler implements CefNative {
     protected void removeLoadHandler(CefLoadHandler h) {
         try {
             N_removeLoadHandler(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -270,7 +270,7 @@ public abstract class CefClientHandler implements CefNative {
         try {
             msgRouters.remove(h);
             N_removeMessageRouter(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -278,7 +278,7 @@ public abstract class CefClientHandler implements CefNative {
     protected void removeRenderHandler(CefRenderHandler h) {
         try {
             N_removeRenderHandler(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -286,7 +286,7 @@ public abstract class CefClientHandler implements CefNative {
     protected void removeRequestHandler(CefRequestHandler h) {
         try {
             N_removeRequestHandler(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -294,7 +294,7 @@ public abstract class CefClientHandler implements CefNative {
     protected void removeWindowHandler(CefWindowHandler h) {
         try {
             N_removeWindowHandler(h);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }

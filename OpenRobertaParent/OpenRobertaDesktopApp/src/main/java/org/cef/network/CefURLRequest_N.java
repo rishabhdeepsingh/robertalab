@@ -9,15 +9,29 @@ import org.cef.callback.CefURLRequestClient;
 import org.cef.handler.CefLoadHandler.ErrorCode;
 
 class CefURLRequest_N extends CefURLRequest implements CefNative {
-    // Used internally to store a pointer to the CEF object.
-    private long N_CefHandle = 0;
     private final CefRequest request_;
     private final CefURLRequestClient client_;
+    // Used internally to store a pointer to the CEF object.
+    private long N_CefHandle = 0;
 
     CefURLRequest_N(CefRequest request, CefURLRequestClient client) {
         super();
         request_ = request;
         client_ = client;
+    }
+
+    public static final CefURLRequest createNative(CefRequest request, CefURLRequestClient client) {
+        // keep a reference to the request and client objects.
+        CefURLRequest_N result = new CefURLRequest_N(request, client);
+        try {
+            result.N_CefURLRequest_CTOR(request, client);
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
+        if ( result.N_CefHandle == 0 ) {
+            return null;
+        }
+        return result;
     }
 
     @Override
@@ -30,25 +44,11 @@ class CefURLRequest_N extends CefURLRequest implements CefNative {
         return N_CefHandle;
     }
 
-    public static final CefURLRequest createNative(CefRequest request, CefURLRequestClient client) {
-        // keep a reference to the request and client objects.
-        CefURLRequest_N result = new CefURLRequest_N(request, client);
-        try {
-            result.N_CefURLRequest_CTOR(request, client);
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-        if (result.N_CefHandle == 0) {
-            return null;
-        }
-        return result;
-    }
-
     @Override
     public void finalize() {
         try {
             N_CefURLRequest_DTOR();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -67,7 +67,7 @@ class CefURLRequest_N extends CefURLRequest implements CefNative {
     public Status getRequestStatus() {
         try {
             return N_GetRequestStatus();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -77,7 +77,7 @@ class CefURLRequest_N extends CefURLRequest implements CefNative {
     public ErrorCode getRequestError() {
         try {
             return N_GetRequestError();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -87,7 +87,7 @@ class CefURLRequest_N extends CefURLRequest implements CefNative {
     public CefResponse getResponse() {
         try {
             return N_GetResponse();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -97,7 +97,7 @@ class CefURLRequest_N extends CefURLRequest implements CefNative {
     public void cancel() {
         try {
             N_Cancel();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }

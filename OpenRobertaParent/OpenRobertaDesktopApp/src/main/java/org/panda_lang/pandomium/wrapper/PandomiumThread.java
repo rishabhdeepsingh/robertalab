@@ -1,16 +1,16 @@
 package org.panda_lang.pandomium.wrapper;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+import javax.swing.*;
+
 import org.cef.CefApp;
 import org.cef.CefClient;
 import org.cef.CefSettings;
 import org.cef.CefThreadBridge;
 import org.panda_lang.pandomium.util.os.PandomiumOS;
-
-import javax.swing.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-
 
 public class PandomiumThread extends Thread implements CefThreadBridge {
 
@@ -38,28 +38,27 @@ public class PandomiumThread extends Thread implements CefThreadBridge {
         this.app = CefApp.getInstance(settings);
         this.client = app.createClient();
 
-        while (isHealthy()) {
-           callDelegates();
+        while ( isHealthy() ) {
+            callDelegates();
         }
     }
 
     public synchronized void callDelegates() {
-        if (delegates.isEmpty()) {
+        if ( delegates.isEmpty() ) {
             return;
         }
 
         List<Runnable> copy = new ArrayList<>(delegates);
         delegates.clear();
 
-        for (Runnable runnable : copy) {
+        for ( Runnable runnable : copy ) {
             try {
-                if (PandomiumOS.isLinux()) {
+                if ( PandomiumOS.isLinux() ) {
                     SwingUtilities.invokeLater(runnable);
-                }
-                else {
+                } else {
                     runnable.run();
                 }
-            } catch (Exception e) {
+            } catch ( Exception e ) {
                 e.printStackTrace();
             }
         }
@@ -87,10 +86,11 @@ public class PandomiumThread extends Thread implements CefThreadBridge {
     public void invokeAndWait(Runnable runnable) {
         invokeLater(runnable);
 
-        if (isEventDispatchThread()) {
+        if ( isEventDispatchThread() ) {
             callDelegates();
         } else {
-            while (delegates.size() != 0);
+            while ( delegates.size() != 0 )
+                ;
         }
     }
 
@@ -103,12 +103,12 @@ public class PandomiumThread extends Thread implements CefThreadBridge {
         return getApp() != null && getClient() != null;
     }
 
-    public void setHealthy(boolean healthy) {
-        this.healthy = healthy;
-    }
-
     public boolean isHealthy() {
         return healthy;
+    }
+
+    public void setHealthy(boolean healthy) {
+        this.healthy = healthy;
     }
 
     public CefClient getClient() {

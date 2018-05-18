@@ -13,7 +13,7 @@ class CefCommandLine_N extends CefNativeAdapter implements CefCommandLine {
     public void reset() {
         try {
             N_reset();
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -22,7 +22,7 @@ class CefCommandLine_N extends CefNativeAdapter implements CefCommandLine {
     public String getProgram() {
         try {
             return N_getProgram();
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
         return null;
@@ -32,7 +32,7 @@ class CefCommandLine_N extends CefNativeAdapter implements CefCommandLine {
     public void setProgram(String program) {
         try {
             N_setProgram(program);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -41,7 +41,7 @@ class CefCommandLine_N extends CefNativeAdapter implements CefCommandLine {
     public boolean hasSwitches() {
         try {
             return N_hasSwitches();
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
         return false;
@@ -51,7 +51,7 @@ class CefCommandLine_N extends CefNativeAdapter implements CefCommandLine {
     public boolean hasSwitch(String name) {
         try {
             return N_hasSwitch(name);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
         return false;
@@ -61,7 +61,7 @@ class CefCommandLine_N extends CefNativeAdapter implements CefCommandLine {
     public String getSwitchValue(String name) {
         try {
             return N_getSwitchValue(name);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
         return null;
@@ -71,7 +71,7 @@ class CefCommandLine_N extends CefNativeAdapter implements CefCommandLine {
     public Map<String, String> getSwitches() {
         try {
             return N_getSwitches();
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
         return null;
@@ -81,7 +81,7 @@ class CefCommandLine_N extends CefNativeAdapter implements CefCommandLine {
     public void appendSwitch(String name) {
         try {
             N_appendSwitch(name);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -90,7 +90,7 @@ class CefCommandLine_N extends CefNativeAdapter implements CefCommandLine {
     public void appendSwitchWithValue(String name, String value) {
         try {
             N_appendSwitchWithValue(name, value);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -99,7 +99,7 @@ class CefCommandLine_N extends CefNativeAdapter implements CefCommandLine {
     public boolean hasArguments() {
         try {
             return N_hasArguments();
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
         return false;
@@ -109,7 +109,7 @@ class CefCommandLine_N extends CefNativeAdapter implements CefCommandLine {
     public Vector<String> getArguments() {
         try {
             return N_getArguments();
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
         return null;
@@ -119,7 +119,7 @@ class CefCommandLine_N extends CefNativeAdapter implements CefCommandLine {
     public void appendArgument(String argument) {
         try {
             N_appendArgument(argument);
-        } catch (UnsatisfiedLinkError err) {
+        } catch ( UnsatisfiedLinkError err ) {
             err.printStackTrace();
         }
     }
@@ -127,11 +127,11 @@ class CefCommandLine_N extends CefNativeAdapter implements CefCommandLine {
     @Override
     public String toString() {
         String result = "CefCommandLine [program=\'" + getProgram() + "\'";
-        if (hasSwitches()) {
+        if ( hasSwitches() ) {
             Map<String, String> switches = getSwitches();
             result += ", switches=" + switches;
         }
-        if (hasArguments()) {
+        if ( hasArguments() ) {
             Vector<String> arguments = getArguments();
             result += ", arguments=" + arguments;
         }

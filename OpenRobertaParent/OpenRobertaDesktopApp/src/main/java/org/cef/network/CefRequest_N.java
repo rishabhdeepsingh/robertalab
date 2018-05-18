@@ -4,9 +4,9 @@
 
 package org.cef.network;
 
-import org.cef.callback.CefNative;
-
 import java.util.Map;
+
+import org.cef.callback.CefNative;
 
 class CefRequest_N extends CefRequest implements CefNative {
     // Used internally to store a pointer to the CEF object.
@@ -14,6 +14,19 @@ class CefRequest_N extends CefRequest implements CefNative {
 
     CefRequest_N() {
         super();
+    }
+
+    public static final CefRequest createNative() {
+        CefRequest_N result = new CefRequest_N();
+        try {
+            result.N_CefRequest_CTOR();
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
+        if ( result.N_CefHandle == 0 ) {
+            return null;
+        }
+        return result;
     }
 
     @Override
@@ -26,24 +39,11 @@ class CefRequest_N extends CefRequest implements CefNative {
         return N_CefHandle;
     }
 
-    public static final CefRequest createNative() {
-        CefRequest_N result = new CefRequest_N();
-        try {
-            result.N_CefRequest_CTOR();
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-        if (result.N_CefHandle == 0) {
-            return null;
-        }
-        return result;
-    }
-
     @Override
     protected void finalize() throws Throwable {
         try {
             N_CefRequest_DTOR();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         } finally {
             super.finalize();
@@ -54,7 +54,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public boolean isReadOnly() {
         try {
             return N_IsReadOnly();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -64,7 +64,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public String getURL() {
         try {
             return N_GetURL();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -74,7 +74,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public void setURL(String url) {
         try {
             N_SetURL(url);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -83,7 +83,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public String getMethod() {
         try {
             return N_GetMethod();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -93,7 +93,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public void setMethod(String string) {
         try {
             N_SetMethod(string);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -102,7 +102,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public CefPostData getPostData() {
         try {
             return N_GetPostData();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -112,7 +112,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public void setPostData(CefPostData postData) {
         try {
             N_SetPostData(postData);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -121,7 +121,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public void getHeaderMap(Map<String, String> headerMap) {
         try {
             N_GetHeaderMap(headerMap);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -130,7 +130,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public void setHeaderMap(Map<String, String> headerMap) {
         try {
             N_SetHeaderMap(headerMap);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -139,7 +139,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public void set(String url, String method, CefPostData postData, Map<String, String> headerMap) {
         try {
             N_Set(url, method, postData, headerMap);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -148,7 +148,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public int getFlags() {
         try {
             return N_GetFlags();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
@@ -158,7 +158,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public void setFlags(int flags) {
         try {
             N_SetFlags(flags);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -167,7 +167,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public String getFirstPartyForCookies() {
         try {
             return N_GetFirstPartyForCookies();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -177,7 +177,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public void setFirstPartyForCookies(String url) {
         try {
             N_SetFirstPartyForCookies(url);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -186,7 +186,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public ResourceType getResourceType() {
         try {
             return N_GetResourceType();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return ResourceType.RT_MAIN_FRAME;
@@ -196,7 +196,7 @@ class CefRequest_N extends CefRequest implements CefNative {
     public TransitionType getTransitionType() {
         try {
             return N_GetTransitionType();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return TransitionType.TT_AUTO_SUBFRAME;

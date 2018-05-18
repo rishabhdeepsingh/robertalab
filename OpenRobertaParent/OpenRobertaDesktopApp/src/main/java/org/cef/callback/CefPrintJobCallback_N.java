@@ -13,7 +13,7 @@ class CefPrintJobCallback_N extends CefNativeAdapter implements CefPrintJobCallb
     public void Continue() {
         try {
             N_Continue();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }

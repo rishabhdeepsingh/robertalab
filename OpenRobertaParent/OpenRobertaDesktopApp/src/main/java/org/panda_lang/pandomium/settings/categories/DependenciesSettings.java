@@ -8,20 +8,8 @@ public class DependenciesSettings {
     private String macOSModule;
     private String linuxModule;
 
-    public void setWindowsModule(String windowsModule) {
-        this.windowsModule = windowsModule;
-    }
-
-    public void setMacOSModule(String macOSModule) {
-        this.macOSModule = macOSModule;
-    }
-
-    public void setLinuxModule(String linuxModule) {
-        this.linuxModule = linuxModule;
-    }
-
     public String getPlatformURL() {
-        switch (PandomiumOS.getOS()) {
+        switch ( PandomiumOS.getOS() ) {
             case OS_WINDOWS:
                 return getWindowsModule();
             case OS_MAC:
@@ -39,12 +27,24 @@ public class DependenciesSettings {
         return linuxModule;
     }
 
+    public void setLinuxModule(String linuxModule) {
+        this.linuxModule = linuxModule;
+    }
+
     public String getMacOSModule() {
         return macOSModule;
     }
 
+    public void setMacOSModule(String macOSModule) {
+        this.macOSModule = macOSModule;
+    }
+
     public String getWindowsModule() {
         return windowsModule;
+    }
+
+    public void setWindowsModule(String windowsModule) {
+        this.windowsModule = windowsModule;
     }
 
 }

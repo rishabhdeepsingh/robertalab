@@ -4,12 +4,12 @@ public class NativesSettings {
 
     private String nativeDirectory;
 
-    public void setNativeDirectory(String nativeDirectory) {
-        this.nativeDirectory = nativeDirectory;
-    }
-
     public String getNativeDirectory() {
         return nativeDirectory;
+    }
+
+    public void setNativeDirectory(String nativeDirectory) {
+        this.nativeDirectory = nativeDirectory;
     }
 
 }

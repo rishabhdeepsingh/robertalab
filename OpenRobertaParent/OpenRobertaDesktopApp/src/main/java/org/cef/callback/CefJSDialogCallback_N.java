@@ -13,7 +13,7 @@ class CefJSDialogCallback_N extends CefNativeAdapter implements CefJSDialogCallb
     public void Continue(boolean success, String user_input) {
         try {
             N_Continue(success, user_input);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }

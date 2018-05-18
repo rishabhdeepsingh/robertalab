@@ -13,7 +13,7 @@ class CefDownloadItemCallback_N extends CefNativeAdapter implements CefDownloadI
     public void cancel() {
         try {
             N_Cancel();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }

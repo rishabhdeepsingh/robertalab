@@ -16,10 +16,10 @@ public interface CefKeyboardHandler {
     /**
      * Called before a keyboard event is sent to the renderer.
      *
-     * @param browser              the corresponding browser.
-     * @param event                contains information about the keyboard event.
+     * @param browser the corresponding browser.
+     * @param event contains information about the keyboard event.
      * @param is_keyboard_shortcut set to true and return false, if
-     *                             the event will be handled in OnKeyEvent() as a keyboard shortcut.
+     *        the event will be handled in OnKeyEvent() as a keyboard shortcut.
      * @return true if the event was handled or false otherwise.
      */
     public boolean onPreKeyEvent(CefBrowser browser, CefKeyEvent event, BoolRef is_keyboard_shortcut);
@@ -29,7 +29,7 @@ public interface CefKeyboardHandler {
      * handle the event.
      *
      * @param browser the corresponding browser.
-     * @param event   contains information about the keyboard event.
+     * @param event contains information about the keyboard event.
      * @return true if the keyboard event was handled or false otherwise.
      */
     public boolean onKeyEvent(CefBrowser browser, CefKeyEvent event);
@@ -80,7 +80,15 @@ public interface CefKeyboardHandler {
          */
         public final boolean focus_on_editable_field;
 
-        CefKeyEvent(EventType typeAttr, int modifiersAttr, int windows_key_codeAttr, int native_key_codeAttr, boolean is_system_keyAttr, char characterAttr, char unmodified_characterAttr, boolean focus_on_editable_fieldAttr) {
+        CefKeyEvent(
+            EventType typeAttr,
+            int modifiersAttr,
+            int windows_key_codeAttr,
+            int native_key_codeAttr,
+            boolean is_system_keyAttr,
+            char characterAttr,
+            char unmodified_characterAttr,
+            boolean focus_on_editable_fieldAttr) {
             type = typeAttr;
             modifiers = modifiersAttr;
             windows_key_code = windows_key_codeAttr;
@@ -93,7 +101,23 @@ public interface CefKeyboardHandler {
 
         @Override
         public String toString() {
-            return "CefKeyEvent [type=" + type + ", modifiers=" + modifiers + ", windows_key_code=" + windows_key_code + ", native_key_code=" + native_key_code + ", is_system_key=" + is_system_key + ", character=" + character + ", unmodified_character=" + unmodified_character + ", focus_on_editable_field=" + focus_on_editable_field + "]";
+            return "CefKeyEvent [type="
+                + type
+                + ", modifiers="
+                + modifiers
+                + ", windows_key_code="
+                + windows_key_code
+                + ", native_key_code="
+                + native_key_code
+                + ", is_system_key="
+                + is_system_key
+                + ", character="
+                + character
+                + ", unmodified_character="
+                + unmodified_character
+                + ", focus_on_editable_field="
+                + focus_on_editable_field
+                + "]";
         }
 
         /**

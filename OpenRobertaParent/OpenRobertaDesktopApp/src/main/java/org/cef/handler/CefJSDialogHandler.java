@@ -26,17 +26,24 @@ public interface CefJSDialogHandler {
      * modal or modeless. If a custom dialog is used the application must execute
      * callback once the custom dialog is dismissed.
      *
-     * @param browser             The corresponding browser.
-     * @param origin_url          The originating url.
-     * @param dialog_type         the dialog type.
-     * @param message_text        the text to be displayed.
+     * @param browser The corresponding browser.
+     * @param origin_url The originating url.
+     * @param dialog_type the dialog type.
+     * @param message_text the text to be displayed.
      * @param default_prompt_text value will be specified for prompt dialogs only.
-     * @param callback            execute callback once the custom dialog is dismissed.
-     * @param suppress_message    set to true to suppress displaying the message.
+     * @param callback execute callback once the custom dialog is dismissed.
+     * @param suppress_message set to true to suppress displaying the message.
      * @return false to use the default dialog implementation. Return true if the
-     * application will use a custom dialog.
+     *         application will use a custom dialog.
      */
-    public boolean onJSDialog(CefBrowser browser, String origin_url, JSDialogType dialog_type, String message_text, String default_prompt_text, CefJSDialogCallback callback, BoolRef suppress_message);
+    public boolean onJSDialog(
+        CefBrowser browser,
+        String origin_url,
+        JSDialogType dialog_type,
+        String message_text,
+        String default_prompt_text,
+        CefJSDialogCallback callback,
+        BoolRef suppress_message);
 
     /**
      * Called to run a dialog asking the user if they want to leave a page. Return
@@ -46,12 +53,12 @@ public interface CefJSDialogHandler {
      * dialog is used the application must execute callback once the custom
      * dialog is dismissed.
      *
-     * @param browser      The corresponding browser.
+     * @param browser The corresponding browser.
      * @param message_text The text to be displayed.
-     * @param is_reload    true if the page is reloaded.
-     * @param callback     execute callback once the custom dialog is dismissed.
+     * @param is_reload true if the page is reloaded.
+     * @param callback execute callback once the custom dialog is dismissed.
      * @return false to use the default dialog implementation. Return true if the
-     * application will use a custom dialog.
+     *         application will use a custom dialog.
      */
     public boolean onBeforeUnloadDialog(CefBrowser browser, String message_text, boolean is_reload, CefJSDialogCallback callback);
 

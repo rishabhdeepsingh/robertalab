@@ -4,10 +4,9 @@
 
 package org.cef.browser;
 
-import org.cef.CefApp;
-import org.cef.callback.CefDragData;
-import org.cef.handler.CefClientHandler;
-import org.cef.handler.CefRenderHandler;
+import java.awt.*;
+import java.awt.event.*;
+import java.nio.ByteBuffer;
 
 import javax.media.nativewindow.NativeSurface;
 import javax.media.opengl.GLAutoDrawable;
@@ -16,9 +15,11 @@ import javax.media.opengl.GLEventListener;
 import javax.media.opengl.GLProfile;
 import javax.media.opengl.awt.GLCanvas;
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.nio.ByteBuffer;
+
+import org.cef.CefApp;
+import org.cef.callback.CefDragData;
+import org.cef.handler.CefClientHandler;
+import org.cef.handler.CefRenderHandler;
 
 /**
  * This class represents an off-screen rendered browser.
@@ -29,7 +30,7 @@ class CefBrowserOsr extends CefBrowser_N implements CefRenderHandler {
     private CefRenderer renderer_;
     private GLCanvas canvas_;
     private long window_handle_ = 0;
-    private Rectangle browser_rect_ = new Rectangle(0, 0, 1, 1);  // Work around CEF issue #1437.
+    private Rectangle browser_rect_ = new Rectangle(0, 0, 1, 1); // Work around CEF issue #1437.
     private Point screenPoint_ = new Point(0, 0);
     private CefClientHandler clientHandler_;
     private String url_;
@@ -37,8 +38,7 @@ class CefBrowserOsr extends CefBrowser_N implements CefRenderHandler {
     private CefRequestContext context_;
     private CefBrowserOsr parent_ = null;
     private Point inspectAt_ = null;
-    private CefBrowserOsr devTools_ = null;
-    ;
+    private CefBrowserOsr devTools_ = null;;
 
     CefBrowserOsr(CefClientHandler clientHandler, String url, boolean transparent, CefRequestContext context) {
         this(clientHandler, url, transparent, context, null, null);
@@ -68,10 +68,10 @@ class CefBrowserOsr extends CefBrowser_N implements CefRenderHandler {
 
     @Override
     public synchronized void close() {
-        if (context_ != null) {
+        if ( context_ != null ) {
             context_.dispose();
         }
-        if (parent_ != null) {
+        if ( parent_ != null ) {
             parent_.closeDevTools();
             parent_.devTools_ = null;
             parent_ = null;
@@ -86,16 +86,16 @@ class CefBrowserOsr extends CefBrowser_N implements CefRenderHandler {
 
     @Override
     public synchronized CefBrowser getDevTools(Point inspectAt) {
-        if (devTools_ == null) {
+        if ( devTools_ == null ) {
             devTools_ = new CefBrowserOsr(clientHandler_, url_, isTransparent_, context_, this, inspectAt);
         }
         return devTools_;
     }
 
     private long getWindowHandle() {
-        if (window_handle_ == 0) {
+        if ( window_handle_ == 0 ) {
             NativeSurface surface = canvas_.getNativeSurface();
-            if (surface != null) {
+            if ( surface != null ) {
                 surface.lockSurface();
                 window_handle_ = getWindowHandle(surface.getSurfaceHandle());
                 surface.unlockSurface();
@@ -112,10 +112,9 @@ class CefBrowserOsr extends CefBrowser_N implements CefRenderHandler {
         canvas_ = new GLCanvas(glcapabilities) {
             @Override
             public void paint(Graphics g) {
-                if (parent_ != null) {
+                if ( parent_ != null ) {
                     createDevTools(parent_, clientHandler_, getWindowHandle(), isTransparent_, null, inspectAt_);
-                }
-                else {
+                } else {
                     createBrowser(clientHandler_, getWindowHandle(), url_, isTransparent_, null, context_);
                 }
                 super.paint(g);
@@ -239,7 +238,7 @@ class CefBrowserOsr extends CefBrowser_N implements CefRenderHandler {
 
     @Override
     public void onPopupShow(CefBrowser browser, boolean show) {
-        if (!show) {
+        if ( !show ) {
             renderer_.clearPopupRects();
             invalidate();
         }
@@ -252,7 +251,7 @@ class CefBrowserOsr extends CefBrowser_N implements CefRenderHandler {
 
     @Override
     public void onPaint(CefBrowser browser, boolean popup, Rectangle[] dirtyRects, ByteBuffer buffer, int width, int height) {
-        if (canvas_.getContext() == null) {
+        if ( canvas_.getContext() == null ) {
             CefApp.getLogger().info("Skipping painting request [CefApp is terminated]");
         }
 

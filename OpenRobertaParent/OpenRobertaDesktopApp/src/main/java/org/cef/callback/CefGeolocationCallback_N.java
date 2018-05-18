@@ -13,7 +13,7 @@ class CefGeolocationCallback_N extends CefNativeAdapter implements CefGeolocatio
     public void Continue(boolean allow) {
         try {
             N_Continue(allow);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }

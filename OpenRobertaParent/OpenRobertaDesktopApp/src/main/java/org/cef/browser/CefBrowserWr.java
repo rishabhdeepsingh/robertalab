@@ -4,15 +4,16 @@
 
 package org.cef.browser;
 
+import java.awt.*;
+import java.awt.event.*;
+import java.util.Date;
+
+import javax.swing.*;
+
 import org.cef.OS;
 import org.cef.handler.CefClientHandler;
 import org.cef.handler.CefWindowHandler;
 import org.cef.handler.CefWindowHandlerAdapter;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.Date;
 
 /**
  * This class represents a windowed rendered browser.
@@ -38,7 +39,7 @@ class CefBrowserWr extends CefBrowser_N {
                 @Override
                 public void run() {
                     createUIIfRequired();
-                    if (OS.isMacintosh()) {
+                    if ( OS.isMacintosh() ) {
                         doUpdate();
                     }
                 }
@@ -52,7 +53,7 @@ class CefBrowserWr extends CefBrowser_N {
 
         @Override
         public Rectangle getRect(CefBrowser browser) {
-            synchronized (content_rect_) {
+            synchronized ( content_rect_ ) {
                 return content_rect_;
             }
         }
@@ -61,17 +62,17 @@ class CefBrowserWr extends CefBrowser_N {
         public void onMouseEvent(CefBrowser browser, int event, final int screenX, final int screenY, final int modifier, final int button) {
 
             final Point pt = new Point(screenX, screenY);
-            if (event == MouseEvent.MOUSE_MOVED) {
+            if ( event == MouseEvent.MOUSE_MOVED ) {
                 // Remove mouse-moved events if the position of the cursor hasn't
                 // changed.
-                if (pt.equals(lastPos)) {
+                if ( pt.equals(lastPos) ) {
                     return;
                 }
                 lastPos = pt;
 
                 // Change mouse-moved event to mouse-dragged event if the left mouse
                 // button is pressed.
-                if ((modifier & MouseEvent.BUTTON1_DOWN_MASK) != 0) {
+                if ( (modifier & MouseEvent.BUTTON1_DOWN_MASK) != 0 ) {
                     event = MouseEvent.MOUSE_DRAGGED;
                 }
             }
@@ -84,26 +85,26 @@ class CefBrowserWr extends CefBrowser_N {
                     // Send mouse event to the root UI component instead to the browser UI.
                     // Otherwise no mouse-entered and no mouse-exited events would be fired.
                     Component parent = SwingUtilities.getRoot(component_);
-                    if (parent == null) {
+                    if ( parent == null ) {
                         return;
                     }
                     SwingUtilities.convertPointFromScreen(pt, parent);
 
                     int clickCnt = 0;
                     long now = new Date().getTime();
-                    if (finalEvent == MouseEvent.MOUSE_WHEEL) {
+                    if ( finalEvent == MouseEvent.MOUSE_WHEEL ) {
                         int scrollType = MouseWheelEvent.WHEEL_UNIT_SCROLL;
                         int rotation = button > 0 ? 1 : -1;
                         component_.dispatchEvent(new MouseWheelEvent(parent, finalEvent, now, modifier, pt.x, pt.y, 0, false, scrollType, 3, rotation));
-                    }
-                    else {
+                    } else {
                         clickCnt = getClickCount(finalEvent, button);
                         component_.dispatchEvent(new MouseEvent(parent, finalEvent, now, modifier, pt.x, pt.y, screenX, screenY, clickCnt, false, button));
                     }
 
                     // Always fire a mouse-clicked event after a mouse-released event.
-                    if (finalEvent == MouseEvent.MOUSE_RELEASED) {
-                        component_.dispatchEvent(new MouseEvent(parent, MouseEvent.MOUSE_CLICKED, now, modifier, pt.x, pt.y, screenX, screenY, clickCnt, false, button));
+                    if ( finalEvent == MouseEvent.MOUSE_RELEASED ) {
+                        component_.dispatchEvent(
+                            new MouseEvent(parent, MouseEvent.MOUSE_CLICKED, now, modifier, pt.x, pt.y, screenX, screenY, clickCnt, false, button));
                     }
                 }
             });
@@ -113,15 +114,13 @@ class CefBrowserWr extends CefBrowser_N {
             // avoid exceptions by using modulo
             int idx = button % nextClick.length;
 
-            switch (event) {
+            switch ( event ) {
                 case MouseEvent.MOUSE_PRESSED:
                     long currTime = new Date().getTime();
-                    if (currTime > nextClick[idx]) {
-                        nextClick[idx] = currTime + (Integer) Toolkit.getDefaultToolkit().
-                                getDesktopProperty("awt.multiClickInterval");
+                    if ( currTime > nextClick[idx] ) {
+                        nextClick[idx] = currTime + (Integer) Toolkit.getDefaultToolkit().getDesktopProperty("awt.multiClickInterval");
                         clickCnt[idx] = 1;
-                    }
-                    else {
+                    } else {
                         clickCnt[idx]++;
                     }
                     // FALL THRU
@@ -193,7 +192,7 @@ class CefBrowserWr extends CefBrowser_N {
         };
         // On windows we have to use a Canvas because its a heavyweight component
         // and we need its native HWND as parent for the browser UI.
-        if (OS.isWindows()) {
+        if ( OS.isWindows() ) {
             canvas_ = new Canvas();
             ((JPanel) component_).add(canvas_, BorderLayout.CENTER);
         }
@@ -229,7 +228,7 @@ class CefBrowserWr extends CefBrowser_N {
         component_.addHierarchyListener(new HierarchyListener() {
             @Override
             public void hierarchyChanged(HierarchyEvent e) {
-                if ((e.getChangeFlags() & HierarchyEvent.SHOWING_CHANGED) != 0) {
+                if ( (e.getChangeFlags() & HierarchyEvent.SHOWING_CHANGED) != 0 ) {
                     setWindowVisibility(e.getChanged().isVisible());
                 }
             }
@@ -249,10 +248,10 @@ class CefBrowserWr extends CefBrowser_N {
     @Override
     public synchronized void close() {
         isDisposed = true;
-        if (context_ != null) {
+        if ( context_ != null ) {
             context_.dispose();
         }
-        if (parent_ != null) {
+        if ( parent_ != null ) {
             parent_.closeDevTools();
             parent_.devTools_ = null;
             parent_ = null;
@@ -267,25 +266,25 @@ class CefBrowserWr extends CefBrowser_N {
 
     @Override
     public synchronized CefBrowser getDevTools(Point inspectAt) {
-        if (devTools_ == null) {
+        if ( devTools_ == null ) {
             devTools_ = new CefBrowserWr(clientHandler_, url_, context_, this, inspectAt);
         }
         return devTools_;
     }
 
     private long getWindowHandle() {
-        if (window_handle_ == 0 && OS.isMacintosh()) {
+        if ( window_handle_ == 0 && OS.isMacintosh() ) {
             try {
                 Class<?> cls = Class.forName("org.cef.browser.mac.CefBrowserWindowMac");
                 CefBrowserWindow browserWindow = (CefBrowserWindow) cls.newInstance();
-                if (browserWindow != null) {
+                if ( browserWindow != null ) {
                     window_handle_ = browserWindow.getWindowHandle(component_);
                 }
-            } catch (ClassNotFoundException e) {
+            } catch ( ClassNotFoundException e ) {
                 e.printStackTrace();
-            } catch (InstantiationException e) {
+            } catch ( InstantiationException e ) {
                 e.printStackTrace();
-            } catch (IllegalAccessException e) {
+            } catch ( IllegalAccessException e ) {
                 e.printStackTrace();
             }
         }
@@ -293,18 +292,18 @@ class CefBrowserWr extends CefBrowser_N {
     }
 
     private void doUpdate() {
-        if (isDisposed) {
+        if ( isDisposed ) {
             return;
         }
 
         Rectangle clipping = ((JPanel) component_).getVisibleRect();
 
-        if (OS.isMacintosh()) {
+        if ( OS.isMacintosh() ) {
             Container parent = component_.getParent();
             Point contentPos = component_.getLocation();
-            while (parent != null) {
+            while ( parent != null ) {
                 Container next = parent.getParent();
-                if (next != null && next instanceof Window) {
+                if ( next != null && next instanceof Window ) {
                     break;
                 }
                 Point parentPos = parent.getLocation();
@@ -317,14 +316,13 @@ class CefBrowserWr extends CefBrowser_N {
             browserPos.x *= -1;
             browserPos.y *= -1;
 
-            synchronized (content_rect_) {
+            synchronized ( content_rect_ ) {
                 content_rect_ = new Rectangle(contentPos, clipping.getSize());
                 Rectangle browserRect = new Rectangle(browserPos, component_.getSize());
                 updateUI(content_rect_, browserRect);
             }
-        }
-        else {
-            synchronized (content_rect_) {
+        } else {
+            synchronized ( content_rect_ ) {
                 content_rect_ = component_.getBounds();
                 updateUI(clipping, content_rect_);
             }
@@ -332,11 +330,10 @@ class CefBrowserWr extends CefBrowser_N {
     }
 
     private void createUIIfRequired() {
-        if (getNativeRef("CefBrowser") == 0 && !isDisposed) {
-            if (parent_ != null) {
+        if ( getNativeRef("CefBrowser") == 0 && !isDisposed ) {
+            if ( parent_ != null ) {
                 createDevTools(parent_, clientHandler_, getWindowHandle(), false, OS.isWindows() ? canvas_ : component_, inspectAt_);
-            }
-            else {
+            } else {
                 createBrowser(clientHandler_, getWindowHandle(), url_, false, OS.isWindows() ? canvas_ : component_, context_);
             }
         }

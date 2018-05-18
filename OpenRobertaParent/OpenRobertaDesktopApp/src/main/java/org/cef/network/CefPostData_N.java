@@ -4,9 +4,9 @@
 
 package org.cef.network;
 
-import org.cef.callback.CefNative;
-
 import java.util.Vector;
+
+import org.cef.callback.CefNative;
 
 /**
  *
@@ -19,6 +19,19 @@ class CefPostData_N extends CefPostData implements CefNative {
         super();
     }
 
+    public static final CefPostData createNative() {
+        CefPostData_N result = new CefPostData_N();
+        try {
+            result.N_CefPostData_CTOR();
+        } catch ( UnsatisfiedLinkError ule ) {
+            ule.printStackTrace();
+        }
+        if ( result.N_CefHandle == 0 ) {
+            return null;
+        }
+        return result;
+    }
+
     @Override
     public void setNativeRef(String identifer, long nativeRef) {
         N_CefHandle = nativeRef;
@@ -29,24 +42,11 @@ class CefPostData_N extends CefPostData implements CefNative {
         return N_CefHandle;
     }
 
-    public static final CefPostData createNative() {
-        CefPostData_N result = new CefPostData_N();
-        try {
-            result.N_CefPostData_CTOR();
-        } catch (UnsatisfiedLinkError ule) {
-            ule.printStackTrace();
-        }
-        if (result.N_CefHandle == 0) {
-            return null;
-        }
-        return result;
-    }
-
     @Override
     protected void finalize() throws Throwable {
         try {
             N_CefPostData_DTOR();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         } finally {
             super.finalize();
@@ -57,7 +57,7 @@ class CefPostData_N extends CefPostData implements CefNative {
     public boolean isReadOnly() {
         try {
             return N_IsReadOnly();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -67,7 +67,7 @@ class CefPostData_N extends CefPostData implements CefNative {
     public int getElementCount() {
         try {
             return N_GetElementCount();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return 0;
@@ -77,7 +77,7 @@ class CefPostData_N extends CefPostData implements CefNative {
     public void getElements(Vector<CefPostDataElement> elements) {
         try {
             N_GetElements(elements);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -86,7 +86,7 @@ class CefPostData_N extends CefPostData implements CefNative {
     public boolean removeElement(CefPostDataElement element) {
         try {
             return N_RemoveElement(element);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -96,7 +96,7 @@ class CefPostData_N extends CefPostData implements CefNative {
     public boolean addElement(CefPostDataElement element) {
         try {
             return N_AddElement(element);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return false;
@@ -106,7 +106,7 @@ class CefPostData_N extends CefPostData implements CefNative {
     public void removeElements() {
         try {
             N_RemoveElements();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }

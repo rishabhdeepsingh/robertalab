@@ -12,7 +12,7 @@ class CefWebPluginInfo_N extends CefNativeAdapter implements CefWebPluginInfo {
     public String getName() {
         try {
             return N_GetName();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -22,7 +22,7 @@ class CefWebPluginInfo_N extends CefNativeAdapter implements CefWebPluginInfo {
     public String getPath() {
         try {
             return N_GetPath();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -32,7 +32,7 @@ class CefWebPluginInfo_N extends CefNativeAdapter implements CefWebPluginInfo {
     public String getVersion() {
         try {
             return N_GetVersion();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;
@@ -42,7 +42,7 @@ class CefWebPluginInfo_N extends CefNativeAdapter implements CefWebPluginInfo {
     public String getDescription() {
         try {
             return N_GetDescription();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
         return null;

@@ -13,7 +13,7 @@ class CefBeforeDownloadCallback_N extends CefNativeAdapter implements CefBeforeD
     public void Continue(String downloadPath, boolean showDialog) {
         try {
             N_Continue(downloadPath, showDialog);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }

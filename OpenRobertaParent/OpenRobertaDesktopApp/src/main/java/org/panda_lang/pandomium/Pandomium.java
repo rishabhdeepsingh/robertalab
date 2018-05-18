@@ -1,13 +1,13 @@
 package org.panda_lang.pandomium;
 
+import java.awt.*;
+
 import org.panda_lang.pandomium.loader.PandomiumLoader;
 import org.panda_lang.pandomium.loader.PandomiumProgressListener;
 import org.panda_lang.pandomium.settings.PandomiumSettings;
 import org.panda_lang.pandomium.wrapper.PandomiumCEF;
 import org.panda_lang.pandomium.wrapper.PandomiumClient;
 import org.slf4j.Logger;
-
-import java.awt.*;
 
 public class Pandomium {
 
@@ -22,11 +22,19 @@ public class Pandomium {
         this.mainThread = Thread.currentThread();
     }
 
+    public static Logger getLogger() {
+        return PandomiumLogger.PANDOMIUM_LOGGER;
+    }
+
+    public static String getVersion() {
+        return PandomiumConstants.PANDOMIUM_VERSION;
+    }
+
     public void initialize() {
         Toolkit.getDefaultToolkit();
 
         loader.addProgressListener((state, progress) -> {
-            if (state != PandomiumProgressListener.State.DONE) {
+            if ( state != PandomiumProgressListener.State.DONE ) {
                 return;
             }
 
@@ -38,7 +46,7 @@ public class Pandomium {
     }
 
     public PandomiumClient createClient() {
-        if (pcef == null) {
+        if ( pcef == null ) {
             throw new RuntimeException("Pandomium is not initialized");
         }
 
@@ -46,7 +54,7 @@ public class Pandomium {
     }
 
     public void dispose() {
-        if (pcef != null) {
+        if ( pcef != null ) {
             pcef.dispose();
         }
     }
@@ -65,14 +73,6 @@ public class Pandomium {
 
     public PandomiumSettings getSettings() {
         return settings;
-    }
-
-    public static Logger getLogger() {
-        return PandomiumLogger.PANDOMIUM_LOGGER;
-    }
-
-    public static String getVersion() {
-        return PandomiumConstants.PANDOMIUM_VERSION;
     }
 
 }

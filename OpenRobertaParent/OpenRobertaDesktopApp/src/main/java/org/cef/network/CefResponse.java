@@ -86,7 +86,7 @@ public abstract class CefResponse {
         Map<String, String> headerMap = new HashMap<>();
         getHeaderMap(headerMap);
         Set<Entry<String, String>> entrySet = headerMap.entrySet();
-        for (Entry<String, String> entry : entrySet) {
+        for ( Entry<String, String> entry : entrySet ) {
             returnValue += "    " + entry.getKey() + "=" + entry.getValue() + "\n";
         }
 

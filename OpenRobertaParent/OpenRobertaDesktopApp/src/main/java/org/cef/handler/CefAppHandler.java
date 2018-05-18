@@ -34,7 +34,7 @@ public interface CefAppHandler {
      * own shutdown sequence return true and do the cleanup on your own.
      *
      * @return false to proceed with the default behavior, true to abort
-     * terminate.
+     *         terminate.
      */
     public boolean onBeforeTerminate();
 

@@ -13,7 +13,7 @@ class CefAuthCallback_N extends CefNativeAdapter implements CefAuthCallback {
     public void Continue(String username, String password) {
         try {
             N_Continue(username, password);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -22,7 +22,7 @@ class CefAuthCallback_N extends CefNativeAdapter implements CefAuthCallback {
     public void cancel() {
         try {
             N_Cancel();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }

@@ -15,7 +15,7 @@ class CefFileDialogCallback_N extends CefNativeAdapter implements CefFileDialogC
     public void Continue(int selectedAcceptFilter, Vector<String> filePaths) {
         try {
             N_Continue(selectedAcceptFilter, filePaths);
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
@@ -24,7 +24,7 @@ class CefFileDialogCallback_N extends CefNativeAdapter implements CefFileDialogC
     public void Cancel() {
         try {
             N_Cancel();
-        } catch (UnsatisfiedLinkError ule) {
+        } catch ( UnsatisfiedLinkError ule ) {
             ule.printStackTrace();
         }
     }
