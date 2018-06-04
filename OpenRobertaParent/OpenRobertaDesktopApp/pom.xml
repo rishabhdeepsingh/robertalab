@@ -25,6 +25,12 @@
     </properties>
 
     <dependencies>
+        <!-- OpenRobertaServer-->
+        <dependency>
+            <groupId>de.fhg.iais.openroberta</groupId>
+            <artifactId>OpenRobertaServer</artifactId>
+            <version>2.7.2-SNAPSHOT</version>
+        </dependency>
         <!-- Pandomium -->
         <dependency>
             <groupId>org.panda-lang</groupId>
