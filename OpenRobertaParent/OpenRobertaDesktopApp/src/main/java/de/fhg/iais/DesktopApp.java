@@ -11,15 +11,19 @@ import org.panda_lang.pandomium.settings.PandomiumSettings;
 import org.panda_lang.pandomium.wrapper.PandomiumBrowser;
 import org.panda_lang.pandomium.wrapper.PandomiumClient;
 
-public class DesktopApp {
-    public static void main(String[] args) {
-        PandomiumSettings settings = PandomiumSettings.getDefaultSettings();
+import de.fhg.iais.roberta.main.ServerStarter;
 
+public class DesktopApp implements Runnable {
+    public static void main(String[] args) {
+        (new Thread(new DesktopApp())).start();
+        
+        PandomiumSettings settings = PandomiumSettings.getDefaultSettings();
+        
         Pandomium pandomium = new Pandomium(settings);
         pandomium.initialize();
 
         PandomiumClient client = pandomium.createClient();
-        PandomiumBrowser browser = client.loadURL("https://google.com/");
+        PandomiumBrowser browser = client.loadURL("localhost:1999");
 
         JFrame frame = new JFrame();
         frame.getContentPane().add(browser.toAWTComponent(), BorderLayout.CENTER);
@@ -37,5 +41,16 @@ public class DesktopApp {
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setUndecorated(true);
         frame.setVisible(true);
+    }
+
+    @Override
+    public void run() {
+        String[] strings = new String[]{"",""};
+        try {
+            ServerStarter.main(strings);
+            Thread.sleep(10000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
