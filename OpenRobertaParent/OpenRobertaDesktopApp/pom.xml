@@ -25,6 +25,44 @@
     </properties>
 
     <dependencies>
+        <!-- All Robots-->
+        <dependency>
+            <groupId>de.fhg.iais.openroberta</groupId>
+            <artifactId>RobotArdu</artifactId>
+            <version>2.7.2-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>de.fhg.iais.openroberta</groupId>
+            <artifactId>RobotEV3</artifactId>
+            <version>2.7.2-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>de.fhg.iais.openroberta</groupId>
+            <artifactId>RobotMbed</artifactId>
+            <version>2.7.2-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>de.fhg.iais.openroberta</groupId>
+            <artifactId>RobotNAO</artifactId>
+            <version>2.7.2-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>de.fhg.iais.openroberta</groupId>
+            <artifactId>RobotEV3</artifactId>
+            <version>2.7.2-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>de.fhg.iais.openroberta</groupId>
+            <artifactId>RobotVorwerk</artifactId>
+            <version>2.7.2-SNAPSHOT</version>
+        </dependency>
+
+        <!--OpenRobertaRobot-->
+        <dependency>
+            <groupId>de.fhg.iais.openroberta</groupId>
+            <artifactId>OpenRobertaRobot</artifactId>
+            <version>2.7.2-SNAPSHOT</version>
+        </dependency>
         <!-- OpenRobertaServer-->
         <dependency>
             <groupId>de.fhg.iais.openroberta</groupId>

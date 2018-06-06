@@ -23,7 +23,7 @@ public class DesktopApp implements Runnable {
         pandomium.initialize();
 
         PandomiumClient client = pandomium.createClient();
-        PandomiumBrowser browser = client.loadURL("localhost:1999");
+        PandomiumBrowser browser = client.loadURL("www.google.com");
 
         JFrame frame = new JFrame();
         frame.getContentPane().add(browser.toAWTComponent(), BorderLayout.CENTER);
@@ -47,8 +47,8 @@ public class DesktopApp implements Runnable {
     public void run() {
         String[] strings = new String[]{"",""};
         try {
-            ServerStarter.main(strings);
-            Thread.sleep(10000);
+//            ServerStarter.main(strings);
+//            Thread.sleep(10000);
         } catch (Exception e) {
             e.printStackTrace();
         }
