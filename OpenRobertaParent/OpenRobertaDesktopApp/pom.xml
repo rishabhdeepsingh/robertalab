@@ -33,6 +33,11 @@
         </dependency>
         <dependency>
             <groupId>de.fhg.iais.openroberta</groupId>
+            <artifactId>RobotNXT</artifactId>
+            <version>2.7.2-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>de.fhg.iais.openroberta</groupId>
             <artifactId>RobotEV3</artifactId>
             <version>2.7.2-SNAPSHOT</version>
         </dependency>
@@ -73,41 +78,7 @@
         <dependency>
             <groupId>org.panda-lang</groupId>
             <artifactId>pandomium</artifactId>
-            <version>1.0.6</version>
-        </dependency>
-        <dependency>
-            <groupId>org.panda-lang</groupId>
-            <artifactId>panda</artifactId>
-            <version>indev-0.2.11</version>
-            <!--<version>1.0.4</version> -->
-        </dependency>
-
-        <!-- Java Chromium Embedded Framework -->
-        <dependency>
-            <groupId>org.panda_lang.pandomium-dependencies</groupId>
-            <artifactId>universal</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
-        <!-- Windows x64 -->
-        <dependency>
-            <groupId>org.panda_lang.pandomium-dependencies</groupId>
-            <artifactId>natives-windows-amd64</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
-        <!-- macOS -->
-        <dependency>
-            <groupId>org.panda_lang.pandomium-dependencies</groupId>
-            <artifactId>natives-macosx-universal</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
-        <!-- Linux x64 -->
-        <dependency>
-            <groupId>net.dzikoysk</groupId>
-            <artifactId>linuxenv</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.7</version>
         </dependency>
 
         <!-- Utilities -->
