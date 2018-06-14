@@ -24,7 +24,7 @@ public class RunDesktopApp implements Runnable {
         JFrame frame = new JFrame();
         frame.getContentPane().add(browser.toAWTComponent(), BorderLayout.CENTER);
 
-        frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -35,7 +35,7 @@ public class RunDesktopApp implements Runnable {
 
         frame.setTitle("OpenRobertaDesktopApp");
         frame.setSize(1380, 760);
-        frame.setUndecorated(true);
+        frame.getAccessibleContext();
         frame.setVisible(true);
     }
 }
