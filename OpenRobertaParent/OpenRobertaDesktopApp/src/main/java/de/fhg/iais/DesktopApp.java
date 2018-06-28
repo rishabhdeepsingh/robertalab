@@ -7,7 +7,7 @@ public class DesktopApp {
         Thread serverThread = new Thread(server);
         Thread appThread = new Thread(app);
         serverThread.start();
-        Thread.sleep(10000);
+        Thread.sleep(3000);
         appThread.start();
     }
 }
