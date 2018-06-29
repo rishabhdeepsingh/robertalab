@@ -3,6 +3,7 @@ package de.fhg.iais;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.net.ServerSocket;
 import java.util.List;
 
 import javax.swing.*;
@@ -20,6 +21,9 @@ import joptsimple.OptionSpec;
 
 public class DesktopApp {
     public static void main(String[] args) throws Exception {
+        ServerSocket serverSocket = new ServerSocket(0);
+        serverSocket.close();
+        String port = String.valueOf(serverSocket.getLocalPort());
         String[] strings =
             new String[] {
                 "-d",
@@ -27,7 +31,9 @@ public class DesktopApp {
                 "-d",
                 "database.parentdir=../OpenRobertaServer",
                 "-d",
-                "server.staticresources.dir=../OpenRobertaServer/staticResources"
+                "server.staticresources.dir=../OpenRobertaServer/staticResources",
+                "-d",
+                "server.port=" + port
             };
         OptionParser parser = new OptionParser();
         OptionSpec<String> defineOpt = parser.accepts("d").withRequiredArg().ofType(String.class);
@@ -37,14 +43,12 @@ public class DesktopApp {
         final ServerStarter serverStarter = new ServerStarter(null, defines);
         Server server = serverStarter.start();
         PandomiumSettings settings = PandomiumSettings.getDefaultSettings();
-
         Pandomium pandomium = new Pandomium(settings);
         pandomium.initialize();
 
         PandomiumClient client = pandomium.createClient();
-        PandomiumBrowser browser = client.loadURL("localhost:1999");
-
-        JFrame frame = new JFrame();
+        PandomiumBrowser browser = client.loadURL("http://0.0.0.0:" + port);
+            JFrame frame = new JFrame();
         frame.getContentPane().add(browser.toAWTComponent(), BorderLayout.CENTER);
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
