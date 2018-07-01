@@ -97,11 +97,11 @@ define([ 'exports', 'log', 'message', 'util', 'user.model', 'guiState.controller
      * resend account activation
      */
     function sendAccountActivation() {
-//        if ($("#registerUserEmail").val() != "") {
+        //        if ($("#registerUserEmail").val() != "") {
         USER.userSendAccountActivation(GUISTATE_C.getUserAccountName(), GUISTATE_C.getLanguage(), function(result) {
             MSG.displayInformation(result, result.message, result.message);
         });
-//        } 
+        //        } 
     }
 
     /**
@@ -549,17 +549,37 @@ define([ 'exports', 'log', 'message', 'util', 'user.model', 'guiState.controller
             $('#iconDisplayLogin').onWrap('click', function() {
                 showUserInfo();
             }, 'icon user click');
-
             initLoginModal();
             initStatusTextModal();
             initUserPasswordChangeModal();
+            initSingleUser();
+            console.log("Here we are in user.controller.js-> init()");
             LOG.info('init user forms');
             ready.resolve();
         });
         return ready.promise();
     }
     exports.init = init;
-
+    function initSingleUser() {
+        $.getJSON('single-user.json', function(data) {
+            console.log("single User = true in user.controller.js");
+            var isSingleUser = data["single-user"] === "true";
+            console.log("isSingleUser = " + isSingleUser);
+            if (isSingleUser) {
+                USER.login("admin", "admin", function(result) {
+                    if (result.rc === "ok") {
+                        GUISTATE_C.setLogin(result);
+                        if (result.userId === 1) {
+                            $('#menuAddStatusTextWrap').removeClass('hidden');
+                        }
+                    }
+                    MSG.displayInformation(result, "MESSAGE_USER_LOGIN", result.message, GUISTATE_C.getUserName());
+                });
+                document.getElementById("head-navigation-gallery").remove();
+                document.getElementById("head-navigation-user").remove();
+            }
+        });
+    }
     function showUserDataForm() {
         getUserFromServer();
         $formRegister.unbind('submit');
