@@ -3,16 +3,26 @@ package de.fhg.iais;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.File;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.*;
 
 import org.eclipse.jetty.server.Server;
+import org.json.JSONObject;
 import org.panda_lang.pandomium.Pandomium;
 import org.panda_lang.pandomium.settings.PandomiumSettings;
 import org.panda_lang.pandomium.wrapper.PandomiumBrowser;
 import org.panda_lang.pandomium.wrapper.PandomiumClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import de.fhg.iais.roberta.main.ServerStarter;
 import joptsimple.OptionParser;
@@ -20,10 +30,20 @@ import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
 
 public class DesktopApp {
+    private static final Logger LOG = LoggerFactory.getLogger(DesktopApp.class);
+
     public static void main(String[] args) throws Exception {
         ServerSocket serverSocket = new ServerSocket(0);
         serverSocket.close();
         String port = String.valueOf(serverSocket.getLocalPort());
+        Boolean isSingleUser = false;
+        updateFile(false);
+        if ( args.length > 0 ) {
+            isSingleUser = args[0].toLowerCase().equals("true");
+            if ( isSingleUser ) {
+                updateFile(true);
+            }
+        }
         String[] strings =
             new String[] {
                 "-d",
@@ -33,7 +53,9 @@ public class DesktopApp {
                 "-d",
                 "server.staticresources.dir=../OpenRobertaServer/staticResources",
                 "-d",
-                "server.port=" + port
+                "server.port=" + port,
+                "-d",
+                "single.user=" + (isSingleUser ? "true" : "false")
             };
         OptionParser parser = new OptionParser();
         OptionSpec<String> defineOpt = parser.accepts("d").withRequiredArg().ofType(String.class);
@@ -66,5 +88,28 @@ public class DesktopApp {
         frame.setVisible(true);
         server.join();
         System.exit(0);
+    }
+
+    private static void updateFile(Boolean val) throws Exception {
+        Path currentRelativePath = Paths.get("").toAbsolutePath().getParent();
+        Path openRobertaServerPath = currentRelativePath.resolve("OpenRobertaServer");
+        Path staticResources = openRobertaServerPath.resolve("staticResources");
+        File singleUserFile = new File(staticResources + "//single-user.json");
+        Path singleUserPath = staticResources.resolve("single-user.json");
+        JSONObject dataTrue = new JSONObject();
+        if ( val ) {
+            dataTrue.put("single-user", "true");
+        } else {
+            dataTrue.put("single-user", "false");
+        }
+        List<String> data = new ArrayList<>();
+        data.add(dataTrue.toString());
+        if ( singleUserFile.createNewFile() ) {
+            Files.write(singleUserPath, data, Charset.defaultCharset());
+        } else {
+            singleUserFile.delete();
+            singleUserFile.createNewFile();
+            Files.write(singleUserPath, data, Charset.defaultCharset());
+        }
     }
 }

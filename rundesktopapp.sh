@@ -25,7 +25,7 @@ case "$cmd" in
                   java -cp 'OpenRobertaParent/OpenRobertaServer/target/resources/*' "${main}" createemptydb "$databaseurl" ;;
 
 --single-user) echo "Single-user"
-	java -cp '../OpenRobertaServer/target/resources/*:target/dependency/*:target/OpenRobertaDesktopApp-2.7.2-SNAPSHOT.jar' de.fhg.iais.DesktopApp ;;
+	java -cp '../OpenRobertaServer/target/resources/*:target/dependency/*:target/OpenRobertaDesktopApp-2.7.2-SNAPSHOT.jar' de.fhg.iais.DesktopApp "true";;
 *) 	
 	java -cp '../OpenRobertaServer/target/resources/*:target/dependency/*:target/OpenRobertaDesktopApp-2.7.2-SNAPSHOT.jar' de.fhg.iais.DesktopApp ;;
 esac
