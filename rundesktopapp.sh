@@ -3,7 +3,7 @@ echo "Script to run the Desktop app and Server"
 cd OpenRobertaParent/OpenRobertaDesktopApp
 echo "Change Directory to OpenRobertaDesktopApp"
 cmd="$1"
-
+shift
 case "$cmd" in
 --createEmptydb)  serverVersionForDb="$1"
 					echo "Create Database"
@@ -12,7 +12,7 @@ case "$cmd" in
 				    lib="OpenRobertaParent/OpenRobertaServer/target/resources"
 					serverVersionForDb=$(java -cp ./${lib}/\* de.fhg.iais.roberta.main.Administration version-for-db)
 				  fi
-				  databaseurl="jdbc:hsqldb:file:OpenRobertaParent/OpenRobertaServer/db-$serverVersionForDb/openroberta-db"
+				  databaseurl="jdbc:hsqldb:file:../OpenRobertaDesktopApp-Documents/db-$serverVersionForDb/openroberta-db"
 				  echo -n "do you really want to create the db for version \"$serverVersionForDb\"? If it exists, it will NOT be damaged. 'yes', 'no') "
                   read ANSWER
                   case "$ANSWER" in
@@ -20,6 +20,8 @@ case "$cmd" in
                   *)   echo "nothing done"
                        exit 0 ;;
                   esac
+                  cd ..
+                  cd ..
 				  echo "creating an empty db using the url $databaseurl"
 				  main='de.fhg.iais.roberta.main.Administration'
                   java -cp 'OpenRobertaParent/OpenRobertaServer/target/resources/*' "${main}" createemptydb "$databaseurl" ;;

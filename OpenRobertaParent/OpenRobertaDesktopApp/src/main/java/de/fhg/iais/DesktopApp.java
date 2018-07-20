@@ -49,7 +49,7 @@ public class DesktopApp {
                 "-d",
                 "database.mode=embedded",
                 "-d",
-                "database.parentdir=../OpenRobertaServer",
+                "database.parentdir=../../../OpenRobertaDesktopApp-Documents",
                 "-d",
                 "server.staticresources.dir=../OpenRobertaServer/staticResources",
                 "-d",
