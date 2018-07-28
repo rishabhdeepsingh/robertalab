@@ -1,4 +1,4 @@
-define([ 'exports', 'comm' ], function(exports, COMM) {
+define([ 'exports', 'comm', 'user.controller' ], function(exports, COMM) {
 
     /**
      * Initialize gui state object
@@ -8,7 +8,6 @@ define([ 'exports', 'comm' ], function(exports, COMM) {
 
         exports.server = {};
         exports.server.ping = true;
-
         exports.gui = {};
         exports.gui.view = '';
         exports.gui.prevView = '';
@@ -86,6 +85,9 @@ define([ 'exports', 'comm' ], function(exports, COMM) {
                 "cmd" : "init",
                 "screenSize" : [ window.screen.availWidth, window.screen.availHeight ]
             }, function(result) {
+                if (result["singleuser"]) {
+                    userController.singleuser = true;
+                }
                 if (result.rc === 'ok') {
                     $.extend(exports.server, result.server);
                     exports.server.version = result["server.version"];

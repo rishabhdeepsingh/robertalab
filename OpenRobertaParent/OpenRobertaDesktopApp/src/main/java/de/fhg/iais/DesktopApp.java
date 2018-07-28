@@ -3,21 +3,14 @@ package de.fhg.iais;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.File;
 import java.net.ServerSocket;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Properties;
 
 import javax.swing.*;
 
 import org.eclipse.jetty.server.Server;
-import org.json.JSONObject;
 import org.panda_lang.pandomium.Pandomium;
 import org.panda_lang.pandomium.settings.PandomiumSettings;
 import org.panda_lang.pandomium.wrapper.PandomiumBrowser;
@@ -26,8 +19,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import de.fhg.iais.roberta.main.ServerStarter;
-import de.fhg.iais.roberta.util.RobertaProperties;
-import de.fhg.iais.roberta.util.Util1;
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
@@ -39,8 +30,8 @@ public class DesktopApp {
         ServerSocket serverSocket = new ServerSocket(0);
         serverSocket.close();
         String port = String.valueOf(serverSocket.getLocalPort());
-        updateFile(false);
-        String[] strings = new String[] {
+        String[] strings =
+            new String[] {
                 "-d",
                 "server.port=" + port,
             };
@@ -54,12 +45,7 @@ public class DesktopApp {
         OptionSpec<String> defineOpt = parser.accepts("d").withRequiredArg().ofType(String.class);
         OptionSet options = parser.parse(strings);
         List<String> defines = defineOpt.values(options);
-        Properties properties = Util1.loadAndMergeProperties(null, defines);
-        RobertaProperties robertaProperties = new RobertaProperties(properties);
-        Boolean isSingleUser = robertaProperties.getBooleanProperty("singleuser");
-        if ( isSingleUser ) {
-            updateFile(true);
-        }
+
         final ServerStarter serverStarter = new ServerStarter(null, defines);
         Server server = serverStarter.start();
         PandomiumSettings settings = PandomiumSettings.getDefaultSettings();
@@ -86,28 +72,5 @@ public class DesktopApp {
         frame.setVisible(true);
         server.join();
         System.exit(0);
-    }
-
-    private static void updateFile(Boolean val) throws Exception {
-        Path currentRelativePath = Paths.get("").toAbsolutePath().getParent();
-        Path openRobertaServerPath = currentRelativePath.resolve("OpenRobertaServer");
-        Path staticResources = openRobertaServerPath.resolve("staticResources");
-        File singleUserFile = new File(staticResources + "//single-user.json");
-        Path singleUserPath = staticResources.resolve("single-user.json");
-        JSONObject dataTrue = new JSONObject();
-        if ( val ) {
-            dataTrue.put("single-user", "true");
-        } else {
-            dataTrue.put("single-user", "false");
-        }
-        List<String> data = new ArrayList<>();
-        data.add(dataTrue.toString());
-        if ( singleUserFile.createNewFile() ) {
-            Files.write(singleUserPath, data, Charset.defaultCharset());
-        } else {
-            singleUserFile.delete();
-            singleUserFile.createNewFile();
-            Files.write(singleUserPath, data, Charset.defaultCharset());
-        }
     }
 }

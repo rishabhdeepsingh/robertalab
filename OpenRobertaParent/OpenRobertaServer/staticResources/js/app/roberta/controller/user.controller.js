@@ -10,6 +10,7 @@ define([ 'exports', 'log', 'message', 'util', 'user.model', 'guiState.controller
     var $modalAnimateTime = 300;
     var $msgAnimateTime = 150;
     var $msgShowTime = 2000;
+    var singleuser = false;
 
     /**
      * Create new user
@@ -553,7 +554,6 @@ define([ 'exports', 'log', 'message', 'util', 'user.model', 'guiState.controller
             initStatusTextModal();
             initUserPasswordChangeModal();
             initSingleUser();
-            console.log("Here we are in user.controller.js-> init()");
             LOG.info('init user forms');
             ready.resolve();
         });
@@ -561,24 +561,19 @@ define([ 'exports', 'log', 'message', 'util', 'user.model', 'guiState.controller
     }
     exports.init = init;
     function initSingleUser() {
-        $.getJSON('single-user.json', function(data) {
-            console.log("single User = true in user.controller.js");
-            var isSingleUser = data["single-user"] === "true";
-            console.log("isSingleUser = " + isSingleUser);
-            if (isSingleUser) {
-                USER.login("admin", "admin", function(result) {
-                    if (result.rc === "ok") {
-                        GUISTATE_C.setLogin(result);
-                        if (result.userId === 1) {
-                            $('#menuAddStatusTextWrap').removeClass('hidden');
-                        }
+        if (userController.singleuser) {
+            USER.login("admin", "admin", function(result) {
+                if (result.rc === "ok") {
+                    GUISTATE_C.setLogin(result);
+                    if (result.userId === 1) {
+                        $('#menuAddStatusTextWrap').removeClass('hidden');
                     }
-                    MSG.displayInformation(result, "MESSAGE_USER_LOGIN", result.message, GUISTATE_C.getUserName());
-                });
-                document.getElementById("head-navigation-gallery").remove();
-                document.getElementById("head-navigation-user").remove();
-            }
-        });
+                }
+                MSG.displayInformation(result, "MESSAGE_USER_LOGIN", result.message, GUISTATE_C.getUserName());
+            });
+            document.getElementById("head-navigation-gallery").remove();
+            document.getElementById("head-navigation-user").remove();
+        }
     }
     function showUserDataForm() {
         getUserFromServer();
