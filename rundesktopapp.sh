@@ -9,7 +9,7 @@ case "$cmd" in
                   echo "Create Database"
                   if [[ "$serverVersionForDb" == '' ]]
                   then
-                                    lib="OpenRobertaParent/OpenRobertaServer/target/resources"
+                                    lib="../OpenRobertaServer/target/resources"
                                     serverVersionForDb=$(java -cp ./${lib}/\* de.fhg.iais.roberta.main.Administration version-for-db)
                   fi
                   databaseurl="jdbc:hsqldb:file:../OpenRobertaDesktopApp-Documents/db-$serverVersionForDb/openroberta-db"

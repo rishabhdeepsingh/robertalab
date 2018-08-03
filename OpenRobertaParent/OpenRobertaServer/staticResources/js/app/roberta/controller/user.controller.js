@@ -98,11 +98,11 @@ define([ 'exports', 'log', 'message', 'util', 'user.model', 'guiState.controller
      * resend account activation
      */
     function sendAccountActivation() {
-        //        if ($("#registerUserEmail").val() != "") {
+//        if ($("#registerUserEmail").val() != "") {
         USER.userSendAccountActivation(GUISTATE_C.getUserAccountName(), GUISTATE_C.getLanguage(), function(result) {
             MSG.displayInformation(result, result.message, result.message);
         });
-        //        } 
+//        } 
     }
 
     /**
@@ -550,6 +550,7 @@ define([ 'exports', 'log', 'message', 'util', 'user.model', 'guiState.controller
             $('#iconDisplayLogin').onWrap('click', function() {
                 showUserInfo();
             }, 'icon user click');
+
             initLoginModal();
             initStatusTextModal();
             initUserPasswordChangeModal();
@@ -560,6 +561,7 @@ define([ 'exports', 'log', 'message', 'util', 'user.model', 'guiState.controller
         return ready.promise();
     }
     exports.init = init;
+
     function initSingleUser() {
         if (userController.singleuser) {
             USER.login("admin", "admin", function(result) {

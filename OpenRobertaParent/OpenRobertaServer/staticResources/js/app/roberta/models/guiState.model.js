@@ -8,6 +8,7 @@ define([ 'exports', 'comm', 'user.controller' ], function(exports, COMM) {
 
         exports.server = {};
         exports.server.ping = true;
+
         exports.gui = {};
         exports.gui.view = '';
         exports.gui.prevView = '';

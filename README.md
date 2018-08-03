@@ -110,11 +110,12 @@ To run the desktop app simply follow the commands below
     cd ..                # return to the repository
 
 #### Step 2: Make sure you have a database
-    ./run.sh --createEmptydb x.y.z
-    
+    ./rundesktopapp.sh --createEmptydb       #Recommended
+    ./rundesktopapp.sh --createEmptydb x.y.z #version number is optional
+
 #### Step 3: Start the Desktop app
-    ./run.sh               #Normal Desktop app
-    ./run.sh --single-user #Single user mode
+    ./rundesktopapp.sh               #Normal Desktop app
+    ./rundesktopapp.sh --single-user #Single user mode
 
 ### Development notes
 
