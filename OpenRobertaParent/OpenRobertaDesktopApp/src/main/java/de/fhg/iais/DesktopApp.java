@@ -53,7 +53,7 @@ public class DesktopApp {
         pandomium.initialize();
 
         PandomiumClient client = pandomium.createClient();
-        PandomiumBrowser browser = client.loadURL("http://0.0.0.0:" + port);
+        PandomiumBrowser browser = client.loadURL("localhost:" + port);
         JFrame frame = new JFrame();
         frame.getContentPane().add(browser.toAWTComponent(), BorderLayout.CENTER);
 
